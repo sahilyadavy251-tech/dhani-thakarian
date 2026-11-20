@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dhani Thakarian — Gram Portal | धनि थकारिआं</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0f6b52">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Dhani Thakarian">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Mukta:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f4ef; --bg2:#eeece3; --surface:#ffffff; --surface2:#faf9f4; --surface3:#f0eee6;
+  --ink:#14181d; --dim:#5c6673; --faint:#8b939d;
+  --line:rgba(20,24,29,.10); --line2:rgba(20,24,29,.18);
+  --brand:#0f6b52; --brand-soft:rgba(15,107,82,.09); --brand-ink:#0b4d3b;
+  --gold:#a97d18; --gold-soft:rgba(169,125,24,.12);
+  --red:#b3392a; --red-soft:rgba(179,57,42,.10);
+  --blue:#25527d; --blue-soft:rgba(37,82,125,.10);
+  --display:"Fraunces",Georgia,serif;
+  --body:"Mukta","Noto Sans Devanagari",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+  --r:16px; --r-sm:10px; --r-xs:7px;
+  --sh:0 1px 2px rgba(20,24,29,.04),0 6px 20px -12px rgba(20,24,29,.25);
+  --sh-lg:0 2px 4px rgba(20,24,29,.04),0 18px 44px -22px rgba(20,24,29,.35);
+}
+[data-theme="dark"]{
+  --bg:#0e1216; --bg2:#12171c; --surface:#151b21; --surface2:#1a2128; --surface3:#222a33;
+  --ink:#e9ece7; --dim:#9aa4af; --faint:#77828d;
+  --line:rgba(233,236,231,.11); --line2:rgba(233,236,231,.2);
+  --brand:#4ecfa2; --brand-soft:rgba(78,207,162,.13); --brand-ink:#8ce3c4;
+  --gold:#e0b45a; --gold-soft:rgba(224,180,90,.13);
+  --red:#f08a76; --red-soft:rgba(240,138,118,.13);
+  --blue:#8bb6e0; --blue-soft:rgba(139,182,224,.13);
+  --sh:0 1px 2px rgba(0,0,0,.4),0 8px 24px -14px rgba(0,0,0,.8);
+  --sh-lg:0 2px 6px rgba(0,0,0,.5),0 24px 60px -28px rgba(0,0,0,.9);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
+body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--body); font-size:15px; line-height:1.55; -webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--display); font-weight:600; margin:0; line-height:1.15; letter-spacing:-.015em}
+p{margin:0 0 10px}
+a{color:var(--brand); text-decoration:none}
+a:hover{text-decoration:underline}
+button{font-family:inherit}
+.mono{font-family:var(--mono); font-size:.82em; letter-spacing:-.02em}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ---------- top bar ---------- */
+.topbar{position:sticky; top:0; z-index:60; display:flex; align-items:center; gap:18px; padding:10px 22px; background:color-mix(in srgb, var(--surface) 88%, transparent); backdrop-filter:blur(14px); border-bottom:1px solid var(--line)}
+.brand{display:flex; align-items:center; gap:11px; min-width:0}
+.brand-mark{width:38px; height:38px; border-radius:11px; display:grid; place-items:center; background:linear-gradient(150deg,var(--brand),var(--brand-ink)); color:#fff; font-family:var(--body); font-size:18px; font-weight:700; flex:none; box-shadow:var(--sh)}
+[data-theme="dark"] .brand-mark{color:#0e1216}
+.brand strong{display:block; font-family:var(--display); font-size:16px; letter-spacing:-.02em; white-space:nowrap}
+.brand small{display:block; font-size:11px; color:var(--faint); white-space:nowrap}
+.tb-search{flex:1; max-width:420px; position:relative; margin-left:auto}
+.tb-search input{width:100%; padding:9px 12px 9px 34px; border-radius:100px; border:1px solid var(--line2); background:var(--surface2); color:var(--ink); font-family:var(--body); font-size:13.5px}
+.tb-search input:focus{outline:none; border-color:var(--brand); box-shadow:0 0 0 3px var(--brand-soft)}
+.tb-search .ico{position:absolute; left:12px; top:50%; transform:translateY(-50%); color:var(--faint); font-size:13px}
+.tb-right{display:flex; align-items:center; gap:8px}
+.pill{display:inline-flex; align-items:center; gap:6px; font-family:var(--mono); font-size:11px; padding:6px 10px; border-radius:100px; border:1px solid var(--line); background:var(--surface2); color:var(--dim); white-space:nowrap}
+.pill b{color:var(--ink)}
+.lang-switch{display:inline-flex; border:1px solid var(--line2); border-radius:100px; overflow:hidden; background:var(--surface2); flex:none}
+.lang-switch button{border:none; background:none; padding:6px 11px; font-size:11.5px; color:var(--dim); cursor:pointer; font-family:var(--mono); letter-spacing:.02em; line-height:1.4}
+.lang-switch button.on{background:var(--brand); color:#fff}
+[data-theme="dark"] .lang-switch button.on{color:#0e1216}
+.icon-btn{width:34px; height:34px; border-radius:10px; border:1px solid var(--line2); background:var(--surface2); color:var(--dim); cursor:pointer; font-size:15px; display:grid; place-items:center}
+.icon-btn:hover{border-color:var(--brand); color:var(--brand)}
+
+/* ---------- subnav ---------- */
+.subnav{position:sticky; top:59px; z-index:55; display:flex; gap:2px; padding:0 22px; overflow-x:auto; background:color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); scrollbar-width:none}
+.subnav::-webkit-scrollbar{display:none}
+.subnav a{padding:11px 13px; font-size:13px; color:var(--dim); border-bottom:2px solid transparent; white-space:nowrap; text-decoration:none; font-weight:500}
+.subnav a:hover{color:var(--ink); text-decoration:none}
+.subnav a.on{color:var(--brand); border-bottom-color:var(--brand)}
+
+.wrap{max-width:1240px; margin:0 auto; padding:26px 22px 90px}
+section{scroll-margin-top:108px}
+
+/* ---------- page head ---------- */
+.page-head{display:flex; align-items:flex-end; justify-content:space-between; gap:16px; flex-wrap:wrap; margin:6px 0 18px}
+.page-head h1{font-size:clamp(24px,3.4vw,34px)}
+.page-head .sub{color:var(--dim); font-size:13.5px; margin-top:5px; max-width:70ch}
+.eyebrow{font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--faint); margin-bottom:8px}
+
+/* ---------- cards ---------- */
+.card{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--sh); padding:18px 20px; min-width:0}
+.card.tight{padding:14px 16px}
+.card h3{font-size:15px; margin-bottom:2px}
+.card .hint{font-size:12px; color:var(--faint); margin:0 0 12px}
+.grid{display:grid; gap:14px}
+.g-stats{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.g-2{grid-template-columns:1fr 1fr}
+.g-3{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+
+.stat{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:15px 16px; box-shadow:var(--sh); min-width:0; position:relative; overflow:hidden}
+.stat .k{font-family:var(--mono); font-size:9.5px; letter-spacing:.13em; text-transform:uppercase; color:var(--faint)}
+.stat .v{font-family:var(--display); font-size:29px; font-weight:700; letter-spacing:-.03em; line-height:1.1; margin-top:6px; font-variant-numeric:tabular-nums}
+.stat .s{font-size:11.5px; color:var(--dim); margin-top:4px}
+.stat.accent{background:linear-gradient(160deg,var(--brand-soft),var(--surface)); border-color:color-mix(in srgb,var(--brand) 30%,var(--line))}
+.stat.accent .v{color:var(--brand)}
+.stat.gold{background:linear-gradient(160deg,var(--gold-soft),var(--surface))}
+.stat.gold .v{color:var(--gold)}
+
+/* ---------- charts ---------- */
+.bars{display:flex; align-items:flex-end; gap:12px; padding:14px 2px 0; min-height:126px}
+.bar-col{flex:1; display:flex; flex-direction:column; justify-content:flex-end; align-items:center; gap:5px; min-width:0; height:112px}
+.bar-col .bar{width:100%; border-radius:6px 6px 3px 3px; background:linear-gradient(180deg,var(--brand),color-mix(in srgb,var(--brand) 55%,var(--surface))); min-height:3px; transition:height .5s ease}
+.bar-col .lab{font-family:var(--mono); font-size:10px; color:var(--faint); white-space:nowrap}
+.bar-col .num{font-family:var(--mono); font-size:11px; color:var(--dim); font-weight:500}
+.split{display:flex; height:10px; border-radius:100px; overflow:hidden; background:var(--surface3); margin:10px 0 8px}
+.split i{display:block; height:100%}
+.legend{display:flex; gap:16px; font-size:12px; color:var(--dim); flex-wrap:wrap}
+.legend span{display:inline-flex; align-items:center; gap:6px}
+.swatch{width:9px; height:9px; border-radius:3px; display:inline-block}
+
+/* ---------- toolbar / controls ---------- */
+.toolbar{display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:12px}
+.toolbar .grow{flex:1; min-width:180px}
+input[type=text],input[type=search],input[type=number],input[type=tel],select,textarea{font-family:var(--body); font-size:13.5px; padding:8px 11px; border-radius:var(--r-sm); border:1px solid var(--line2); background:var(--surface); color:var(--ink); width:100%; min-width:0}
+input:focus,select:focus,textarea:focus{outline:none; border-color:var(--brand); box-shadow:0 0 0 3px var(--brand-soft)}
+.btn{display:inline-flex; align-items:center; gap:6px; font-size:13px; font-weight:600; padding:8px 13px; border-radius:var(--r-sm); border:1px solid var(--line2); background:var(--surface2); color:var(--ink); cursor:pointer; white-space:nowrap; transition:.14s}
+.btn:hover{border-color:var(--brand); color:var(--brand)}
+.btn.primary{background:var(--brand); border-color:var(--brand); color:#fff}
+[data-theme="dark"] .btn.primary{color:#0e1216}
+.btn.primary:hover{filter:brightness(1.06); color:#fff}
+.btn.sm{font-size:12px; padding:5px 9px}
+.btn.icon{padding:5px 8px; font-size:12px}
+.chipset{display:flex; gap:6px; flex-wrap:wrap}
+.chip{font-size:12px; padding:5px 11px; border-radius:100px; border:1px solid var(--line2); background:var(--surface); color:var(--dim); cursor:pointer; user-select:none}
+.chip.on{background:var(--brand-soft); border-color:var(--brand); color:var(--brand); font-weight:600}
+
+/* ---------- table ---------- */
+.tbl-wrap{border:1px solid var(--line); border-radius:var(--r); overflow:auto; background:var(--surface); box-shadow:var(--sh)}
+table{width:100%; border-collapse:collapse; font-size:13.5px}
+thead th{position:sticky; top:0; z-index:2; background:var(--surface2); text-align:left; padding:10px 12px; font-family:var(--mono); font-size:9.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--dim); border-bottom:1px solid var(--line2); white-space:nowrap; font-weight:700; cursor:pointer; user-select:none}
+thead th.no-sort{cursor:default}
+thead th .ar{opacity:.35; margin-left:4px}
+thead th.sorted .ar{opacity:1; color:var(--brand)}
+tbody td{padding:9px 12px; border-bottom:1px solid var(--line); vertical-align:middle}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:var(--brand-soft)}
+td.num,th.num{text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap}
+td.name{font-weight:600}
+td .rel{display:block; font-size:11.5px; color:var(--faint); font-weight:400}
+.badge{display:inline-block; font-size:10.5px; padding:2px 7px; border-radius:100px; border:1px solid var(--line2); color:var(--dim); white-space:nowrap; font-family:var(--mono); letter-spacing:.02em}
+.badge.m{background:var(--blue-soft); border-color:color-mix(in srgb,var(--blue) 40%,var(--line)); color:var(--blue)}
+.badge.f{background:var(--red-soft); border-color:color-mix(in srgb,var(--red) 40%,var(--line)); color:var(--red)}
+.badge.win{background:var(--brand-soft); border-color:var(--brand); color:var(--brand)}
+.epic{font-family:var(--mono); font-size:11px; color:var(--dim); letter-spacing:-.02em}
+
+/* ---------- pagination ---------- */
+.pager{display:flex; align-items:center; gap:8px; flex-wrap:wrap; padding:10px 2px 0; font-size:12.5px; color:var(--dim)}
+.pager .spacer{flex:1}
+.pager button{min-width:32px; height:32px; border-radius:9px; border:1px solid var(--line2); background:var(--surface); color:var(--dim); cursor:pointer; font-size:12.5px; font-family:var(--mono)}
+.pager button.on{background:var(--brand); border-color:var(--brand); color:#fff; font-weight:700}
+[data-theme="dark"] .pager button.on{color:#0e1216}
+.pager button:disabled{opacity:.4; cursor:default}
+
+/* ---------- parivar ---------- */
+.houses{display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:12px}
+.house{background:var(--surface); border:1px solid var(--line); border-radius:var(--r-sm); padding:12px 14px; box-shadow:var(--sh)}
+.house h4{font-size:14px; display:flex; justify-content:space-between; align-items:baseline; gap:8px}
+.house .cnt{font-family:var(--mono); font-size:10.5px; color:var(--faint); font-weight:400}
+.house .head{font-size:11.5px; color:var(--faint); margin:2px 0 8px}
+.house ul{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:5px}
+.house li{font-size:11.5px; padding:2px 8px; border-radius:100px; background:var(--surface2); border:1px solid var(--line); color:var(--dim); max-width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.house li.m{border-left:2px solid var(--blue)}
+.house li.f{border-left:2px solid var(--red)}
+
+/* ---------- misc ---------- */
+.note{font-size:12.5px; color:var(--dim); background:var(--surface2); border:1px solid var(--line); border-left:3px solid var(--gold); padding:10px 13px; border-radius:var(--r-xs); margin-top:12px}
+.note.warn{border-left-color:var(--red)}
+.note.info{border-left-color:var(--blue)}
+.note.ok{border-left-color:var(--brand)}
+.dl{display:grid; grid-template-columns:auto 1fr; gap:0; font-size:13.5px}
+.dl > div{padding:7px 0; border-bottom:1px dashed var(--line)}
+.dl > div:nth-last-child(-n+2){border-bottom:none}
+.dl .k{color:var(--faint); font-size:12px; padding-right:14px; white-space:nowrap}
+.dl .v{text-align:right; overflow-wrap:break-word}
+.empty{padding:34px 20px; text-align:center; color:var(--dim); border:1px dashed var(--line2); border-radius:var(--r); background:var(--surface2)}
+.empty b{display:block; font-family:var(--display); font-size:16px; color:var(--ink); margin-bottom:6px}
+.empty p{max-width:56ch; margin:0 auto 14px; font-size:13px}
+
+/* news */
+.news-tabs{display:flex; gap:6px; margin-bottom:12px; flex-wrap:wrap}
+.news-item{display:grid; grid-template-columns:1fr auto; gap:2px 14px; padding:11px 0; border-bottom:1px dashed var(--line)}
+.news-item:last-child{border-bottom:none}
+.news-item a{font-weight:600; font-size:13.5px; color:var(--ink); line-height:1.4}
+.news-item a:hover{color:var(--brand); text-decoration:none}
+.news-item .meta{font-family:var(--mono); font-size:10px; color:var(--faint); white-space:nowrap}
+.news-item .src{grid-column:1/-1; font-size:11px; color:var(--faint)}
+
+/* modal */
+dialog{border:none; border-radius:var(--r); padding:0; background:var(--surface); color:var(--ink); box-shadow:var(--sh-lg); max-width:min(560px,94vw); width:100%}
+dialog::backdrop{background:rgba(10,14,18,.5); backdrop-filter:blur(3px)}
+.dlg-head{display:flex; align-items:center; justify-content:space-between; gap:10px; padding:16px 20px; border-bottom:1px solid var(--line)}
+.dlg-head h3{font-size:16px}
+.dlg-body{padding:16px 20px; max-height:70vh; overflow:auto}
+.dlg-foot{display:flex; gap:8px; justify-content:flex-end; padding:14px 20px; border-top:1px solid var(--line); background:var(--surface2); border-radius:0 0 var(--r) var(--r)}
+.frm{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+label.f{display:flex; flex-direction:column; gap:4px; font-family:var(--mono); font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); min-width:0}
+label.f.wide{grid-column:1/-1}
+
+.toast{position:fixed; left:50%; bottom:24px; transform:translate(-50%,16px); background:var(--ink); color:var(--bg); padding:10px 18px; border-radius:100px; font-size:13px; font-weight:600; opacity:0; pointer-events:none; transition:.22s; z-index:200}
+.toast.on{opacity:1; transform:translate(-50%,0)}
+
+footer{margin-top:40px; padding-top:16px; border-top:1px solid var(--line); display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; font-size:11.5px; color:var(--faint)}
+
+@media (max-width:900px){
+  .topbar{padding:9px 14px; gap:10px; flex-wrap:wrap}
+  .tb-search{order:3; flex:1 1 100%; max-width:none; margin:0}
+  .subnav{top:auto; position:sticky; top:0; padding:0 12px}
+  .wrap{padding:18px 14px 80px}
+  section{scroll-margin-top:96px}
+  .g-2{grid-template-columns:1fr}
+  .frm{grid-template-columns:1fr}
+  .brand small{display:none}
+  .pill.wx{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important; animation:none!important}}
+@media print{.topbar,.subnav,.toolbar,.pager,.btn{display:none!important} body{background:#fff} .card{box-shadow:none}}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">ध</span>
+    <div>
+      <strong>Dhani Thakarian</strong>
+      <small data-en="Hansi-I, Hisar · 125033">धनि थकारिआं · Hansi-I, Hisar · 125033</small>
+    </div>
+  </div>
+  <div class="tb-search">
+    <span class="ico" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.6-3.6"></path></svg></span>
+    <input type="search" id="global-search" placeholder="Naam, ghar number ya EPIC se search karein…" aria-label="Search">
+  </div>
+  <div class="tb-right">
+    <span class="pill" id="clock">--:--</span>
+    <span class="pill wx" id="wx-pill">—</span>
+    <div class="lang-switch" id="lang-switch" title="Bhasha / Language">
+      <button data-lang="hi" class="on">हिंदी</button>
+      <button data-lang="en">EN</button>
+    </div>
+    <button class="icon-btn" id="theme-toggle" title="Light / dark" aria-label="Theme">◐</button>
+  </div>
+</header>
+
+<nav class="subnav" id="subnav">
+  <a href="#dash" class="on">Dashboard</a>
+  <a href="#directory" data-en="Voter list">Matdata list</a>
+  <a href="#parivar" data-en="Families">Parivar</a>
+  <a href="#chunav" data-en="Elections">Chunav</a>
+  <a href="#panchayat">Panchayat</a>
+  <a href="#suvidha" data-en="Facilities">Suvidhaayein</a>
+  <a href="#news" data-en="News">Khabrein</a>
+  <a href="#about" data-en="Sources">Source</a>
+</nav>
+
+<main class="wrap">
+
+  <!-- ============ DASHBOARD ============ -->
+  <section id="dash">
+    <div class="page-head">
+      <div>
+        <div class="eyebrow">Gram Panchayat · Hansi-I block · Hisar</div>
+        <h1>Dhani Thakarian <span data-en="" style="color:var(--faint); font-size:.62em; font-family:var(--body)">धनि थकारिआं</span></h1>
+        <p class="sub">Gaon ki poori jaankari ek jagah — 2026 ki sarkari matdata namavali (SIR draft roll) se poora voter record, parivar-wise list, panchayat, chunav aur roz taaza khabrein.</p>
+      </div>
+      <div style="display:flex; gap:8px; flex-wrap:wrap">
+        <button class="btn primary" id="dash-add" data-en="+ New member">+ Naya member</button>
+        <button class="btn" id="dash-search" data-en="Open list">List kholein</button>
+      </div>
+    </div>
+
+    <div class="grid g-stats">
+      <div class="stat accent">
+        <div class="k" data-en="Total voters">Kul matdata</div>
+        <div class="v" id="st-total">1,071</div>
+        <div class="s">Polling station 124 · 2026 SIR roll</div>
+      </div>
+      <div class="stat">
+        <div class="k" data-en="Male">Purush</div>
+        <div class="v" id="st-m">563</div>
+        <div class="s" data-en="As per official roll">Sarkari roll ke anusar</div>
+      </div>
+      <div class="stat">
+        <div class="k" data-en="Female">Mahila</div>
+        <div class="v" id="st-f">508</div>
+        <div class="s" data-en="As per official roll">Sarkari roll ke anusar</div>
+      </div>
+      <div class="stat gold">
+        <div class="k" data-en="Houses">Ghar / makan</div>
+        <div class="v" id="st-house">149</div>
+        <div class="s" data-en="Distinct house numbers">Alag-alag makan sankhya</div>
+      </div>
+      <div class="stat">
+        <div class="k" data-en="Wards">Ward</div>
+        <div class="v">18</div>
+        <div class="s">GP code 29783</div>
+      </div>
+      <div class="stat">
+        <div class="k" data-en="In this list">List mein abhi</div>
+        <div class="v" id="st-live">1,071</div>
+        <div class="s" id="st-live-sub">aapke edit ke baad badlega</div>
+      </div>
+    </div>
+
+    <div class="grid g-2" style="margin-top:14px">
+      <div class="card">
+        <h3 data-en="Voters by age">Umar ke hisaab se matdata</h3>
+        <p class="hint">Namavali ki umar (1.7.2026 ke anusar)</p>
+        <div class="bars" id="age-bars"></div>
+      </div>
+      <div class="card">
+        <h3 data-en="Male – Female">Purush–Mahila</h3>
+        <p class="hint" data-en="From the row-wise data">List ke row-wise data se</p>
+        <div class="split" id="gender-split"></div>
+        <div class="legend" id="gender-legend"></div>
+        <div class="dl" style="margin-top:14px">
+          <div class="k" data-en="Youngest voter">Sabse chhoti umar</div><div class="v" id="age-min">—</div>
+          <div class="k" data-en="Oldest voter">Sabse badi umar</div><div class="v" id="age-max">—</div>
+          <div class="k" data-en="Average age">Ausat umar</div><div class="v" id="age-avg">—</div>
+          <div class="k" data-en="Largest family">Sabse bada parivar</div><div class="v" id="big-house">—</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3 data-en="Largest families">Sabse bade parivar</h3>
+      <p class="hint">Ek hi makan sankhya par sabse zyada naam</p>
+      <div class="houses" id="top-houses"></div>
+    </div>
+  </section>
+
+  <!-- ============ DIRECTORY ============ -->
+  <section id="directory">
+    <div class="page-head">
+      <div>
+        <div class="eyebrow">Nirvachak namavali 2026 · SIR draft roll · bhag 124</div>
+        <h1 data-en="Voter list">Matdata list</h1>
+        <p class="sub">1,071 naam — ghar number, pita/pati ka naam, umar, ling aur EPIC ke saath. Search karein, filter karein, edit karein — sab aapke browser mein save hota hai.</p>
+      </div>
+      <div style="display:flex; gap:8px; flex-wrap:wrap">
+        <button class="btn primary" id="dir-add" data-en="+ Add member">+ Member jodein</button>
+        <button class="btn" id="dir-export">CSV export</button>
+        <button class="btn" id="dir-backup">Backup</button>
+      </div>
+    </div>
+
+    <div class="card tight">
+      <div class="toolbar">
+        <div class="grow"><input type="search" id="dir-search" placeholder="Naam, pita/pati, ghar, EPIC…"></div>
+        <div class="chipset" id="gender-filter">
+          <span class="chip on" data-g="" data-en="All">Sab</span>
+          <span class="chip" data-g="M" data-en="Male">Purush</span>
+          <span class="chip" data-g="F" data-en="Female">Mahila</span>
+        </div>
+        <select id="house-filter" style="width:auto; min-width:150px"><option value="" data-en="All houses">Sab ghar</option></select>
+        <select id="age-filter" style="width:auto; min-width:140px">
+          <option value="" data-en="All ages">Sab umar</option>
+          <option value="18-25">18–25</option>
+          <option value="26-35">26–35</option>
+          <option value="36-45">36–45</option>
+          <option value="46-60">46–60</option>
+          <option value="61-120">60+</option>
+        </select>
+        <label class="chip" style="display:inline-flex; align-items:center; gap:6px; cursor:pointer">
+          <input type="checkbox" id="show-epic" style="width:auto; margin:0"> EPIC dikhayein
+        </label>
+        <button class="btn sm" id="dir-clear">Reset</button>
+      </div>
+
+      <div class="tbl-wrap">
+        <table id="dir-table">
+          <thead>
+            <tr>
+              <th class="no-sort" style="width:52px">#</th>
+              <th data-sort="name" data-en="Name / father-husband">Naam / pita-pati <span class="ar">↕</span></th>
+              <th data-sort="house" class="num" data-en="House">Ghar <span class="ar">↕</span></th>
+              <th data-sort="age" class="num" data-en="Age">Umar <span class="ar">↕</span></th>
+              <th data-sort="g" data-en="Gender">Ling <span class="ar">↕</span></th>
+              <th data-sort="epic">EPIC</th>
+              <th class="no-sort" style="width:96px"></th>
+            </tr>
+          </thead>
+          <tbody id="dir-body"><tr><td class="num" style="color:var(--faint)">1</td><td class="name">होशियार सिंह<span class="rel">पिता: चंद्र सिंह</span></td><td class="num">1</td><td class="num">73</td><td><span class="badge m">पु</span></td><td class="epic">HR/08/72/028••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">2</td><td class="name">प्यारे लाल<span class="rel">पिता: चंद्र सिंह</span></td><td class="num">1</td><td class="num">69</td><td><span class="badge m">पु</span></td><td class="epic">HR/08/72/028••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">3</td><td class="name">फूल मती<span class="rel">पति: प्यारे लाल</span></td><td class="num">1</td><td class="num">67</td><td><span class="badge f">म</span></td><td class="epic">HR/08/72/028••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">4</td><td class="name">चमेली<span class="rel">पति: होशियार सिंह</span></td><td class="num">1</td><td class="num">63</td><td><span class="badge f">म</span></td><td class="epic">HR/08/72/028••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">5</td><td class="name">रामी<span class="rel">पति: भले राम</span></td><td class="num">1</td><td class="num">61</td><td><span class="badge f">म</span></td><td class="epic">HR/08/72/028••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">6</td><td class="name">सुनील कुमार<span class="rel">पिता: प्यारे लाल</span></td><td class="num">1</td><td class="num">44</td><td><span class="badge m">पु</span></td><td class="epic">HWV164••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">7</td><td class="name">अनिल कुमार<span class="rel">पिता: प्यारे लाल</span></td><td class="num">1</td><td class="num">42</td><td><span class="badge m">पु</span></td><td class="epic">HWV121••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">8</td><td class="name">जय भगवान<span class="rel">पिता: होशियार सिंह</span></td><td class="num">1</td><td class="num">42</td><td><span class="badge m">पु</span></td><td class="epic">HWV121••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">9</td><td class="name">सरस्वती<span class="rel">पति: सुनील कुमार</span></td><td class="num">1</td><td class="num">39</td><td><span class="badge f">म</span></td><td class="epic">NZR053••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">10</td><td class="name">संदीप<span class="rel">पिता: होशियार सिंह</span></td><td class="num">1</td><td class="num">37</td><td><span class="badge m">पु</span></td><td class="epic">NZR022••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">11</td><td class="name">निर्मला<span class="rel">पति: अनिल कुमार</span></td><td class="num">1</td><td class="num">37</td><td><span class="badge f">म</span></td><td class="epic">NZR053••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">12</td><td class="name">शमशेर<span class="rel">पिता: भले राम</span></td><td class="num">1</td><td class="num">35</td><td><span class="badge m">पु</span></td><td class="epic">NZR022••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">13</td><td class="name">सुनीता<span class="rel">पति: संदीप</span></td><td class="num">1</td><td class="num">34</td><td><span class="badge f">म</span></td><td class="epic">NZR049••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">14</td><td class="name">मंजू देवी<span class="rel">पति: जयभगवान</span></td><td class="num">1</td><td class="num">35</td><td><span class="badge f">म</span></td><td class="epic">NZR022••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">15</td><td class="name">सुनीता<span class="rel">पति: सोनू</span></td><td class="num">01</td><td class="num">34</td><td><span class="badge f">म</span></td><td class="epic">NZR130••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">16</td><td class="name">संजय कुमार<span class="rel">पिता: भले राम</span></td><td class="num">1</td><td class="num">33</td><td><span class="badge m">पु</span></td><td class="epic">NZR063••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">17</td><td class="name">रानी देवी<span class="rel">पति: शमशेर</span></td><td class="num">01</td><td class="num">31</td><td><span class="badge f">म</span></td><td class="epic">NZR068••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">18</td><td class="name">कंचन राऊत<span class="rel">पति: सोनू</span></td><td class="num">001</td><td class="num">30</td><td><span class="badge f">म</span></td><td class="epic">NZR141••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">19</td><td class="name">एकम देवी<span class="rel">पति: सचिन</span></td><td class="num">1</td><td class="num">26</td><td><span class="badge f">म</span></td><td class="epic">NZR156••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">20</td><td class="name">रीना<span class="rel">पति: संजय</span></td><td class="num">1</td><td class="num">28</td><td><span class="badge f">म</span></td><td class="epic">NZR107••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">21</td><td class="name">हर्षित<span class="rel">पिता: वेद प्रकाश</span></td><td class="num">1</td><td class="num">28</td><td><span class="badge m">पु</span></td><td class="epic">NZR104••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">22</td><td class="name">अंगूरी<span class="rel">पति: राम सरूप</span></td><td class="num">2</td><td class="num">73</td><td><span class="badge f">म</span></td><td class="epic">HR/08/72/028••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">23</td><td class="name">सुरेश<span class="rel">पिता: राम सरूप</span></td><td class="num">2</td><td class="num">57</td><td><span class="badge m">पु</span></td><td class="epic">HR/08/72/028••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">24</td><td class="name">राज बाला<span class="rel">पति: सुरेश</span></td><td class="num">2</td><td class="num">51</td><td><span class="badge f">म</span></td><td class="epic">HR/08/72/028••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">25</td><td class="name">आशु<span class="rel">पिता: सुरेश</span></td><td class="num">02</td><td class="num">30</td><td><span class="badge m">पु</span></td><td class="epic">NZR066••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">26</td><td class="name">इंशु<span class="rel">पिता: सुरेश कुमार</span></td><td class="num">2</td><td class="num">27</td><td><span class="badge m">पु</span></td><td class="epic">NZR104••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">27</td><td class="name">संकित<span class="rel">पिता: ईश्वर</span></td><td class="num">02</td><td class="num">23</td><td><span class="badge m">पु</span></td><td class="epic">NZR129••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">28</td><td class="name">जानेद<span class="rel">पति: रामेश्वर</span></td><td class="num">3</td><td class="num">78</td><td><span class="badge f">म</span></td><td class="epic">HR/08/72/028••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">29</td><td class="name">बलजीत<span class="rel">पिता: रामेश्वर</span></td><td class="num">3</td><td class="num">55</td><td><span class="badge m">पु</span></td><td class="epic">HR/08/72/028••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">30</td><td class="name">सुनीता<span class="rel">पति: बलजीत</span></td><td class="num">3</td><td class="num">53</td><td><span class="badge f">म</span></td><td class="epic">HR/08/72/028••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">31</td><td class="name">बलबीर<span class="rel">पिता: रामेश्वर</span></td><td class="num">3</td><td class="num">53</td><td><span class="badge m">पु</span></td><td class="epic">HR/08/72/028••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">32</td><td class="name">सुमित्रा<span class="rel">पति: बलबीर</span></td><td class="num">3</td><td class="num">47</td><td><span class="badge f">म</span></td><td class="epic">HWV173••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">33</td><td class="name">नरेन्द्र<span class="rel">पिता: बलजीत</span></td><td class="num">03</td><td class="num">35</td><td><span class="badge m">पु</span></td><td class="epic">NZR025••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">34</td><td class="name">मोतिका<span class="rel">पति: नरेन्द्र</span></td><td class="num">3</td><td class="num">30</td><td><span class="badge f">म</span></td><td class="epic">NZR060••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">35</td><td class="name">सुरेश कुमार<span class="rel">पिता: बलजीत</span></td><td class="num">03</td><td class="num">30</td><td><span class="badge m">पु</span></td><td class="epic">NZR049••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">36</td><td class="name">रण सिंह<span class="rel">पिता: मामन</span></td><td class="num">4</td><td class="num">78</td><td><span class="badge m">पु</span></td><td class="epic">HR/08/72/028••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">37</td><td class="name">फूली<span class="rel">पति: रण सिंह</span></td><td class="num">4</td><td class="num">73</td><td><span class="badge f">म</span></td><td class="epic">HR/08/72/028••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">38</td><td class="name">दलबीर<span class="rel">पिता: रण सिंह</span></td><td class="num">4</td><td class="num">57</td><td><span class="badge m">पु</span></td><td class="epic">HR/08/72/028••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">39</td><td class="name">सुनीता<span class="rel">पति: दलबीर</span></td><td class="num">4</td><td class="num">53</td><td><span class="badge f">म</span></td><td class="epic">HR/08/72/028••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">40</td><td class="name">सतबीर<span class="rel">पिता: रण सिंह</span></td><td class="num">4</td><td class="num">53</td><td><span class="badge m">पु</span></td><td class="epic">HR/08/72/028••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">41</td><td class="name">धन पत्ती<span class="rel">पति: सतबीर</span></td><td class="num">4</td><td class="num">50</td><td><span class="badge f">म</span></td><td class="epic">HR/08/72/028••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">42</td><td class="name">सोमबीर<span class="rel">पिता: दलबीर</span></td><td class="num">4</td><td class="num">35</td><td><span class="badge m">पु</span></td><td class="epic">NZR028••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">43</td><td class="name">ओमबीर सिंह<span class="rel">पिता: दलबीर</span></td><td class="num">4</td><td class="num">33</td><td><span class="badge m">पु</span></td><td class="epic">NZR053••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">44</td><td class="name">प्रियंका<span class="rel">पति: सोमबीर</span></td><td class="num">4</td><td class="num">32</td><td><span class="badge f">म</span></td><td class="epic">NZR104••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">45</td><td class="name">नरेन्द्र<span class="rel">पिता: सतबीर यादव</span></td><td class="num">04</td><td class="num">30</td><td><span class="badge m">पु</span></td><td class="epic">NZR049••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">46</td><td class="name">वर्षा देवी<span class="rel">पति: ओमबीर</span></td><td class="num">4</td><td class="num">30</td><td><span class="badge f">म</span></td><td class="epic">NZR104••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">47</td><td class="name">अमित<span class="rel">पिता: सतबीर</span></td><td class="num">04</td><td class="num">27</td><td><span class="badge m">पु</span></td><td class="epic">NZR117••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">48</td><td class="name">सतरा<span class="rel">पति: माडू</span></td><td class="num">5</td><td class="num">63</td><td><span class="badge f">म</span></td><td class="epic">HR/08/72/028••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">49</td><td class="name">सतीश कुमार<span class="rel">पिता: मारू राम</span></td><td class="num">05</td><td class="num">47</td><td><span class="badge m">पु</span></td><td class="epic">NZR132••••</td><td></td></tr>
+<tr><td class="num" style="color:var(--faint)">50</td><td class="name">पिंकी<span class="rel">पति: सतीश</span></td><td class="num">05</td><td class="num">40</td><td><span class="badge f">म</span></td><td class="epic">HWV183••••</td><td></td></tr></tbody>
+        </table>
+      </div>
+
+      <div class="pager" id="pager">
+        <span id="page-info">—</span>
+        <span class="spacer"></span>
+        <select id="per-page" style="width:auto">
+          <option value="25">25 / page</option>
+          <option value="50" selected>50 / page</option>
+          <option value="100">100 / page</option>
+          <option value="685">Sab dikhayein</option>
+        </select>
+        <span id="page-btns" style="display:flex; gap:6px"></span>
+      </div>
+
+      <div class="note info">Ye 2026 ki sarkari nirvachak namavali (SIR draft roll, 31-07-2026 ko prakashit) hai — abhi ki list. Draft hone ki wajah se kuch naam chhoot bhi sakte hain; koi row galat lage to “Edit” se theek kar dein, naya naam “+ Member jodein” se.</div>
+    </div>
+  </section>
+
+  <!-- ============ PARIVAR ============ -->
+  <section id="parivar">
+    <div class="page-head">
+      <div>
+        <div class="eyebrow">Makan sankhya ke hisaab se</div>
+        <h1 data-en="Family-wise">Parivar-wise</h1>
+        <p class="sub">Har ghar ke saare sadasya ek jagah — sabse bada parivar pehle. Ghar number par click karke us parivar ki list dekhein.</p>
+      </div>
+      <div class="toolbar" style="margin:0">
+        <input type="search" id="house-search" placeholder="Ghar number…" style="width:160px">
+        <select id="house-sort" style="width:auto">
+          <option value="size">Sabse bada pehle</option>
+          <option value="num">Ghar number se</option>
+        </select>
+      </div>
+    </div>
+    <div class="houses" id="house-grid"></div>
+  </section>
+
+  <!-- ============ CHUNAV ============ -->
+  <section id="chunav">
+    <div class="page-head">
+      <div>
+        <div class="eyebrow">2026 namavali + 2024 ke result</div>
+        <h1 data-en="Votes &amp; elections">Vote &amp; chunav</h1>
+        <p class="sub">Gaon ka voter record, Vidhan Sabha aur Lok Sabha ke asli result, aur aapke apne gaon-level vote ka hisaab.</p>
+      </div>
+    </div>
+
+    <div class="grid g-3">
+      <div class="card">
+        <h3>Is gaon ka vote (2026)</h3>
+        <p class="hint">Polling station 124 — Rajkiya Middle School</p>
+        <div class="dl">
+          <div class="k">Kul matdata</div><div class="v"><b>1,071</b></div>
+          <div class="k">Purush</div><div class="v">563</div>
+          <div class="k">Mahila</div><div class="v">508</div>
+          <div class="k">Sahayak booth</div><div class="v">0 (koi nahi)</div>
+          <div class="k">Kshetra</div><div class="v" data-en="Rural · Ward zero">Gramin · Ward शून्य</div>
+          <div class="k">Thana</div><div class="v">Sadar Hansi · PIN 125033</div>
+          <div class="k">Umar ki tarikh</div><div class="v">01-07-2026</div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Hansi Vidhan Sabha 2024</h3>
+        <p class="hint">AC-50 · ECI ke aankde</p>
+        <div class="dl">
+          <div class="k">Vijeta</div><div class="v"><b>Vinod Bhayana</b> <span class="badge win">BJP</span></div>
+          <div class="k">Vote</div><div class="v">78,686 (55.30%)</div>
+          <div class="k">Runner-up</div><div class="v">Rahul Makkar (INC) — 57,226</div>
+          <div class="k">Margin</div><div class="v">21,460 (15.08%)</div>
+          <div class="k">Turnout</div><div class="v">70.02%</div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Hisar Lok Sabha 2024</h3>
+        <p class="hint">PC-4 · ECI ke aankde</p>
+        <div class="dl">
+          <div class="k">Vijeta</div><div class="v"><b>Jai Parkash</b> <span class="badge win">INC</span></div>
+          <div class="k">Vote</div><div class="v">5,70,424 (48.6%)</div>
+          <div class="k">Runner-up</div><div class="v">Ranjit Singh (BJP) — 5,07,043</div>
+          <div class="k">Margin</div><div class="v">63,381 (5.4%)</div>
+          <div class="k">Turnout</div><div class="v">65.6%</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid g-2" style="margin-top:14px">
+      <div class="card">
+        <h3>Hansi AC 2024 — sab candidate</h3>
+        <p class="hint">Vote aur vote %</p>
+        <div class="tbl-wrap" style="max-height:330px; overflow:auto; box-shadow:none">
+          <table>
+            <thead><tr><th class="no-sort">Candidate</th><th class="no-sort">Party</th><th class="no-sort num">Vote</th><th class="no-sort num">%</th></tr></thead>
+            <tbody id="ac-body"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Hisar LS 2024 — top</h3>
+        <p class="hint">Vote aur vote %</p>
+        <div class="tbl-wrap" style="max-height:330px; overflow:auto; box-shadow:none">
+          <table>
+            <thead><tr><th class="no-sort">Candidate</th><th class="no-sort">Party</th><th class="no-sort num">Vote</th><th class="no-sort num">%</th></tr></thead>
+            <tbody id="ls-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <div class="toolbar">
+        <div><h3>Gaon-level vote record</h3><p class="hint" style="margin:0">Aapke chunav / booth ka data — aap bharein</p></div>
+        <button class="btn sm" id="vote-export" style="margin-left:auto">CSV export</button>
+      </div>
+      <div class="frm" style="margin-bottom:12px">
+        <label class="f wide">Chunav ka naam<input type="text" id="v-name" placeholder="jaise Panchayat chunav 2022"></label>
+        <label class="f">Kul voters<input type="number" id="v-voters" placeholder="1450"></label>
+        <label class="f">Vote pade<input type="number" id="v-polled" placeholder="1120"></label>
+        <label class="f wide">Sabse zyada vote kisko<input type="text" id="v-lead" placeholder="naam / party"></label>
+      </div>
+      <button class="btn primary" id="v-save">Record save karein</button>
+      <div class="tbl-wrap" style="margin-top:14px">
+        <table>
+          <thead><tr><th class="no-sort">Chunav</th><th class="no-sort num">Voters</th><th class="no-sort num">Pade</th><th class="no-sort num">Turnout</th><th class="no-sort">Leader</th><th class="no-sort" style="width:60px"></th></tr></thead>
+          <tbody id="v-body"></tbody>
+        </table>
+      </div>
+      <div class="empty" id="v-empty" style="margin-top:12px">
+        <b>Abhi koi record nahi</b>
+        <p>Upar form bhar ke apne chunav ka data save karein — turnout khud calculate hoga.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PANCHAYAT ============ -->
+  <section id="panchayat">
+    <div class="page-head">
+      <div>
+        <div class="eyebrow">Gram Panchayat Dhani Thakarian · LGD 29783</div>
+        <h1 data-en="Panchayat &amp; administration">Panchayat &amp; prashasan</h1>
+        <p class="sub">Sarpanch, Gram Sachiv, MLA, MP aur 18 ward members. Ward members ke naam aap khud bhar sakte hain.</p>
+      </div>
+    </div>
+
+    <div class="grid g-3">
+      <div class="card"><h3>Sarpanch</h3><p class="hint">Gram Panchayat pramukh</p>
+        <div class="dl"><div class="k">Naam</div><div class="v"><b>Deepak</b></div><div class="k">Mobile</div><div class="v">06••••••63</div></div>
+        <div class="note">Public directory ka aankda; poora number public nahi hai.</div>
+      </div>
+      <div class="card"><h3>Gram Sachiv</h3><p class="hint">Panchayat secretary</p>
+        <div class="dl"><div class="k">Naam</div><div class="v"><b>Vijay</b></div><div class="k">Office</div><div class="v">General Chaupal, Hansi</div></div>
+      </div>
+      <div class="card"><h3>MLA &amp; MP</h3><p class="hint">Hansi AC-50 · Hisar PC-4</p>
+        <div class="dl"><div class="k">MLA</div><div class="v"><b>Vinod Bhayana</b> <span class="badge win">BJP</span></div><div class="k">MP</div><div class="v"><b>Jai Parkash</b> <span class="badge win">INC</span></div></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <div class="toolbar">
+        <div><h3>Ward members — 18 ward</h3><p class="hint" style="margin:0">Naam aur mobile bharein — browser mein save</p></div>
+        <div style="margin-left:auto; display:flex; gap:8px">
+          <button class="btn sm" id="ward-export">CSV export</button>
+          <button class="btn sm" id="ward-reset">Reset</button>
+        </div>
+      </div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th class="no-sort" style="width:90px">Ward</th><th class="no-sort">Member</th><th class="no-sort" style="width:180px">Mobile</th><th class="no-sort" style="width:150px">Note</th><th class="no-sort" style="width:52px"></th></tr></thead>
+          <tbody id="ward-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SUVIDHA ============ -->
+  <section id="suvidha">
+    <div class="page-head">
+      <div>
+        <div class="eyebrow">School, mandir, dharamshala, library</div>
+        <h1 data-en="Facilities &amp; places">Suvidhaayein &amp; jagah</h1>
+        <p class="sub">Gaon aur aas-paas ki zaroori jagah — public records aur maps se.</p>
+      </div>
+    </div>
+    <div class="grid g-3" id="places"></div>
+  </section>
+
+  <!-- ============ NEWS ============ -->
+  <section id="news">
+    <div class="page-head">
+      <div>
+        <div class="eyebrow">Google News · har 5 minute</div>
+        <h1 data-en="Latest news">Taaza khabrein</h1>
+        <p class="sub">Gaon, Hansi aur Hisar ki khabrein — apne aap update hoti hain.</p>
+      </div>
+      <button class="btn" id="news-refresh">Refresh</button>
+    </div>
+    <div class="card">
+      <div class="toolbar">
+        <div class="news-tabs" id="news-tabs">
+          <span class="chip on" data-tab="village">Dhani Thakarian</span>
+          <span class="chip" data-tab="hansi">Hansi</span>
+          <span class="chip" data-tab="hisar">Hisar</span>
+        </div>
+        <span style="margin-left:auto; font-size:12px; color:var(--faint)" id="news-status">Connect ho raha hai…</span>
+      </div>
+      <div id="news-list"></div>
+      <div class="empty" id="news-empty" style="display:none">
+        <b>Koi khabar nahi mili</b>
+        <p>Feed connect nahi hua — internet check karein ya Refresh dabayein.</p>
+      </div>
+      <div class="note">Khabrein Google News ke public RSS se aati hain. Browser se seedha feed na mile to page last saved list dikhata hai.</div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about">
+    <div class="page-head">
+      <div>
+        <div class="eyebrow">Data kahan se aaya</div>
+        <h1 data-en="Sources &amp; notes">Source &amp; notes</h1>
+        <p class="sub">Har aankda ka source saaf-saaf — aur kya cheez aapke apne bharne ki hai.</p>
+      </div>
+    </div>
+    <div class="grid g-2">
+      <div class="card">
+        <h3>Sources</h3>
+        <p class="hint">20 November 2026 ko check kiye</p>
+        <div class="dl">
+          <div class="k">Matdata list</div><div class="v">Nirvachak Namavali 2026 S07 Haryana — Vidhan Sabha 50 Hansi, bhag 124, SIR draft roll revision-1, 39 prishth (aapki di hui PDF)</div>
+          <div class="k">Panchayat</div><div class="v">Hisar district GP list, Gram Panchayat directory</div>
+          <div class="k">Chunav 2024</div><div class="v">Election Commission of India ke statistical report</div>
+          <div class="k">School</div><div class="v">UDISE+ — GMS Dhani Thakria (06120402702)</div>
+          <div class="k">Khabrein</div><div class="v">Google News RSS</div>
+          <div class="k">Mausam</div><div class="v">Open-Meteo</div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Kya sach hai, kya aap bharenge</h3>
+        <p class="hint">Saaf-saaf baat</p>
+        <div class="dl">
+          <div class="k">PDF se</div><div class="v">1,071 matdata ke naam, ghar number, pita/pati, umar, ling, EPIC</div>
+          <div class="k">Public record</div><div class="v">Panchayat code, ward, MLA/MP, 2024 ke vote, school ka data</div>
+          <div class="k">Aap bharenge</div><div class="v">Ward members ke naam, gaon-level vote record, naye member</div>
+          <div class="k">Auto update</div><div class="v">Khabrein (5 min), mausam (10 min), clock (live)</div>
+        </div>
+        <div class="note warn">Matdata list scan se padh kar banayi gayi hai. 1,071 naam aur serial 1–1,071 poore hain, lekin kuch naam, EPIC ya ling (purush/mahila) mein chhoti galti ho sakti hai — list se ginti 571 purush / 500 mahila aati hai, jabki namavali ka sarkari total 563 / 508 hai. Jo row galat lage use “Edit” se theek kar dein. Ye 2026 ka SIR draft roll (prakashit 31-07-2026) hai.</div>
+        <div class="note ok">Aapka saara edit sirf isi browser mein (localStorage) save hota hai — kisi server par nahi jaata. Backup lena ho to “↓ Backup” dabayein.</div>
+      </div>
+    </div>
+    <footer>
+      <span>Dhani Thakarian Gram Portal · 2026 namavali · <b style="color:var(--brand)">build v6</b> · 20 Nov 2026</span>
+      <span class="mono">Hansi-I · Hisar · Haryana · PIN 125033</span>
+    </footer>
+  </section>
+
+</main>
+
+<!-- modal -->
+<dialog id="modal">
+  <form id="member-form" method="dialog">
+    <div class="dlg-head">
+      <h3 id="modal-title">Member jodein</h3>
+      <button type="button" class="icon-btn" id="modal-close" aria-label="Close">&times;</button>
+    </div>
+    <div class="dlg-body">
+      <div class="frm">
+        <label class="f wide">Naam *<input type="text" id="m-name" required placeholder="poora naam"></label>
+        <label class="f wide">Pita / pati ka naam<input type="text" id="m-rel" placeholder="rishtedar ka naam"></label>
+        <label class="f">Ghar / makan no.<input type="text" id="m-house" placeholder="jaise 39"></label>
+        <label class="f">Umar<input type="number" id="m-age" min="0" max="120" placeholder="umar"></label>
+        <label class="f">Ling<select id="m-g"><option value="M">Purush</option><option value="F">Mahila</option></select></label>
+        <label class="f">EPIC number<input type="text" id="m-epic" placeholder="HR/08/72/…"></label>
+        <label class="f wide">Note (optional)<input type="text" id="m-note" placeholder="jaise: panchayat member, naya voter"></label>
+      </div>
+      <div class="note info" id="modal-note" style="display:none"></div>
+    </div>
+    <div class="dlg-foot">
+      <button type="button" class="btn" id="modal-cancel">Cancel</button>
+      <button type="submit" class="btn primary" id="modal-save">Save</button>
+    </div>
+  </form>
+</dialog>
+
+<div class="toast" id="toast"></div>
+<script>
+'use strict';
+
+/* =========================================================================
+   Dhani Thakarian Gram Portal
+   Data: Nirvachak Namavali 2002 (bhag 95) + public records + aapka data
+   ========================================================================= */
+
+const VOTERS_RAW = [[1, "1", "होशियार सिंह", "पिता", "चंद्र सिंह", "M", 73, "HR/08/72/0282003"], [2, "1", "प्यारे लाल", "पिता", "चंद्र सिंह", "M", 69, "HR/08/72/0282005"], [3, "1", "फूल मती", "पति", "प्यारे लाल", "F", 67, "HR/08/72/0282006"], [4, "1", "चमेली", "पति", "होशियार सिंह", "F", 63, "HR/08/72/0282004"], [5, "1", "रामी", "पति", "भले राम", "F", 61, "HR/08/72/0282008"], [6, "1", "सुनील कुमार", "पिता", "प्यारे लाल", "M", 44, "HWV1641224"], [7, "1", "अनिल कुमार", "पिता", "प्यारे लाल", "M", 42, "HWV1217751"], [8, "1", "जय भगवान", "पिता", "होशियार सिंह", "M", 42, "HWV1217769"], [9, "1", "सरस्वती", "पति", "सुनील कुमार", "F", 39, "NZR0536516"], [10, "1", "संदीप", "पिता", "होशियार सिंह", "M", 37, "NZR0229294"], [11, "1", "निर्मला", "पति", "अनिल कुमार", "F", 37, "NZR0536508"], [12, "1", "शमशेर", "पिता", "भले राम", "M", 35, "NZR0229286"], [13, "1", "सुनीता", "पति", "संदीप", "F", 34, "NZR0491712"], [14, "1", "मंजू देवी", "पति", "जयभगवान", "F", 35, "NZR0229302"], [15, "01", "सुनीता", "पति", "सोनू", "F", 34, "NZR1306893"], [16, "1", "संजय कुमार", "पिता", "भले राम", "M", 33, "NZR0637900"], [17, "01", "रानी देवी", "पति", "शमशेर", "F", 31, "NZR0685859"], [18, "001", "कंचन राऊत", "पति", "सोनू", "F", 30, "NZR1414002"], [19, "1", "एकम देवी", "पति", "सचिन", "F", 26, "NZR1567049"], [20, "1", "रीना", "पति", "संजय", "F", 28, "NZR1070242"], [21, "1", "हर्षित", "पिता", "वेद प्रकाश", "M", 28, "NZR1046648"], [22, "2", "अंगूरी", "पति", "राम सरूप", "F", 73, "HR/08/72/0282010"], [23, "2", "सुरेश", "पिता", "राम सरूप", "M", 57, "HR/08/72/0282011"], [24, "2", "राज बाला", "पति", "सुरेश", "F", 51, "HR/08/72/0282584"], [25, "02", "आशु", "पिता", "सुरेश", "M", 30, "NZR0666776"], [26, "2", "इंशु", "पिता", "सुरेश कुमार", "M", 27, "NZR1046655"], [27, "02", "संकित", "पिता", "ईश्वर", "M", 23, "NZR1296821"], [28, "3", "जानेद", "पति", "रामेश्वर", "F", 78, "HR/08/72/0282013"], [29, "3", "बलजीत", "पिता", "रामेश्वर", "M", 55, "HR/08/72/0282014"], [30, "3", "सुनीता", "पति", "बलजीत", "F", 53, "HR/08/72/0282015"], [31, "3", "बलबीर", "पिता", "रामेश्वर", "M", 53, "HR/08/72/0282016"], [32, "3", "सुमित्रा", "पति", "बलबीर", "F", 47, "HWV1731512"], [33, "03", "नरेन्द्र", "पिता", "बलजीत", "M", 35, "NZR0258897"], [34, "3", "मोतिका", "पति", "नरेन्द्र", "F", 30, "NZR0601195"], [35, "03", "सुरेश कुमार", "पिता", "बलजीत", "M", 30, "NZR0491720"], [36, "4", "रण सिंह", "पिता", "मामन", "M", 78, "HR/08/72/0282017"], [37, "4", "फूली", "पति", "रण सिंह", "F", 73, "HR/08/72/0282018"], [38, "4", "दलबीर", "पिता", "रण सिंह", "M", 57, "HR/08/72/0282019"], [39, "4", "सुनीता", "पति", "दलबीर", "F", 53, "HR/08/72/0282020"], [40, "4", "सतबीर", "पिता", "रण सिंह", "M", 53, "HR/08/72/0282021"], [41, "4", "धन पत्ती", "पति", "सतबीर", "F", 50, "HR/08/72/0282585"], [42, "4", "सोमबीर", "पिता", "दलबीर", "M", 35, "NZR0289694"], [43, "4", "ओमबीर सिंह", "पिता", "दलबीर", "M", 33, "NZR0536524"], [44, "4", "प्रियंका", "पति", "सोमबीर", "F", 32, "NZR1046671"], [45, "04", "नरेन्द्र", "पिता", "सतबीर यादव", "M", 30, "NZR0491738"], [46, "4", "वर्षा देवी", "पति", "ओमबीर", "F", 30, "NZR1046663"], [47, "04", "अमित", "पिता", "सतबीर", "M", 27, "NZR1178763"], [48, "5", "सतरा", "पति", "माडू", "F", 63, "HR/08/72/0282024"], [49, "05", "सतीश कुमार", "पिता", "मारू राम", "M", 47, "NZR1327543"], [50, "05", "पिंकी", "पति", "सतीश", "F", 40, "HWV1835347"], [51, "05", "कर्तव्य", "पिता", "सतीश कुमार", "M", 21, "NZR1394311"], [52, "6", "ओम पत्ती", "पति", "शेर सिंह", "F", 66, "HR/08/72/0282026"], [53, "6", "सुरेश", "पिता", "शेर सिंह", "M", 52, "HR/08/72/0282027"], [54, "6", "धर्मेन्द्र", "पिता", "शेर सिंह", "M", 51, "NZR0647438"], [55, "6", "रेशनी", "पति", "सुरेश", "F", 49, "HR/08/72/0282586"], [56, "6", "सुमन", "पति", "धर्मेन्द्र", "F", 49, "NZR0647446"], [57, "06", "अनिल कुमार", "पिता", "धर्मेन्द्र", "M", 28, "NZR0689364"], [58, "6", "सचिन यादव", "पिता", "धर्मेन्द्र", "M", 26, "NZR1054428"], [59, "6", "दीपक", "पिता", "सुरेश कुमार", "M", 25, "NZR1070549"], [60, "7", "प्रकाश पत्ती", "पति", "उमराव सिंह", "F", 73, "HR/08/72/0282029"], [61, "7", "सुनील", "पिता", "उमराव सिंह", "M", 49, "HR/08/72/0282589"], [62, "07", "निर्मला", "पति", "सुनील", "F", 41, "HWV1835719"], [63, "7", "सुमन रानी", "पति", "अनिल कुमार", "F", 34, "NZR0637710"], [64, "7", "अनिल कुमार", "पिता", "उमराव सिंह", "M", 33, "NZR0501031"], [65, "8", "राज पत्ती", "पति", "भगत सिंह", "F", 74, "NZR1475284"], [66, "8", "मामन", "पिता", "नन्द लाल", "M", 73, "HR/08/72/0282031"], [67, "8", "केला", "पति", "मामन", "F", 63, "HR/08/72/0282032"], [68, "8", "राज कुमार", "पिता", "नन्द लाल", "M", 57, "HR/08/72/0282455"], [69, "8", "कृष्णा", "पति", "राज कुमार", "F", 55, "HR/08/72/0282036"], [70, "08", "मुकेश कुमार", "पिता", "मामन राम", "M", 41, "HWV1617794"], [71, "08", "जसबीर", "पिता", "भगत राम", "M", 40, "HWV1618685"], [72, "08", "सुरेश कुमार", "पिता", "मामन राम", "M", 39, "HWV1618693"], [73, "8", "रेखा रानी", "पति", "जसबीर", "F", 40, "NZR0360230"], [74, "08", "अजमेर सिंह", "पिता", "भगत राम", "M", 38, "HWV1835586"], [75, "08", "कविता रानी", "पति", "मुकेश कुमार", "F", 34, "NZR1178730"], [76, "8", "मनदीप", "पिता", "राजकुमार", "M", 31, "NZR0437244"], [77, "08", "रितु", "पति", "अजमेर सिंह", "F", 28, "NZR0999839"], [78, "8", "संदीप", "पिता", "राज कुमार", "M", 26, "NZR1070259"], [79, "9", "कर्ण सिंह", "पिता", "श्री चंद", "M", 68, "HR/08/72/0282040"], [80, "9", "रत्ना", "पति", "ईश्वर", "F", 63, "HR/08/72/0282039"], [81, "9", "दलीप सिंह", "पिता", "श्री चंद", "M", 60, "NZR1550169"], [82, "9", "रववीर", "पिता", "श्री चंद", "M", 58, "HR/08/72/0282044"], [83, "9", "बाला", "पति", "दलीप", "F", 57, "HR/08/72/0282043"], [84, "9", "धर्मवीर", "पिता", "श्री चंद", "M", 53, "HR/08/72/0282046"], [85, "9", "कवीता", "पति", "धर्मवीर", "F", 51, "HR/08/72/0282047"], [86, "9", "सतीश कुमार", "पिता", "ईश्वर सिंह", "M", 42, "HWV1281500"], [87, "09", "रमेश", "पिता", "कर्ण सिंह", "M", 37, "NZR0999847"], [88, "09", "संजय कुमार", "पिता", "दलीप सिंह", "M", 34, "NZR0360248"], [89, "9", "नरेश कुमार", "पिता", "ईश्वर सिंह", "M", 32, "NZR0360263"], [90, "9", "दिनेश कुमार", "पिता", "ईश्वर", "M", 31, "NZR0360255"], [91, "09", "विक्रम", "पिता", "कर्ण सिंह", "M", 32, "NZR0700625"], [92, "9", "नविशा औरेरा", "पति", "नरेश कुमार", "F", 31, "NZR1326099"], [93, "9", "सोमबीर", "पिता", "दलीप सिंह", "M", 30, "NZR0437251"], [94, "9", "मोतिका", "पति", "सतीश कुमार", "F", 29, "NZR1110295"], [95, "09", "प्रियंका", "पति", "रमेश", "F", 26, "NZR0999854"], [96, "09", "पूजा", "पति", "संजय कुमार", "F", 26, "NZR1174325"], [97, "09", "सोनू", "पति", "विक्रम", "F", 26, "NZR1356005"], [98, "9", "पूजा", "पिता", "धर्मबीर", "F", 25, "NZR1325356"], [99, "09", "संदीप", "पिता", "रववीर", "M", 24, "NZR1174333"], [100, "9", "अमन", "पिता", "धर्मवीर", "M", 24, "NZR1326107"], [101, "9", "प्रियंका राणी", "पिता", "रववीर", "F", 22, "NZR1327790"], [102, "10", "राज बीर", "पिता", "रती राम", "M", 61, "HR/08/72/0282052"], [103, "10", "राम सरूप", "पिता", "रती राम", "M", 57, "HR/08/72/0282054"], [104, "10", "शिमला", "पति", "राम सरूप", "F", 55, "HR/08/72/0282055"], [105, "10", "हमा सिंह", "पिता", "रती राम", "M", 54, "HR/08/72/0282056"], [106, "10", "सुनीता", "पति", "हमा सिंह", "F", 53, "HWV1731520"], [107, "10", "संदीप कुमार", "पिता", "राजबीर सिंह", "M", 29, "NZR0637918"], [108, "10", "रेनु", "पति", "संदीप कुमार", "F", 27, "NZR1142389"], [109, "10", "प्रवीन", "पिता", "रामसरूप", "M", 28, "NZR0994848"], [110, "10", "सोमबीर", "पिता", "हमसिंह", "M", 26, "NZR1110287"], [111, "10", "रितु", "पति", "प्रवीन", "F", 25, "NZR1325422"], [112, "10", "सुखबीर", "पिता", "हरवंसिंह", "M", 23, "NZR1493279"], [113, "10बी", "कुलदीप", "पिता", "धर्मपाल", "M", 41, "NZR1142082"], [114, "11", "अशोक", "पिता", "सुरज मल", "M", 36, "NZR0122028"], [115, "11", "राम लाल", "पिता", "सुरजमल", "M", 32, "NZR0360271"], [116, "11", "संतोष", "पति", "रामलाल", "F", 25, "NZR1142371"], [117, "12", "कृष्ण", "पिता", "रणवीर", "M", 73, "HR/08/72/0282064"], [118, "12", "धन सिंह", "पिता", "रणवीर", "M", 68, "HR/08/72/0282066"], [119, "12", "महेन्द्र", "पिता", "रणबीर", "M", 63, "HR/08/72/0282068"], [120, "12", "लाली", "पति", "धन सिंह", "F", 63, "HR/08/72/0282067"], [121, "12", "मूर्ति", "पति", "कृष्ण", "F", 63, "HR/08/72/0282065"], [122, "12", "भारत सिंह यादव", "पिता", "रणबीर सिंह", "M", 64, "NZR0601229"], [123, "12", "सुभे सिंह", "पिता", "रणवीर सिंह", "M", 59, "HWV1161538"], [124, "12", "कैलाश", "पति", "महेन्द्र", "F", 57, "HWV1731538"], [125, "12", "अनिता", "पति", "सुभे सिंह", "F", 53, "HR/08/72/0282069"], [126, "12", "अनिता", "पति", "भरत सिंह", "F", 50, "HWV1790682"], [127, "12", "नरेन्द्र कुमार", "पिता", "धन सिंह", "M", 44, "HWV1731546"], [128, "12", "प्रवीण कुमार", "पिता", "कृष्ण कुमार", "M", 44, "HWV1161579"], [129, "12", "सुनीता", "पति", "प्रवीण कुमार", "F", 44, "NZR0536565"], [130, "12", "सरोज", "पति", "नरेन्द्र", "F", 40, "NZR0243030"], [131, "12", "विरेन्द्र कुमार", "पिता", "धन सिंह", "M", 39, "HWV1836261"], [132, "12", "कमलेश", "पति", "अनुज कुमार", "F", 39, "NZR0536540"], [133, "12", "अनुज", "पिता", "किशन", "M", 38, "NZR0536557"], [134, "12", "सीमा देवी", "पति", "अंकुश यादव", "F", 37, "NZR1046689"], [135, "12", "सरिता", "पति", "विरेन्द्र", "F", 36, "NZR0243022"], [136, "12", "विपिन यादव", "पिता", "भारत सिंह", "M", 36, "NZR0601211"], [137, "12", "नितिन कुमार", "पिता", "भरत सिंह", "M", 34, "NZR0360289"], [138, "12", "अंकुश यादव", "पिता", "सुभे सिंह", "M", 31, "NZR0360297"], [139, "12", "निशिल", "पिता", "महेन्द्र सिंह", "M", 28, "NZR0666800"], [140, "012", "बीरेंद", "पिता", "बलबीर सिंह", "M", 28, "NZR1337161"], [141, "012", "सुनील", "पिता", "बलबीर", "M", 25, "NZR1328368"], [142, "13", "सुशीला", "पति", "सतबीर", "F", 59, "NZR1222090"], [143, "13", "गजा नन्द", "पिता", "सुरज पाल", "M", 50, "HR/08/72/0282591"], [144, "13", "नीलम", "पति", "गजानन्द", "F", 42, "HWV1283670"], [145, "13", "राज कुमार", "पिता", "सतपाल", "M", 42, "HWV1283688"], [146, "13", "किरण", "पति", "राजकुमार", "F", 37, "HWV1835545"], [147, "13/1", "भंती", "पति", "पृथ्वी सिंह", "F", 71, "HR/08/72/0282076"], [148, "13/1", "दिनेश कुमार", "पिता", "पृथ्वी सिंह", "M", 53, "NZR0174771"], [149, "13/1", "रमेश", "पिता", "पृथ्वी", "M", 50, "HR/08/72/0282592"], [150, "13/1", "सुनीता", "पति", "दिनेश कुमार", "F", 49, "HWV1850122"], [151, "13/1", "अनिता", "पति", "रमेश कुमार", "F", 47, "HWV1731553"], [152, "13/1", "नवीन कुमार", "पिता", "पृथ्वी सिंह", "M", 41, "HWV1835370"], [153, "13/1", "अनिता रानी", "पति", "नवीन", "F", 35, "NZR0033944"], [154, "13/1", "अर्पित यादव", "पिता", "रमेश", "M", 25, "NZR1076017"], [155, "13/2", "चमेली", "पति", "लाजपत", "F", 73, "HR/08/72/0282079"], [156, "13/2", "राजेन्द्र", "पिता", "लाजपत", "M", 53, "HR/08/72/0282080"], [157, "13/2", "कोशल्या देवी", "पति", "राजेन्द्र कुमार", "F", 48, "HWV1282557"], [158, "13/2", "सुरेन्द्र", "पिता", "लाज पत", "M", 48, "HR/08/72/0282593"], [159, "13/2", "सुशील देवी", "पति", "सुरेन्द्र कुमार", "F", 46, "HWV1282565"], [160, "13/2", "सुरेशकुमार", "पिता", "लाजपत", "M", 45, "HR/08/72/0282717"], [161, "13/2", "मंजू देवी", "पति", "सुरेश कुमार", "F", 43, "HWV1282573"], [162, "13/02", "अश्वनी", "पिता", "राजेन्द्र सिंह", "M", 29, "NZR0689356"], [163, "13/2", "मनोज", "पिता", "सुरेन्द्र कुमार", "M", 28, "NZR0966549"], [164, "13/2", "अनूप", "पिता", "राजेन्द्र", "M", 28, "NZR0966614"], [165, "13/2", "पूनम", "पति", "मनोज", "F", 26, "NZR1490226"], [166, "13/2", "पूजा", "पति", "अश्वनी", "F", 25, "NZR1142363"], [167, "14", "बलवान", "पिता", "रूप चंद", "M", 58, "HR/08/72/0282083"], [168, "14", "सुभे सिंह", "पिता", "रूप चंद", "M", 54, "HR/08/72/0282085"], [169, "14", "रोशनी", "पति", "बलवान", "F", 53, "HR/08/72/0282084"], [170, "14", "चमेली", "पति", "सुभे सिंह", "F", 51, "HR/08/72/0282086"], [171, "14", "राजेन्द्र", "पिता", "बलवान", "M", 33, "NZR0360305"], [172, "14", "नरेन्द्र कुमार", "पिता", "बलवान सिंह", "M", 28, "NZR0994863"], [173, "16", "रोशनी", "पति", "शेर सिंह", "F", 56, "HR/08/72/0282088"], [174, "16", "नरेश कुमार", "पिता", "शेर सिंह", "M", 41, "HWV1617117"], [175, "16", "मुकेश", "पिता", "शेर सिंह", "M", 36, "NZR0491753"], [176, "16", "मंजु रानी", "पति", "नरेश कुमार", "F", 36, "NZR0491746"], [177, "16", "सुनीता", "पति", "मुकेश", "F", 34, "NZR0491761"], [178, "16/1", "दरिया सिंह", "पिता", "प्रहलाद", "M", 79, "HR/08/72/0282089"], [179, "16/1", "शकुंतला", "पति", "दरिया सिंह", "F", 63, "HR/08/72/0282090"], [180, "16/1", "सीता राम", "पिता", "दरिया सिंह", "M", 53, "NZR1307669"], [181, "16/1", "राजपति", "पति", "सीता राम", "F", 46, "HWV1731561"], [182, "16/1", "लाल", "पिता", "दरिया सिंह", "M", 44, "HWV1217975"], [183, "16/1", "कमलेश", "पति", "सतपाल", "F", 42, "HWV1731579"], [184, "16/1", "राजेश", "पिता", "दरिया सिंह", "M", 42, "HWV1217868"], [185, "16/1", "सुनीता", "पति", "राजेश", "F", 37, "NZR0122036"], [186, "16/1", "शुभम", "पिता", "सीता राम", "M", 26, "NZR1046697"], [187, "16/1", "अंकित", "पिता", "सतपाल", "M", 23, "NZR1316074"], [188, "17", "उदे राम", "पिता", "चुनी", "M", 73, "HR/08/72/0282097"], [189, "17", "मुनि", "पति", "उदे राम", "F", 65, "HR/08/72/0282098"], [190, "17", "सुनीता", "पति", "ओम प्रकाश", "F", 61, "HR/08/72/0282100"], [191, "17", "ईश्वर", "पिता", "उदे राम", "M", 57, "HR/08/72/0282099"], [192, "17", "ओम प्रकाश", "पिता", "उदे राम", "M", 56, "HR/08/72/0282101"], [193, "17", "जय भगवान", "पिता", "उदे राम", "M", 54, "HR/08/72/0282102"], [194, "17", "सुरेन्द्र", "पिता", "उदे राम", "M", 53, "HR/08/72/0282103"], [195, "17", "संतोष कुमारी", "पति", "ईश्वर", "F", 54, "NZR0621763"], [196, "17", "सीता", "पति", "सुरेन्द्र", "F", 46, "NZR0258947"], [197, "17", "अनिता", "पति", "जय भगवान", "F", 44, "HWV1790690"], [198, "17", "हरी कृष्ण", "पिता", "उदेराम", "M", 36, "NZR0122044"], [199, "17", "सोनू कुमार", "पिता", "ओम प्रकाश", "M", 34, "NZR0259036"], [200, "17", "जितेन्द्र कुमार", "पिता", "ईश्वर", "M", 34, "NZR0259085"], [201, "17", "दर्शना", "पति", "हरी कृष्ण", "F", 31, "NZR0637702"], [202, "17", "आरजू", "पति", "सोनू कुमार", "F", 30, "NZR1046713"], [203, "17", "देवेन्द्र", "पिता", "ईश्वर सिंह", "M", 30, "NZR0491779"], [204, "017", "प्रीतम", "पिता", "कृष्ण लाल", "M", 29, "NZR1328319"], [205, "17/1", "मीना", "पति", "हीरालाल", "F", 39, "NZR0122069"], [206, "17/1", "हीरा लाल", "पिता", "उदे राम", "M", 39, "NZR0122051"], [207, "18", "अमर सिंह", "पिता", "प्रहलाद", "M", 78, "HR/08/72/0282092"], [208, "18", "कृष्ण", "पिता", "अमर सिंह", "M", 54, "HR/08/72/0282094"], [209, "18", "सतरा", "पति", "कृष्ण", "F", 51, "HR/08/72/0282095"], [210, "18", "सत्य नारायण", "पिता", "अमर सिंह", "M", 47, "HWV1217926"], [211, "18", "कविता", "पति", "सत्यनारायण", "F", 46, "HWV1618164"], [212, "18", "सुनील कुमार", "पिता", "कृष्ण कुमार", "M", 30, "NZR0685867"], [213, "19", "अनचाई", "पति", "कृपा राम", "F", 68, "HR/08/72/0282105"], [214, "19", "राम फल", "पिता", "कृपा राम", "M", 53, "HR/08/72/0282106"], [215, "19", "रामकुमार", "पिता", "कृपाराम", "M", 51, "NZR1316058"], [216, "19", "कमलेश", "पति", "रामफल", "F", 49, "HR/08/72/0282705"], [217, "19", "रमेश", "पिता", "कृपाराम", "M", 47, "HR/08/72/0282706"], [218, "19", "सुनीता", "पति", "राम कुमार", "F", 45, "HR/08/72/0282707"], [219, "19", "पूनम", "पति", "रमेश कुमार", "F", 42, "NZR0122085"], [220, "19", "प्रीती", "पति", "रामेश्वर", "F", 40, "NZR0122077"], [221, "19", "अमित", "पिता", "उमेद सिंह", "M", 29, "NZR1328285"], [222, "19", "राजेश", "पिता", "जगबीर", "M", 22, "NZR1343631"], [223, "19/1", "मांगेराम", "पिता", "पतराम", "M", 56, "HR/08/72/0282680"], [224, "19/1", "मूनी", "पति", "मांगे राम", "F", 54, "HR/08/72/0282109"], [225, "19/1", "सुनील कुमार", "पिता", "मांगे राम", "M", 37, "NZR0122093"], [226, "19/1", "संदीप", "पिता", "मांगेराम", "M", 36, "NZR0122101"], [227, "19/1", "बंटी देवी", "पति", "सुनील कुमार", "F", 36, "NZR0437269"], [228, "19/1", "सुमन देवी", "पति", "संदीप", "F", 33, "NZR0437277"], [229, "20", "हवा सिंह", "पिता", "श्यो चंद", "M", 73, "HR/08/72/0282111"], [230, "20", "कमला", "पति", "हवा सिंह", "F", 69, "HR/08/72/0282112"], [231, "20", "सुभे सिंह", "पिता", "श्यो चंद", "M", 65, "HR/08/72/0282113"], [232, "20", "संतोष", "पति", "सुभे सिंह", "F", 61, "HR/08/72/0282114"], [233, "20", "राम निवास", "पिता", "श्यो चंद", "M", 53, "HR/08/72/0282115"], [234, "20", "रोशनी", "पति", "राम निवास", "F", 51, "HR/08/72/0282116"], [235, "20", "पिंकी", "पति", "संदीप", "F", 36, "NZR0122119"], [236, "20", "कुलदीप", "पिता", "सुभे सिंह", "M", 36, "NZR0122135"], [237, "20", "पूजा", "पति", "कुलदीप", "F", 35, "NZR0122127"], [238, "20", "नरेश कुमार", "पिता", "रामनिवास", "M", 32, "NZR0360313"], [239, "20", "अनूप यादव", "पिता", "हवा सिंह", "M", 31, "NZR0491795"], [240, "20", "प्रमिला", "पति", "अनूप यादव", "F", 29, "NZR1070267"], [241, "21", "राम चंद", "पिता", "मनी राम", "M", 61, "HR/08/72/0282120"], [242, "21", "सरु राम", "पिता", "मणि राम", "M", 62, "NZR1419977"], [243, "21", "किताबो", "पति", "राम चंद", "F", 59, "HR/08/72/0282121"], [244, "21", "धर्मवीर", "पिता", "मनी राम", "M", 58, "HR/08/72/0282123"], [245, "21", "कमला", "पति", "धर्मवीर", "F", 56, "HR/08/72/0282124"], [246, "21", "उमेद", "पिता", "मनी राम", "M", 55, "HR/08/72/0282125"], [247, "21", "राज बाला", "पति", "उमेद", "F", 52, "HR/08/72/0282594"], [248, "21", "ओम प्रकाश", "पिता", "सीता राम", "M", 52, "NZR1391317"], [249, "21", "रोशनी", "पति", "सन्नू राम", "F", 51, "HWV1616945"], [250, "21", "इन्द्रजीत सिंह", "पिता", "मनीराम", "M", 49, "NZR1070275"], [251, "21", "सतीश कुमार", "पिता", "मनी राम", "M", 41, "HWV1850106"], [252, "21", "रेखा", "पति", "सतीश", "F", 39, "NZR0491803"], [253, "21", "पवन कुमार", "पिता", "राम चन्द", "M", 36, "NZR0259226"], [254, "21", "कुलदीप", "पिता", "रामचन्द्र", "M", 34, "NZR0259184"], [255, "21", "अरुण", "पिता", "सन्नू राम", "M", 28, "NZR0666818"], [256, "21", "शुभम", "पिता", "इन्द्रजीत सिंह", "M", 28, "NZR1174358"], [257, "21", "प्रीतम", "पिता", "धर्मवीर", "M", 26, "NZR1151240"], [258, "21", "प्रीति", "पति", "सुनील", "F", 27, "NZR1337229"], [259, "22", "राम सरूप", "पिता", "मंगल", "M", 73, "HR/08/72/0282127"], [260, "22", "धनी", "पति", "राम सरूप", "F", 69, "HR/08/72/0282128"], [261, "22", "मही पाल", "पिता", "राम सरूप", "M", 52, "HR/08/72/0282131"], [262, "22", "सुदेश", "पति", "राजेन्द्र", "F", 44, "NZR0536599"], [263, "22", "राजेन्द्र", "पिता", "रामसरूप", "M", 43, "HWV1756329"], [264, "22", "कलावती", "पति", "महीपाल", "F", 42, "HWV1756311"], [265, "22", "विपिन", "पिता", "महीपाल", "M", 25, "NZR1142355"], [266, "23", "हर चंद", "पिता", "मंगल", "M", 75, "HR/08/72/0282132"], [267, "23", "बाला", "पति", "सत्यवान", "F", 56, "HR/08/72/0282134"], [268, "23", "कांता", "पति", "शेर सिंह", "F", 53, "HR/08/72/0282136"], [269, "23", "मनीषा", "पति", "सत्यनारायण", "F", 35, "NZR0536607"], [270, "23", "सत्य नारायण", "पिता", "सत्वान", "M", 33, "NZR0437293"], [271, "23", "अनिशा", "पति", "नरेश कुमार", "F", 31, "NZR0536615"], [272, "23", "भूप सिंह", "पिता", "शेर सिंह", "M", 33, "NZR0360321"], [273, "23", "नरेश कुमार", "पिता", "सत्यवान", "M", 32, "NZR0437285"], [274, "24", "जुग लाल", "पिता", "मंगल", "M", 93, "HR/08/72/0282138"], [275, "24", "राज पाल", "पिता", "जुग लाल", "M", 58, "HR/08/72/0282140"], [276, "24", "कमला", "पति", "राज पाल", "F", 55, "HR/08/72/0282141"], [277, "24", "सुरेश", "पिता", "जुगलाल", "M", 49, "NZR1327550"], [278, "24", "नवीता", "पति", "सुरेश कुमार", "F", 42, "HWV1790641"], [279, "24", "सुनील कुमार", "पिता", "राजपाल", "M", 32, "NZR0637736"], [280, "24", "मनोज यादव", "पिता", "राजपाल", "M", 30, "NZR0637728"], [281, "25", "सुरज भान", "पिता", "नन्यू राम", "M", 73, "NZR0625640"], [282, "25", "दर्शना", "पति", "प्रेम", "F", 68, "HR/08/72/0282148"], [283, "25", "ज्ञानी", "पिता", "नन्यू राम", "M", 63, "HR/08/72/0282149"], [284, "25", "बीर सिंह", "पिता", "नन्यू राम", "M", 59, "HR/08/72/0282151"], [285, "25", "गुडडी", "पति", "बीर सिंह", "F", 58, "HR/08/72/0282152"], [286, "25", "कमलेश", "पति", "राम फल", "F", 53, "HR/08/72/0282154"], [287, "25", "केला", "पति", "ज्ञानी", "F", 53, "HR/08/72/0282150"], [288, "25", "रामफल", "पिता", "नन्यू राम", "M", 49, "HWV1278563"], [289, "25", "जय सिंह", "पिता", "सुरजभान", "M", 44, "HWV1161710"], [290, "25", "मुकेश", "पिता", "प्रेम सिंह", "M", 43, "HWV1618131"], [291, "25", "मंजु", "पति", "मुकेश", "F", 42, "HWV1618149"], [292, "25", "मंजु", "पति", "जय सिंह", "F", 42, "NZR0122143"], [293, "25", "नरेश", "पिता", "प्रेम कुमार", "M", 41, "HWV1790633"], [294, "25", "सोनू", "पिता", "ज्ञानी", "M", 33, "NZR0437301"], [295, "25", "पंकज", "पिता", "बीर सिंह", "M", 30, "NZR0437319"], [296, "25", "मोनू", "पिता", "रामफल", "M", 29, "NZR1151257"], [297, "25", "कुलदीप", "पिता", "बीर सिंह", "M", 29, "NZR1046739"], [298, "25", "नेहा", "पति", "मोनू", "F", 27, "NZR1408590"], [299, "25", "विपिन", "पिता", "मुकेश", "M", 23, "NZR1174341"], [300, "26", "सतबीर", "पिता", "शेर सिंह", "M", 66, "HR/08/72/0282158"], [301, "26", "जयवीर सिंह", "पिता", "शेर सिंह", "M", 61, "NZR0685776"], [302, "26", "बिजेंद्र", "पिता", "शेर सिंह", "M", 58, "HR/08/72/0282161"], [303, "26", "जगबीर सिंह", "पिता", "शेर सिंह", "M", 57, "HR/08/72/0282163"], [304, "26", "संतोष", "पति", "जग बीर", "F", 56, "HR/08/72/0282160"], [305, "26", "मुकेश", "पति", "जगबीर", "F", 55, "HR/08/72/0282164"], [306, "26", "किरण", "पति", "बिजेन्द्र", "F", 55, "HR/08/72/0282162"], [307, "26", "प्रवीण", "पति", "सुभाष", "F", 52, "HWV1218015"], [308, "26", "सुभाष", "पिता", "शेर सिंह", "M", 49, "HR/08/72/0282165"], [309, "26", "संदीप", "पिता", "सतबीर", "M", 34, "NZR0229310"], [310, "26", "सुनील कुमार", "पिता", "जगबीर सिंह", "M", 35, "NZR0229328"], [311, "26", "सीमा देवी", "पति", "सुनील कुमार", "F", 35, "NZR0491811"], [312, "26", "नवीन", "पिता", "बिजेन्द्र", "M", 29, "NZR1110261"], [313, "26", "विकास", "पिता", "सुभाष", "M", 29, "NZR1174366"], [314, "26", "नरेन्द्र", "पिता", "बिजेन्द्र", "M", 27, "NZR1046747"], [315, "26", "अंकित", "पिता", "जगबीर", "M", 26, "NZR1070291"], [316, "28", "चंद्र भान", "पिता", "अमी लाल", "M", 71, "HR/08/72/0282170"], [317, "28", "मेवा", "पति", "चंद्र भान", "F", 68, "HR/08/72/0282171"], [318, "28", "जगदीश", "पिता", "अमी लाल", "M", 63, "HR/08/72/0282172"], [319, "28", "रोशनी", "पति", "जगदीश", "F", 61, "HR/08/72/0282173"], [320, "28", "सुशीला", "पति", "राम प्रसाद", "F", 51, "HR/08/72/0282177"], [321, "28", "सुरेश", "पिता", "मदन", "M", 51, "HR/08/72/0282178"], [322, "28", "बब्बी", "पति", "सुरेश", "F", 45, "HWV1731603"], [323, "28", "कुलदीप", "पिता", "चंदर भान", "M", 42, "HWV1281492"], [324, "28", "राजेश कुमार", "पिता", "जगदीश", "M", 42, "HWV1731611"], [325, "28", "राजबीर", "पिता", "हरचन्द", "M", 42, "HWV1281484"], [326, "28", "रीना", "पति", "राजबीर", "F", 41, "NZR0216523"], [327, "28", "सुमन रानी", "पति", "राजेश कुमार", "F", 35, "NZR0637744"], [328, "28", "रितु रानी", "पति", "कुलदीप सिंह", "F", 34, "NZR1174374"], [329, "28", "सिंधु", "पिता", "सुरेश कुमार", "M", 28, "NZR1109776"], [330, "28", "रीना", "पति", "दीपक", "F", 27, "NZR1174382"], [331, "28", "दीपक", "पिता", "सुरेश कुमार", "M", 26, "NZR1110220"], [332, "28", "सुमित", "पिता", "सुरेश कुमार", "M", 25, "NZR1174390"], [333, "29", "बिमला", "पति", "दलीप", "F", 78, "HR/08/72/0282180"], [334, "29", "अंगूरी", "पति", "भीम सिंह", "F", 52, "NZR0647420"], [335, "29", "सुनीता", "पति", "ओम प्रकाश", "F", 51, "HR/08/72/0282184"], [336, "29", "सुनील कुमार", "पिता", "दलीप", "M", 40, "HWV1281534"], [337, "29", "अनिल कुमार", "पिता", "दलीप सिंह", "M", 39, "HWV1748664"], [338, "29", "बबली", "पति", "सुनील कुमार", "F", 38, "NZR0637595"], [339, "29", "मोनिका", "पति", "अनिल कुमार", "F", 31, "NZR1109701"], [340, "29", "पवन कुमार", "पिता", "भीम सिंह", "M", 29, "NZR0637587"], [341, "30", "राजेश", "पिता", "मूल चंद", "M", 60, "HR/08/72/0282186"], [342, "30", "राम रती", "पति", "राजेश", "F", 57, "HR/08/72/0282187"], [343, "30", "संदीप कुमार", "पिता", "राजेश कुमार", "M", 37, "NZR0122168"], [344, "30", "मनदीप", "पिता", "राजेश", "M", 35, "NZR0122150"], [345, "30", "सुनीता देवी", "पति", "मनदीप", "F", 35, "NZR0637603"], [346, "30", "पूनम रानी", "पति", "संदीप कुमार", "F", 34, "NZR0204644"], [347, "30ए", "सुलतान", "पिता", "नन्द राम", "M", 63, "HR/08/72/0282190"], [348, "30ए", "कमला", "पति", "सुलतान", "F", 52, "HWV1790658"], [349, "30ए", "दिनेश कुमार", "पिता", "सुलतान सिंह", "M", 37, "NZR0289702"], [350, "30ए", "बबीता", "पति", "दिनेश कुमार", "F", 35, "NZR0491852"], [351, "30ए", "नरेन्द्र", "पिता", "सुलतान", "M", 33, "NZR0491845"], [352, "30ए", "कविता", "पति", "नरेन्द्र", "F", 33, "NZR0491837"], [353, "31", "अनिल", "पिता", "राजपाल", "M", 37, "NZR0229344"], [354, "31", "गीता", "पति", "अनिल", "F", 35, "NZR0229351"], [355, "32", "सुरेश", "पिता", "फकीर चंद", "M", 45, "HR/08/72/0282673"], [356, "32", "सुनीता देवी", "पति", "सुरेश कुमार", "F", 42, "HWV1748672"], [357, "32", "दिनेश मेहता", "पिता", "फकीरचंद", "M", 41, "NZR0536631"], [358, "32", "योगेश", "पिता", "सुरेश कुमार", "M", 20, "NZR1496835"], [359, "32ए", "फकीर चंद", "पिता", "गुमान", "M", 73, "HR/08/72/0282596"], [360, "32ए", "कृष्णा", "पति", "फकीर चंद", "F", 63, "HR/08/72/0282197"], [361, "32ए", "प्रेमा", "पति", "छोटू", "F", 59, "HR/08/72/0282198"], [362, "32ए", "राधा देवी", "पति", "दिनेश", "F", 38, "HWV1748680"], [363, "32ए", "विक्रम सिंह", "पिता", "छोटू राम", "M", 35, "NZR0033951"], [364, "32ए", "रवि कुमार", "पिता", "छोटू राम", "M", 35, "NZR0360339"], [365, "34", "पिंकी", "पति", "कुलदीप", "F", 34, "NZR1142264"], [366, "34", "कुलदीप", "पिता", "विजय", "M", 28, "NZR1280445"], [367, "35", "शीला", "पति", "सतबीर", "F", 59, "HR/08/72/0282213"], [368, "35", "बिमला", "पति", "जयवीर", "F", 54, "HR/08/72/0282212"], [369, "35", "सुमित्रा", "पति", "राम कुमार", "F", 53, "HR/08/72/0282209"], [370, "35", "सचिन", "पिता", "राम कुमार", "M", 38, "NZR0008706"], [371, "35", "पवन", "पिता", "जयवीर", "M", 38, "NZR0491886"], [372, "35", "सीमा", "पति", "सचिन कुमार", "F", 36, "NZR0994988"], [373, "35", "किरण", "पति", "रवि कुमार", "F", 36, "NZR0491878"], [374, "35", "रजनेश", "पिता", "सतबीर सिंह", "M", 33, "NZR0360347"], [375, "35", "पूनम", "पति", "पवन", "F", 33, "NZR0491894"], [376, "35", "पायल", "पति", "रजनीश", "F", 31, "NZR0491902"], [377, "37", "चंद्र पति", "पति", "हरि सिंह", "F", 93, "HR/08/72/0282214"], [378, "37", "बीर सिंह", "पिता", "हरि सिंह", "M", 68, "HR/08/72/0282215"], [379, "37", "लाली", "पति", "बीर सिंह", "F", 63, "HR/08/72/0282216"], [380, "37", "दलबीर", "पिता", "हरि सिंह", "M", 61, "HR/08/72/0282217"], [381, "37", "सरला", "पति", "दलबीर", "F", 58, "HR/08/72/0282218"], [382, "37", "रोहताश", "पिता", "दलबीर सिंह", "M", 36, "NZR0637678"], [383, "37", "सीमा", "पति", "रोहताश", "F", 35, "NZR1046762"], [384, "37", "महेन्द्र", "पिता", "बीर सिंह", "M", 34, "NZR0491910"], [385, "37", "मनीत रानी", "पति", "महेन्द्र", "F", 31, "NZR1457449"], [386, "37", "सोनू", "पिता", "बीर सिंह", "M", 31, "NZR0637645"], [387, "37", "रमेश कुमार", "पिता", "दलबीर सिंह", "M", 27, "NZR1046754"], [388, "39", "प्रदीप", "पिता", "जय सिंह", "M", 63, "HR/08/72/0282223"], [389, "39", "राजेश", "पिता", "जय सिंह", "M", 61, "HR/08/72/0282225"], [390, "39", "लक्ष्मी", "पति", "प्रदीप", "F", 59, "HR/08/72/0282224"], [391, "39", "जय देव", "पिता", "जय सिंह", "M", 57, "HR/08/72/0282227"], [392, "39", "सतरा", "पति", "जय देव", "F", 55, "HR/08/72/0282228"], [393, "39", "कमला देवी", "पति", "राजेश", "F", 54, "HR/08/72/0282226"], [394, "39", "राजबाला", "पति", "पवन कुमार", "F", 42, "HWV1790625"], [395, "39", "संदीप", "पिता", "प्रदीप कुमार", "M", 36, "NZR0033969"], [396, "39", "विकास", "पिता", "राजेश कुमार", "M", 36, "NZR0033977"], [397, "39", "शकुंतला", "पति", "संदीप कुमार", "F", 35, "NZR0259317"], [398, "39", "शिल्पा", "पति", "विकास", "F", 35, "NZR0666834"], [399, "39", "पूजा", "पति", "बंटी कुमार", "F", 33, "NZR1046788"], [400, "39", "राहुल कुमार", "पिता", "राजेश कुमार", "M", 33, "NZR0491936"], [401, "39", "शीतल", "पति", "राहुल कुमार", "F", 32, "NZR0666842"], [402, "39", "बंटी कुमार", "पिता", "जयदेव", "M", 30, "NZR0491928"], [403, "39", "संजय", "पिता", "पवन", "M", 25, "NZR1159391"], [404, "40", "निहाली", "पति", "भाल सिंह", "F", 82, "HR/08/72/0282230"], [405, "40", "राम निवास", "पिता", "भाल सिंह", "M", 61, "HR/08/72/0282231"], [406, "40", "अजमेर", "पिता", "भाल सिंह", "M", 59, "HR/08/72/0282233"], [407, "40", "सरोज", "पति", "राम निवास", "F", 58, "HR/08/72/0282232"], [408, "40", "सुमित्रा", "पति", "अजमेर", "F", 57, "NZR1307651"], [409, "40", "सुमेर", "पिता", "भाल सिंह", "M", 53, "HR/08/72/0282235"], [410, "40", "राजबाला", "पति", "सुमेर", "F", 46, "HWV1731629"], [411, "40", "श्रवण", "पिता", "भाल सिंह", "M", 44, "HWV1756451"], [412, "40", "पूनम", "पति", "श्रवण", "F", 45, "NZR0259416"], [413, "40", "सुमन बाला", "पति", "अंकुश कुमार", "F", 40, "NZR0259465"], [414, "40", "अंकुश कुमार", "पिता", "रामनिवास", "M", 39, "NZR0259556"], [415, "40", "अंचल कुमार", "पिता", "रामनिवास", "M", 33, "NZR0259341"], [416, "40", "बबिता सैनी", "पति", "अंचल कुमार", "F", 34, "NZR0994889"], [417, "40", "विपिन", "पिता", "अजमेर सिंह", "M", 33, "NZR0289710"], [418, "40", "दीपक", "पिता", "सुमेर सिंह", "M", 29, "NZR1109677"], [419, "41", "सतीश", "पिता", "किशन", "M", 64, "NZR1361047"], [420, "41", "अशोक कुमार", "पिता", "किशन", "M", 58, "NZR1515881"], [421, "41", "सुमन", "पति", "सतीश", "F", 54, "HR/08/72/0282240"], [422, "41", "राज बाला", "पति", "अशोक", "F", 48, "NZR1515907"], [423, "41", "श्रीकांत", "पिता", "सतीश कुमार", "M", 36, "NZR0637629"], [424, "41", "मूर्ति", "पति", "श्री कान्त", "F", 33, "NZR0666867"], [425, "41", "रेनु", "पति", "नवीन", "F", 30, "NZR1493410"], [426, "41", "नवीन", "पिता", "सतीश", "M", 30, "NZR0666859"], [427, "41", "अमन रैनी", "पिता", "अशोक कुमार", "M", 29, "NZR0637637"], [428, "41", "सिमरन", "पति", "अमन रैनी", "F", 28, "XYZ0958512"], [429, "43", "कंवर सिंह", "पिता", "फते सिंह", "M", 68, "HWV1731637"], [430, "43", "गुडी", "पति", "ईश्वर", "F", 65, "HR/08/72/0282252"], [431, "43", "ईमरती", "पति", "कंवर सिंह", "F", 63, "HR/08/72/0282254"], [432, "43", "ओम प्रकाश", "पिता", "श्री चंद", "M", 58, "HR/08/72/0282256"], [433, "43", "राम सेवा", "पति", "ओम प्रकाश", "F", 53, "HR/08/72/0282257"], [434, "43", "संदीप", "पिता", "ईश्वर", "M", 35, "NZR0122176"], [435, "43", "पूनम", "पति", "संदीप", "F", 35, "NZR0536656"], [436, "43", "मनदीप कुमार", "पिता", "ईश्वर सिंह", "M", 34, "NZR0259622"], [437, "43", "रीना देवी", "पति", "मनदीप कुमार", "F", 33, "NZR0536649"], [438, "43", "कृष्णा", "पिता", "कंवर सिंह", "M", 29, "NZR0666925"], [439, "43", "विनोद यादव", "पिता", "ओम प्रकाश", "M", 29, "NZR0666917"], [440, "44", "राजपति", "पति", "बलवंत", "F", 51, "HR/08/72/0282202"], [441, "44", "संतोष", "पति", "रवि", "F", 26, "NZR1408582"], [442, "45", "कौशल्या", "पति", "संदीप", "F", 27, "NZR1343607"], [443, "045", "अंजु", "पति", "महेन्द्र", "F", 25, "NZR1331602"], [444, "46", "वेद प्रकाश", "पिता", "पृथ्वी राम", "M", 63, "NZR1532506"], [445, "46", "राम प्रताप", "पिता", "मुशी राम", "M", 59, "HR/08/72/0282599"], [446, "46", "राम रती", "पति", "जोत राम", "F", 59, "HR/08/72/0282598"], [447, "46", "सुनीता", "पति", "राम प्रताप", "F", 57, "HWV1281476"], [448, "46", "सतबीर", "पिता", "जोत राम", "M", 43, "HR/08/72/0282672"], [449, "46", "रेनु", "पति", "सतबीर सिंह", "F", 44, "NZR0122192"], [450, "46", "सतीश कुमार", "पिता", "जोतराम", "M", 41, "NZR0122184"], [451, "46", "सुलोचना", "पति", "सतीश कुमार", "F", 40, "NZR0122200"], [452, "46", "सुशील कुमार", "पिता", "वेद प्रकाश", "M", 33, "NZR0491951"], [453, "46", "सोनू", "पिता", "वेद प्रकाश", "M", 32, "NZR0491944"], [454, "47", "कौशल्या", "पति", "उजाला", "F", 63, "HR/08/72/0282265"], [455, "47", "अमित कुमार", "पिता", "उजाला", "M", 44, "HWV1756527"], [456, "47", "राजेन्द्र सिंह", "पिता", "उजाला राम", "M", 41, "NZR0536672"], [457, "47", "संजय कुमार", "पिता", "उजाला राम", "M", 39, "NZR0637934"], [458, "47", "संतोष", "पति", "राजेन्द्र सिंह", "F", 37, "NZR0536664"], [459, "48", "नन्हे", "पिता", "सुख देवा", "M", 68, "HR/08/72/0282266"], [460, "048", "राहुल", "पिता", "राजेन्द्र", "M", 25, "NZR1337237"], [461, "48", "प्रियंका जादराणा", "पिता", "नन्हे जादराणा", "F", 21, "NZR1397538"], [462, "048", "बलेंदर", "पिता", "कृष्ण लाल", "M", 22, "NZR1343573"], [463, "49", "संतोष", "पति", "राम कुमार", "F", 65, "HR/08/72/0282269"], [464, "49", "मिंटू", "पिता", "रामकुमार", "M", 28, "NZR0994905"], [465, "49", "मोनिका", "पिता", "संतोष", "F", 26, "NZR1325448"], [466, "49", "कृष्ण कुमार", "पिता", "राम कुमार", "M", 24, "NZR1326081"], [467, "52", "ज्ञान देवी", "पति", "श्यो कर्ण", "F", 83, "HR/08/72/0282274"], [468, "52", "तारा मती", "पति", "हर देवा", "F", 73, "HR/08/72/0282273"], [469, "52", "कमला", "पति", "हवा सिंह", "F", 61, "HR/08/72/0282276"], [470, "52", "राज कुमार", "पिता", "हवासिंह", "M", 38, "NZR0122218"], [471, "52", "मोनिका", "पति", "राज कुमार", "F", 32, "NZR1046770"], [472, "53", "धनी", "पति", "राम करण", "F", 78, "HR/08/72/0282278"], [473, "53", "सज्जन कुमार", "पिता", "रामकरण", "M", 40, "NZR0229385"], [474, "53", "भतेरी", "पति", "पवन कुमार", "F", 38, "NZR0637751"], [475, "53", "संदीप कुमार", "पिता", "रामकरण", "M", 37, "NZR0229377"], [476, "53", "दर्शना", "पति", "सज्जन कुमार", "F", 36, "NZR1046796"], [477, "54", "बलबीर कोर", "पति", "जागे राम", "F", 59, "HR/08/72/0282282"], [478, "54", "दीपक कुमार", "पिता", "जागे राम", "M", 37, "NZR0008722"], [479, "54", "कुसम देवी", "पति", "संदीप कुमार", "F", 37, "NZR0666784"], [480, "54", "संदीप कुमार", "पिता", "जागे राम", "M", 35, "NZR0163709"], [481, "54", "सिमरन कोर", "पिता", "जागे राम", "F", 33, "NZR0360354"], [482, "54ए", "वंदना डबास", "पति", "दीपक कुमार", "F", 35, "NEJ2451896"], [483, "55", "सुमेर", "पिता", "सिंधा", "M", 78, "HWV1731652"], [484, "55", "कांता", "पति", "मांगे राम", "F", 73, "HR/08/72/0282286"], [485, "55", "वजीर", "पिता", "सिंधा", "M", 63, "NZR1550193"], [486, "55", "राकेश", "पति", "वजीर", "F", 53, "HWV1731660"], [487, "55", "कृष्ण कुमार", "पिता", "मांगे राम", "M", 33, "NZR0259804"], [488, "55", "सोनू", "पिता", "मांगे राम", "M", 34, "NZR0259739"], [489, "55", "सुषमा", "पति", "कृष्ण", "F", 30, "NZR1488956"], [490, "55", "नीलम", "पति", "सोनू", "F", 28, "NZR1046804"], [491, "56", "बलबीर", "पिता", "सादीराम", "M", 68, "HR/08/72/0282684"], [492, "56", "राजो देवी", "पति", "ईश्वर सिंह", "F", 65, "HWV1756394"], [493, "56", "कृष्णा", "पति", "बलबीर", "F", 61, "HR/08/72/0282685"], [494, "56", "ईश्वर", "पिता", "शादी राम", "M", 58, "NZR1307636"], [495, "56", "सत्य नारायण", "पिता", "शादी राम", "M", 49, "HR/08/72/0282296"], [496, "56", "सुनीता", "पति", "सतनारायण", "F", 45, "HR/08/72/0282686"], [497, "56", "रवि कांत", "पिता", "बलबीर", "M", 41, "HWV1835412"], [498, "56", "सुरेश कुमार", "पिता", "ईश्वर", "M", 37, "HWV1876697"], [499, "56", "नवीन कुमार", "पिता", "बलबीर", "M", 37, "HWV1835420"], [500, "56", "संतोष शास्त्री", "पति", "रवि कांत", "F", 36, "NZR0122226"], [501, "56", "मोनिका", "पति", "सुरेश", "F", 34, "NZR0229393"], [502, "56", "सरिता", "पति", "नवीन कुमार", "F", 31, "NZR0666875"], [503, "56", "मीनू", "पिता", "सत्य नारायण", "M", 24, "NZR1151372"], [504, "57", "सोमनाथ", "पिता", "रामसरूप", "M", 48, "HWV1616481"], [505, "57", "सुनीता", "पति", "सोमनाथ", "F", 47, "HR/08/72/0282301"], [506, "57", "सोमबीर", "पिता", "रामसरूप", "M", 42, "HWV1731678"], [507, "57", "मुकेश", "पति", "सोमबीर", "F", 42, "NZR0601237"], [508, "57", "राजीव यादव", "पिता", "सोमनाथ यादव", "M", 31, "NZR0491977"], [509, "57", "संजीव कुमार", "पिता", "सोमनाथ", "M", 29, "NZR0685842"], [510, "57/1", "सीता राम", "पिता", "हरी सिंह", "M", 78, "HR/08/72/0282302"], [511, "57/1", "मूर्ति", "पति", "सीता राम", "F", 76, "HR/08/72/0282303"], [512, "57/1", "सुनीता", "पति", "ओमप्रकाश", "F", 46, "HWV1281468"], [513, "57/1", "कमलेश", "पति", "जय भगवान", "F", 39, "NZR0122234"], [514, "57/1", "जय भगवान", "पिता", "सीता राम", "M", 39, "HWV1748714"], [515, "57/1", "सोनू", "पिता", "सीता राम", "M", 33, "NZR0360362"], [516, "57/1", "अंजु", "पिता", "ओम प्रकाश", "F", 26, "NZR1054733"], [517, "57/1", "स्वीटी", "पिता", "ओमप्रकाश", "F", 23, "NZR1326875"], [518, "58", "उमेद", "पिता", "इंद्राज", "M", 62, "HR/08/72/0282307"], [519, "58", "राम रति", "पति", "उमेद", "F", 55, "HR/08/72/0282308"], [520, "58", "रोशनी", "पति", "राम मेहर", "F", 53, "HR/08/72/0282310"], [521, "58", "कश्मीर", "पिता", "उमेद", "M", 27, "NZR1325471"], [522, "58", "श्रीतिक कुमार", "पिता", "उमेद सिंह", "M", 23, "NZR1325463"], [523, "59", "राम कुमार", "पिता", "छाजू राम", "M", 63, "HR/08/72/0282312"], [524, "59", "राम निवास", "पिता", "छाजू राम", "M", 59, "HWV1731686"], [525, "59", "केला", "पति", "राम निवास", "F", 55, "HR/08/72/0282315"], [526, "59", "राजेन्द्र", "पिता", "छाजू राम", "M", 53, "HR/08/72/0282316"], [527, "59", "पूनम कुमारी", "पति", "नरेन्द्र", "F", 39, "NZR0437335"], [528, "59", "नरेन्द्र कुमार", "पिता", "राम निवास", "M", 38, "NZR0008730"], [529, "59", "विकास", "पिता", "रामकुमार", "M", 31, "NZR0700641"], [530, "59", "ललित सैनी", "पिता", "सुखे सिंह", "M", 28, "NZR0666883"], [531, "60", "चांद वती", "पति", "धन सिंह", "F", 79, "HR/08/72/0282318"], [532, "60", "सुभे", "पिता", "धन सिंह", "M", 56, "HR/08/72/0282319"], [533, "60", "रजनी", "पति", "सुभे", "F", 54, "HWV1756501"], [534, "60", "कुलदीप", "पिता", "धन सिंह", "M", 53, "HR/08/72/0282320"], [535, "60", "बबीता", "पति", "कुलदीप", "F", 47, "HWV1756535"], [536, "60", "शुभम", "पिता", "सुभे सिंह", "M", 29, "NZR0666750"], [537, "60", "पूनम", "पति", "कुलदीप सिंह", "F", 27, "NZR1046812"], [538, "60", "निशा", "पति", "शुभम", "F", 25, "NZR1458637"], [539, "60", "दर्शन", "पिता", "कुलदीप", "M", 25, "NZR1280452"], [540, "61", "मांगे राम", "पिता", "रूप राम", "M", 78, "HR/08/72/0282321"], [541, "61", "बिमला", "पति", "मांगे राम", "F", 63, "HR/08/72/0282322"], [542, "61", "राज कुमार", "पिता", "मांगे राम", "M", 46, "HR/08/72/0282603"], [543, "61", "प्रमिला", "पति", "राज कुमार", "F", 43, "HWV1217991"], [544, "61", "चायिता", "पिता", "राजकुमार", "F", 23, "NZR1325372"], [545, "61", "साहिल", "पिता", "राजकुमार", "M", 20, "NZR1490879"], [546, "62", "पवन कुमार", "पिता", "जग राम", "M", 55, "HR/08/72/0282324"], [547, "62", "बाला", "पति", "पवन कुमार", "F", 52, "HR/08/72/0282325"], [548, "62", "कृष्ण कुमार", "पिता", "जग राम", "M", 51, "HWV1756402"], [549, "62", "संतोष", "पति", "कृष्ण कुमार", "F", 47, "HWV1756337"], [550, "62", "तेजबीर", "पिता", "पवन कुमार", "M", 30, "NZR0437343"], [551, "62", "कुसुम", "पिता", "पवन कुमार", "F", 25, "NZR1325430"], [552, "62", "अंकित", "पिता", "कृष्ण कुमार", "M", 26, "NZR1070309"], [553, "62", "राहुल", "पिता", "पवन", "M", 23, "NZR1174408"], [554, "64", "मूर्ति", "पति", "विजय सिंह", "F", 59, "HR/08/72/0282328"], [555, "64", "करण सिंह", "पिता", "विजय सिंह", "M", 43, "HWV1644723"], [556, "64", "सीमा", "पति", "करण सिंह", "F", 41, "HWV1644004"], [557, "64", "संदीप", "पिता", "विजय सिंह", "M", 39, "HWV1673359"], [558, "64", "मंजीत देवी", "पति", "संदीप कुमार", "F", 38, "NZR0637777"], [559, "64", "मनदीप", "पिता", "विजय सिंह", "M", 37, "NZR0260000"], [560, "64", "मंजु", "पति", "मनदीप", "F", 35, "NZR0259937"], [561, "64", "मोनिका", "पति", "करण सिंह", "F", 21, "NZR1337948"], [562, "65", "देवी", "पति", "श्री राम", "F", 79, "HR/08/72/0282330"], [563, "65", "सूरज भान", "पिता", "श्री राम", "M", 59, "HR/08/72/0282331"], [564, "65", "सुमित्रा", "पति", "सूरज भान", "F", 53, "HR/08/72/0282332"], [565, "65", "राम निवास", "पिता", "सूरज भान", "M", 36, "NZR0122242"], [566, "65", "कविता रानी", "पति", "रामनिवास", "F", 30, "NZR1174416"], [567, "65", "सचिन", "पिता", "सूरज भान", "M", 27, "NZR1070317"], [568, "65", "मोनिका", "पति", "सचिन", "F", 25, "NZR1178714"], [569, "67", "कमला", "पति", "ईश्वर", "F", 53, "HR/08/72/0282337"], [570, "67", "अजय कुमार", "पिता", "ईश्वर सिंह", "M", 39, "NZR0122259"], [571, "67", "सुमन", "पति", "अजय कुमार", "F", 37, "NZR0637785"], [572, "68", "कौर सिंह", "पिता", "दीवान", "M", 68, "HR/08/72/0282341"], [573, "68", "मनमती", "पति", "कौर सिंह", "F", 62, "HR/08/72/0282342"], [574, "68", "राधा", "पति", "नरेश", "F", 42, "HWV1731694"], [575, "68", "राज कुमार", "पिता", "दीवान", "M", 42, "HWV1790716"], [576, "68", "भतेरी", "पति", "राज कुमार", "F", 42, "HWV1731702"], [577, "68", "मनदीप कुमार", "पिता", "कौर सिंह", "M", 37, "NZR0289744"], [578, "68", "सोनू", "पति", "मनदीप कुमार", "F", 32, "NZR0289736"], [579, "68", "जगबीर", "पिता", "कौर सिंह", "M", 33, "NZR0289728"], [580, "68", "मंजु", "पति", "जगबीर", "F", 27, "NZR1280460"], [581, "68", "अनिल", "पिता", "नरेश कुमार", "M", 25, "NZR1159383"], [582, "68", "राहुल", "पिता", "नरेश कुमार", "M", 22, "NZR1424217"], [583, "69", "संतोष", "पति", "कृष्ण", "F", 60, "HR/08/72/0282347"], [584, "69", "रवबीर", "पिता", "राम सिंह", "M", 58, "HR/08/72/0282348"], [585, "69", "दर्शना", "पति", "रवबीर", "F", 57, "HR/08/72/0282349"], [586, "69", "कृष्ण", "पिता", "राम सिंह", "M", 56, "HWV1790724"], [587, "69", "शमशेर", "पिता", "राम सिंह", "M", 50, "HR/08/72/0282605"], [588, "69", "सुषमा", "पति", "शमशेर सिंह", "F", 43, "HWV1281583"], [589, "69", "सतबीर", "पिता", "रवबीर", "M", 30, "NZR0437350"], [590, "70", "जोगिंदर", "पिता", "जय सिंह", "M", 56, "HR/08/72/0282353"], [591, "70", "सुरेन्द्र", "पिता", "जय सिंह", "M", 53, "HR/08/72/0282355"], [592, "70", "छोटो", "पति", "जोगिंदर", "F", 53, "HR/08/72/0282354"], [593, "70", "प्रवीन", "पिता", "जोगिंदर", "M", 30, "NZR0437368"], [594, "70", "अमन", "पति", "प्रवीण", "F", 30, "NZR1388685"], [595, "71", "प्रेम", "पिता", "रणजीत", "M", 63, "HR/08/72/0282358"], [596, "71", "सुशीला", "पति", "प्रेम", "F", 59, "HR/08/72/0282359"], [597, "71", "सरबती", "पति", "सुभाष", "F", 53, "HR/08/72/0282361"], [598, "71", "सुनील", "पिता", "जगदीश", "M", 43, "HWV1756485"], [599, "71", "समरता", "पति", "सुनील कुमार", "F", 35, "NZR1112887"], [600, "71", "निर्मला", "पति", "हनुमान", "F", 34, "NZR0260133"], [601, "71", "भावना भारती", "पति", "दीपक", "F", 32, "NZR1142561"], [602, "71", "दीपक", "पिता", "सुभाष", "M", 30, "NZR0637793"], [603, "71", "विकास", "पिता", "सुभाष सिंह", "M", 28, "NZR1070325"], [604, "71", "आरती", "पति", "विकास", "F", 26, "NZR1142272"], [605, "73", "सरोजी", "पति", "पूर्ण", "F", 79, "HR/08/72/0282363"], [606, "73", "ओम प्रकाश", "पिता", "पूर्ण", "M", 63, "HR/08/72/0282364"], [607, "73", "विजय", "पिता", "पूर्ण", "M", 55, "HR/08/72/0282366"], [608, "73", "कविता देवी", "पति", "धन सिंह", "F", 44, "HWV1835727"], [609, "73", "मुकेश कुमार", "पिता", "ओम प्रकाश", "M", 40, "HWV1649284"], [610, "73", "रमेश", "पिता", "ओम प्रकाश", "M", 39, "HWV1835578"], [611, "73", "सोनू", "पति", "रमेश", "F", 38, "HWV1835362"], [612, "73", "रोशन", "पिता", "विजय सिंह", "M", 39, "NZR0309633"], [613, "73", "अनीता", "पति", "मुकेश कुमार", "F", 37, "HWV1835354"], [614, "73", "अंजु राणी", "पति", "संदीप", "F", 35, "NZR1142108"], [615, "73", "पिंकी", "पति", "रोशन", "F", 33, "NZR0309641"], [616, "73", "संदीप", "पिता", "विजय सिंह", "M", 30, "NZR0666891"], [617, "74", "शाम सुन्दर", "पिता", "एलेन", "M", 56, "HR/08/72/0282610"], [618, "74", "संतोष", "पति", "शाम सुन्दर", "F", 53, "HR/08/72/0282611"], [619, "74", "सुशील कुमार", "पिता", "एलेन", "M", 44, "HWV1756584"], [620, "74", "सुशीला", "पति", "सुशील", "F", 43, "NZR0260208"], [621, "74", "स्वाति", "पति", "गगन", "F", 34, "NZR1065945"], [622, "74", "गगन", "पिता", "श्याम सुन्दर", "M", 32, "NZR0360370"], [623, "74", "शिव", "पिता", "श्याम सुन्दर", "M", 29, "NZR0666909"], [624, "74", "सचिन", "पिता", "सुशील", "M", 20, "NZR1510684"], [625, "77", "शकुंतला", "पति", "सोहन लाल", "F", 73, "HR/08/72/0282370"], [626, "77", "जोगिंदर", "पिता", "सोहन लाल", "M", 53, "HR/08/72/0282372"], [627, "77", "राज पति", "पति", "जोगिंदर", "F", 51, "HR/08/72/0282373"], [628, "77", "विरेन्द्र", "पिता", "सोहन लाल", "M", 49, "HR/08/72/0282374"], [629, "77", "सलीना", "पति", "विरेन्द्र", "F", 43, "NZR0008755"], [630, "77", "विक्रम", "पिता", "सुभाष", "M", 36, "NZR0033985"], [631, "77", "श्वेता", "पति", "विक्रम", "F", 38, "NZR1178672"], [632, "77", "रजत", "पिता", "जोगिन्द्र", "M", 30, "NZR0700682"], [633, "77", "रोहित", "पिता", "जोगिन्द्र", "M", 24, "NZR1159375"], [634, "77/1", "कविता", "पति", "विजय सिंह", "F", 41, "NZR0122267"], [635, "77/1", "मयंक", "पिता", "विजय सिंह", "M", 21, "NZR1405679"], [636, "78", "कृष्णा", "पति", "बलवंत", "F", 59, "NZR0625194"], [637, "78", "वेद", "पति", "जिले सिंह", "F", 56, "HR/08/72/0282379"], [638, "78", "कुलदीप सिंह", "पिता", "बलवंत", "M", 36, "NZR0385740"], [639, "78", "रेखा कुमारी", "पति", "कुलदीप सिंह", "F", 35, "NZR0385757"], [640, "78", "दारा सिंह", "पिता", "जिले सिंह", "M", 28, "NZR0685800"], [641, "79", "रतन सिंह", "पिता", "राम पाल", "M", 65, "NZR1478650"], [642, "79", "सुमित्रा", "पति", "रतन सिंह", "F", 58, "HR/08/72/0282383"], [643, "79", "शिव राम", "पिता", "राम पाल", "M", 50, "HR/08/72/0282612"], [644, "79", "राजबाला", "पति", "शिवराम", "F", 44, "HWV1731736"], [645, "79", "सुशीला", "पति", "राजेश", "F", 37, "NZR0260406"], [646, "79", "राजेश", "पिता", "रतन सिंह", "M", 36, "NZR0260331"], [647, "79", "विकास", "पिता", "शिव कुमार", "M", 28, "NZR0999862"], [648, "79", "विशाल", "पिता", "शिव कुमार", "M", 26, "NZR1070333"], [649, "79", "गीता", "पति", "विकास", "F", 24, "NZR1459791"], [650, "80", "ईश्वर", "पिता", "साधू", "M", 57, "HR/08/72/0282386"], [651, "80", "उर्मिला", "पति", "ईश्वर", "F", 57, "HR/08/72/0282387"], [652, "80", "विजय", "पिता", "साधू", "M", 55, "HR/08/72/0282388"], [653, "80", "सरोज", "पति", "विजय", "F", 53, "HR/08/72/0282389"], [654, "80", "सचिन", "पिता", "ईश्वर", "M", 32, "NZR0601245"], [655, "80", "अंशु", "पिता", "विजय", "M", 31, "NZR0437376"], [656, "80", "प्रिया", "पति", "अंशु", "F", 30, "NZR1167600"], [657, "80", "रंजिका", "पति", "सचिन", "F", 30, "NZR1142249"], [658, "80", "रवि", "पिता", "विजय", "M", 28, "NZR1142090"], [659, "81", "देवेन्द", "पिता", "सूरज पाल", "M", 73, "HR/08/72/0282392"], [660, "81", "प्रताप", "पिता", "सूरज पाल", "M", 57, "HR/08/72/0282396"], [661, "81", "अनाथी", "पति", "देवेन्द", "F", 53, "HWV1756436"], [662, "81", "कांता", "पति", "प्रताप", "F", 53, "HR/08/72/0282397"], [663, "81", "जोगिंदर", "पिता", "सूरज पाल", "M", 53, "HR/08/72/0282394"], [664, "81", "संतोष", "पति", "जोगिंदर", "F", 51, "HR/08/72/0282395"], [665, "81", "मोहनलाल", "पिता", "जोगिन्द सिंह", "M", 36, "NZR0360404"], [666, "81", "सोनू", "पिता", "प्रताप", "M", 35, "NZR0122275"], [667, "81", "रिकी रानी", "पति", "सुनील", "F", 34, "NZR0666768"], [668, "81", "अनीता", "पति", "मोहनलाल", "F", 35, "NZR1280478"], [669, "81", "आशा", "पिता", "सोनू", "F", 34, "NZR0666933"], [670, "81", "सुमन", "पति", "कृष्ण", "F", 33, "NZR1280486"], [671, "81", "कृष्ण", "पिता", "जोगेन्द्र", "M", 32, "NZR0685818"], [672, "81", "सुनील", "पिता", "प्रताप सिंह", "M", 32, "NZR0360396"], [673, "81", "रिकी देवी", "पति", "मुकेश कुमार", "F", 28, "NZR1498377"], [674, "81", "मुकेश कुमार", "पिता", "देवेन्द सिंह", "M", 30, "NZR0637611"], [675, "81", "शुभम", "पिता", "देवेन्द", "M", 26, "NZR1076702"], [676, "83", "रमेश", "पिता", "राम सिंह", "M", 53, "HR/08/72/0282400"], [677, "83", "सत्यवंती", "पति", "रमेश", "F", 52, "HR/08/72/0282401"], [678, "83", "बबली", "पति", "जोगिंदर", "F", 49, "HR/08/72/0282614"], [679, "83", "राजू", "पिता", "राम सिंह", "M", 40, "HWV1617661"], [680, "83", "चांदी राम", "पिता", "राम सिंह", "M", 39, "HWV1834936"], [681, "83", "सुनील", "पिता", "रमेश लाल", "M", 30, "NZR0685826"], [682, "83", "दीपू", "पिता", "जोगिंदर", "M", 27, "NZR1142231"], [683, "84", "नरसी भगत", "पिता", "फन्हे सिंह", "M", 42, "NZR0637801"], [684, "84", "विद्यावती", "पति", "नरसी भगत", "F", 39, "NZR0637827"], [685, "85", "केला", "पति", "छाजू", "F", 57, "HR/08/72/0282409"], [686, "85", "बलवान", "पिता", "राज करण", "M", 53, "NZR1490143"], [687, "85", "तारा चंद", "पिता", "राज करण", "M", 49, "HR/08/72/0282618"], [688, "85", "सोयिया", "पति", "ताराचंद", "F", 40, "NZR0122283"], [689, "85", "कविता", "पति", "सलवान", "F", 32, "NZR1408574"], [690, "85", "सलवान", "पति", "बलवान सिंह", "F", 32, "NZR1405661"], [691, "85", "रोहतास", "पिता", "बलवान सिंह", "M", 29, "NZR1356013"], [692, "85", "पवन", "पिता", "छाजू राम", "M", 27, "NZR1070341"], [693, "85", "विक्रम", "पिता", "सुबी सिंग", "M", 25, "NZR1337187"], [694, "85", "संगीता", "पति", "रोहतास", "F", 24, "NZR1355981"], [695, "87", "बिमला", "पति", "मही पाल", "F", 53, "HR/08/72/0282415"], [696, "87", "गुलाब", "पिता", "राम किशन", "M", 52, "HR/08/72/0282416"], [697, "87", "संतोष", "पति", "गुलाब", "F", 51, "HR/08/72/0282417"], [698, "87", "संदीप कुमार", "पिता", "महीपाल", "M", 38, "NZR0289751"], [699, "87", "सरिता देवी", "पति", "राजेश कुमार", "F", 37, "NZR0966564"], [700, "87", "राजेश कुमार", "पिता", "गुलाब", "M", 33, "NZR0302497"], [701, "87", "संजय कुमार", "पिता", "महीपाल", "M", 32, "NZR0360412"], [702, "87", "रविन्द", "पिता", "गुलाब सिंह", "M", 27, "NZR1441377"], [703, "87", "सचिन", "पिता", "गुलाब सिंह", "M", 25, "NZR1405653"], [704, "87", "कृष्ण", "पति", "रविन्द", "F", 24, "NZR1405562"], [705, "89", "सन्नरा", "पति", "राम चंद", "F", 73, "HR/08/72/0282419"], [706, "89", "कृष्णमुरार", "पिता", "रामचन्द्र", "M", 47, "HR/08/72/0282709"], [707, "89", "सुरेन्द्र", "पिता", "रामचंद", "M", 42, "HWV1790740"], [708, "89", "सुनील कुमार", "पिता", "रामचन्द्र", "M", 41, "HWV1617653"], [709, "89", "सुमन", "पति", "सुरेन्द्र", "F", 38, "NZR0289769"], [710, "89", "मीना", "पिता", "कृष्ण मुरार", "F", 37, "NZR0289777"], [711, "89", "पूनम", "पति", "सुनील कुमार", "F", 32, "NZR0437384"], [712, "89", "रजत", "पिता", "सुरेश कुमार", "M", 24, "NZR1510700"], [713, "90", "राम कुमार", "पिता", "बनवारी", "M", 76, "HR/08/72/0282422"], [714, "90", "गंगा देवी", "पति", "राम कुमार", "F", 72, "HWV1790732"], [715, "90", "महेन्द्र", "पिता", "राम कुमार", "M", 34, "NZR0204669"], [716, "90", "विनोद", "पिता", "राम कुमार", "M", 31, "NZR0437392"], [717, "90", "विक्रम", "पिता", "रामकुमार", "M", 29, "NZR0637843"], [718, "91", "कला वती", "पति", "साधू राम", "F", 66, "HR/08/72/0282427"], [719, "91", "सुरेन्द्र कुमार", "पिता", "साधू राम", "M", 45, "HWV1731751"], [720, "91", "सुनीता रानी", "पति", "सुरेन्द्र कुमार", "F", 44, "HWV1731769"], [721, "91", "मंजु कुमारी", "पति", "नरेन्द्र कुमार", "F", 41, "NZR0229401"], [722, "91", "नरेन्द्र कुमार", "पिता", "साधू राम", "M", 40, "HWV1731777"], [723, "91", "राजबीर", "पिता", "साधू राम", "M", 36, "NZR0122291"], [724, "91", "बरकाती", "पति", "राजबीर", "F", 33, "NZR0700617"], [725, "91", "भतेरी", "पति", "सागर", "F", 26, "NZR1562156"], [726, "91", "अंकित", "पिता", "सुरेन्द्र कुमार", "M", 24, "NZR1174234"], [727, "92", "जगदीश", "पिता", "रती राम", "M", 79, "HR/08/72/0282429"], [728, "92", "जीवा", "पति", "जगदीश", "F", 75, "HR/08/72/0282430"], [729, "92", "चंद्र पति", "पति", "भगवान दास", "F", 71, "HR/08/72/0282432"], [730, "92", "बहादर", "पिता", "रती राम", "M", 61, "HR/08/72/0282433"], [731, "92", "बिमला", "पति", "बहादर", "F", 59, "HR/08/72/0282434"], [732, "92", "संत लाल", "पिता", "भगवाना", "M", 44, "HWV1731785"], [733, "92", "सुबे", "पिता", "भगवान दास", "M", 44, "HWV1731793"], [734, "92", "सुनीता", "पति", "संत लाल", "F", 42, "HWV1731801"], [735, "92", "निर्मला", "पति", "सुबे", "F", 41, "NZR0122325"], [736, "92", "श्रवन", "पिता", "बहादर", "M", 39, "HWV1835305"], [737, "92", "गीता", "पति", "श्रवन", "F", 38, "HWV1835313"], [738, "92", "सुनीता", "पति", "राजबीर", "F", 36, "NZR0122317"], [739, "92", "गुगन", "पिता", "जगदीश", "M", 37, "NZR0122309"], [740, "92", "तारापति", "पति", "गुगन", "F", 35, "NZR0666941"], [741, "92", "गुडी", "पिता", "विक्रम", "F", 33, "NZR0229427"], [742, "92", "विक्रम", "पिता", "बहादर", "M", 34, "NZR0229419"], [743, "92", "रेखा", "पति", "सतीश", "F", 31, "NZR0437418"], [744, "92", "सुरेन्द्र", "पिता", "बहादर सिंह", "M", 32, "NZR0360420"], [745, "92", "कविता", "पति", "सुरेन्द्र", "F", 31, "NZR0601252"], [746, "92", "सतीश", "पिता", "भगवाना", "M", 30, "NZR0437400"], [747, "93", "अरुण कुमार", "पिता", "महेन्द्र", "M", 26, "NZR0994921"], [748, "94", "करण सिंह", "पिता", "जगदीश", "M", 62, "HR/08/72/0282447"], [749, "94", "बाला", "पति", "करण सिंह", "F", 60, "HR/08/72/0282448"], [750, "94", "रण सिंह", "पिता", "जगदीश", "M", 60, "HR/08/72/0282449"], [751, "94", "कमला", "पति", "रण सिंह", "F", 58, "HR/08/72/0282450"], [752, "94", "राधे श्याम", "पिता", "जगदीश", "M", 58, "HR/08/72/0282451"], [753, "94", "संतोष", "पति", "सुभाष", "F", 57, "HR/08/72/0282442"], [754, "94", "भतेरी", "पति", "दया नंद", "F", 54, "HR/08/72/0282454"], [755, "94", "रानी", "पति", "ईश्वर", "F", 53, "NZR1496710"], [756, "94", "महेन्द्र", "पिता", "मनसा", "M", 52, "HR/08/72/0282445"], [757, "94", "सरोज", "पति", "महेन्द्र", "F", 47, "NZR0966572"], [758, "94", "सुशील कुमार", "पिता", "करणसिंह", "M", 45, "NZR1431949"], [759, "94", "दीपू", "पिता", "रण सिंह", "M", 35, "NZR0033993"], [760, "94", "मेनका", "पति", "सुशील", "F", 36, "NZR0637868"], [761, "94", "सुमित", "पिता", "रण सिंह", "M", 32, "NZR0360438"], [762, "94", "सुरेन्द्र", "पिता", "दया नन्द", "M", 32, "NZR0492009"], [763, "94", "विकास", "पिता", "करण सिंह", "M", 32, "NZR0637850"], [764, "94", "सोनू", "पिता", "राधेश्याम", "M", 32, "NZR0437426"], [765, "94", "सोमबीर", "पिता", "राधेश्याम", "M", 31, "NZR0601260"], [766, "94", "रीना", "पति", "सुनील", "F", 30, "NZR0437434"], [767, "94", "सुनील", "पिता", "सुभाष", "M", 31, "NZR0437442"], [768, "94", "बाबुदेव", "पिता", "दयानन्द", "M", 30, "NZR0601278"], [769, "94", "रेनु", "पति", "दीपू", "F", 29, "NZR1109552"], [770, "94", "संतोष", "पति", "संदीप", "F", 27, "NZR1174309"], [771, "94", "संदीप", "पिता", "सुभाष", "M", 26, "NZR1046820"], [772, "94", "मंजु बाई", "पति", "सुरेन्द्र", "F", 25, "NZR1280502"], [773, "94", "मंजु", "पति", "सुमित", "F", 26, "NZR1280494"], [774, "94", "लक्ष्मी", "पति", "बाबुदेव", "F", 24, "NZR1280510"], [775, "95", "मीनू", "पति", "रोहित", "F", 29, "NZR1142066"], [776, "95", "संनी कुमार", "पिता", "राधे श्याम", "M", 26, "NZR1312008"], [777, "95/1", "संतोष", "पति", "सुरत सिंह", "F", 61, "HR/08/72/0282458"], [778, "95/1", "भागी रथ", "पिता", "रामेश्वर", "M", 50, "HWV1731819"], [779, "95/1", "उषा देवी", "पति", "भागीरथ", "F", 45, "HWV1756576"], [780, "95/1", "हरीश कुमार", "पिता", "सुरत सिंह", "M", 40, "HWV1756592"], [781, "95/1", "अनूप", "पिता", "सुरत सिंह", "M", 38, "HWV1748722"], [782, "95/1", "अंजु", "पति", "हरीश कुमार", "F", 38, "NZR0122341"], [783, "95/1", "गीता देवी", "पति", "अनूप", "F", 36, "NZR0122333"], [784, "95/1", "रोहित", "पिता", "सुरत सिंह", "M", 32, "NZR0492017"], [785, "95/1", "मोहित", "पिता", "सुरत सिंह", "M", 28, "NZR0700658"], [786, "95/1", "हैप्पी", "पिता", "भागी रथ", "M", 27, "NZR0966580"], [787, "95/1", "राहुल", "पिता", "भागीरथ सिंह", "M", 24, "NZR1405554"], [788, "96", "देस राज", "पिता", "हर फुल", "M", 71, "HR/08/72/0282463"], [789, "96", "शेर सिंह", "पिता", "रती राम", "M", 69, "HR/08/72/0282460"], [790, "96", "राम बाई", "पति", "शेर सिंह", "F", 67, "HR/08/72/0282461"], [791, "96", "भतेरी", "पति", "देस राज", "F", 67, "HR/08/72/0282464"], [792, "96", "संजय", "पिता", "देस राज", "M", 50, "HR/08/72/0282629"], [793, "96", "महेन्द्र", "पिता", "देस राज", "M", 49, "HR/08/72/0282668"], [794, "96", "अनीता", "पति", "महेंदर सिंह", "F", 49, "HR/08/72/0282630"], [795, "96", "हरकेश", "पिता", "देसराज", "M", 44, "HR/08/72/0282698"], [796, "96", "फकीर चंद", "पिता", "शेर सिंह", "M", 43, "HWV1756519"], [797, "96", "प्रमीला", "पति", "संजय", "F", 43, "HWV1756550"], [798, "96", "किरण देवी", "पति", "फकीर चंद", "F", 40, "HWV1761790"], [799, "96", "रिंकु", "पिता", "शेर सिंह", "M", 32, "NZR0685784"], [800, "96", "विकास", "पिता", "फकीर चंद", "M", 20, "NZR1424720"], [801, "97", "चतर सिंह", "पिता", "हर फुल", "M", 62, "HR/08/72/0282471"], [802, "97", "कमला", "पति", "कृष्ण", "F", 61, "HR/08/72/0282466"], [803, "97", "सतबीर", "पिता", "हर फुल", "M", 61, "HR/08/72/0282467"], [804, "97", "कमला", "पति", "सतबीर", "F", 59, "HWV1850080"], [805, "97", "प्रताप", "पिता", "हर फुल", "M", 57, "HR/08/72/0282473"], [806, "97", "बलबीर", "पिता", "हर फुल", "M", 56, "HR/08/72/0282469"], [807, "97", "सुनीता", "पति", "चतर सिंह", "F", 55, "HR/08/72/0282472"], [808, "97", "बीर सिंह", "पिता", "हर फुल", "M", 55, "HR/08/72/0282475"], [809, "97", "कांता", "पति", "बलबीर", "F", 54, "HR/08/72/0282470"], [810, "97", "रानी", "पति", "प्रताप", "F", 53, "HR/08/72/0282474"], [811, "97", "शीला", "पति", "बीर सिंह", "F", 53, "HR/08/72/0282476"], [812, "97", "राजकुमार", "पिता", "कृष्णकुमार", "M", 46, "HR/08/72/0282712"], [813, "97", "नारो", "पति", "राज कुमार", "F", 42, "HWV1756543"], [814, "97", "मुकेश कुमार", "पिता", "सतबीर", "M", 40, "NZR0385765"], [815, "97", "किरण रानी", "पति", "मुकेश कुमार", "F", 38, "NZR0385773"], [816, "97", "शीला", "पति", "जोगिन्द कुमार", "F", 35, "NZR0229435"], [817, "97", "जोगिन्द कुमार", "पिता", "कृष्ण लाल", "M", 36, "NZR0122358"], [818, "97", "अमित", "पिता", "बीर सिंह", "M", 30, "NZR1046838"], [819, "97", "मंजीत सिंह", "पिता", "प्रताप सिंह", "M", 29, "NZR0601286"], [820, "97", "ललित", "पिता", "बीर सिंह", "M", 27, "NZR1046846"], [821, "97", "नरेश", "पिता", "बलबीर सिंह", "M", 28, "NZR0700591"], [822, "97", "सागर", "पिता", "छतर सिंह", "M", 23, "NZR1405547"], [823, "97", "प्रियंका", "पिता", "बलबीर सिंह", "F", 24, "NZR1280528"], [824, "98", "विद्या", "पति", "अमर सिंह", "F", 67, "NZR0625046"], [825, "98", "सुरेश", "पिता", "अमर सिंह", "M", 50, "HR/08/72/0282480"], [826, "98", "सुरेन्द", "पिता", "अमर सिंह", "M", 48, "HR/08/72/0282631"], [827, "98", "मीना", "पति", "सुरेन्द", "F", 44, "HWV1282201"], [828, "98", "अशोक", "पिता", "अमर सिंह", "M", 43, "HWV1282219"], [829, "98", "पूनम", "पति", "अशोक", "F", 42, "HWV1282227"], [830, "98", "सुमन", "पति", "सुरेश", "F", 42, "HWV1282235"], [831, "98", "नरेश कुमार", "पिता", "अमर सिंह", "M", 36, "NZR0122366"], [832, "98", "अरविन्द", "पिता", "अमर सिंह", "M", 35, "NZR0163717"], [833, "98", "सचिन", "पिता", "अमर सिंह", "M", 30, "NZR0437459"], [834, "98", "मंजु रानी", "पति", "नरेश कुमार", "F", 30, "NZR1046853"], [835, "99", "शीला", "पति", "जगबीर", "F", 46, "HWV1276567"], [836, "99", "रितु गौतम", "पति", "सुरेश कुमार", "F", 33, "NZR1465087"], [837, "99", "विरेन्द्र", "पिता", "जगबीर", "M", 31, "NZR0437467"], [838, "99", "नरेन्द्र", "पिता", "शीला", "M", 29, "NZR1046861"], [839, "99", "आशा", "पति", "वीरेन्द्र", "F", 27, "NZR1424225"], [840, "101", "कृष्णा", "पति", "मंगल", "F", 73, "HR/08/72/0282485"], [841, "101", "बंटी", "पति", "राम निवास", "F", 51, "HR/08/72/0282487"], [842, "101", "सतीश", "पिता", "मंगलराम", "M", 49, "HR/08/72/0282690"], [843, "101", "शारदा", "पति", "सतीश कुमार", "F", 46, "HR/08/72/0282689"], [844, "101", "सरोज", "पति", "अरविंद कुमार", "F", 43, "HWV1283548"], [845, "101", "अरविन्दकुमार", "पिता", "रामकुमार", "M", 43, "HR/08/72/0282693"], [846, "101", "सुरेन्द्र", "पिता", "मंगल", "M", 41, "NZR0034017"], [847, "101", "अनूप कुमार", "पिता", "राम कुमार", "M", 40, "HWV1731645"], [848, "101", "लाल चंद", "पिता", "मंगल", "M", 39, "NZR0034009"], [849, "101", "मंजु", "पति", "अनूप", "F", 38, "NZR0008714"], [850, "101", "बंटी", "पति", "सुरेन्द्र", "F", 35, "NZR0437475"], [851, "101", "पूजा", "पति", "लाल चंद", "F", 35, "NZR0492025"], [852, "101", "राज कुमार", "पिता", "राजेन्द्र सिंह", "M", 35, "NZR0163733"], [853, "101", "प्रवीना", "पति", "राजकुमार", "F", 31, "NZR0437483"], [854, "101", "मुनेश", "पिता", "राम निवास", "M", 29, "NZR1280544"], [855, "102/1", "साहिल", "पिता", "सतीश", "M", 20, "NZR1424738"], [856, "103", "तारा चंद", "पिता", "खुबी राम", "M", 71, "HWV1850049"], [857, "103", "छन्नो देवी", "पति", "तारा चंद", "F", 68, "HR/08/72/0282518"], [858, "103", "राजेश", "पिता", "ओमप्रकाश", "M", 47, "HWV1850056"], [859, "103", "अनीता", "पति", "सुनील कुमार", "F", 42, "HWV1897271"], [860, "103", "रेखा", "पति", "राजेश", "F", 41, "NZR0229443"], [861, "103", "दीपक", "पिता", "ताराचंद", "M", 36, "NZR0122374"], [862, "103", "सुमित्रा", "पति", "दीपक", "F", 33, "NZR0536698"], [863, "103", "अंकुश", "पिता", "ताराचन्द", "M", 32, "NZR0360446"], [864, "103/1", "सुनीलकुमार", "पिता", "ओमप्रकाश", "M", 47, "HR/08/72/0282699"], [865, "103/2", "लखमी", "पिता", "खुबी राम", "M", 65, "HR/08/72/0282499"], [866, "103/2", "भतेरी", "पति", "लखमी", "F", 63, "HR/08/72/0282500"], [867, "103/2", "त्रिलोक", "पिता", "खुबी राम", "M", 59, "HR/08/72/0282501"], [868, "103/2", "लाली", "पति", "त्रिलोक", "F", 56, "HR/08/72/0282502"], [869, "103/2", "सरोज", "पति", "अजयकुमार", "F", 46, "HR/08/72/0282702"], [870, "103/2", "अजयकुमार", "पिता", "लखमीचन्द", "M", 46, "HR/08/72/0282701"], [871, "103/2", "मोहन लाल", "पिता", "लखमीचंद", "M", 39, "NZR0536706"], [872, "103/2", "सुमन देवी", "पति", "मोहन लाल", "F", 37, "NZR0536714"], [873, "104", "कमलेश", "पिता", "जगदीश", "M", 60, "NZR1070358"], [874, "104", "अजीत", "पिता", "दुनी चंद", "M", 59, "HR/08/72/0282507"], [875, "104", "दुखनी", "पति", "कमलेश", "F", 58, "NZR1070234"], [876, "104", "राजेन्द्र", "पिता", "दुनी चंद", "M", 57, "HR/08/72/0282632"], [877, "104", "जमना", "पति", "अजीत", "F", 57, "HR/08/72/0282508"], [878, "104", "बलवान", "पिता", "दुनी चंद", "M", 56, "HR/08/72/0282510"], [879, "104", "गुडडी", "पति", "राजेन्द्र", "F", 56, "HR/08/72/0282509"], [880, "104", "राजबाला", "पति", "बलवान", "F", 54, "HR/08/72/0282511"], [881, "104", "मोहन लाल", "पिता", "दुनी चंद", "M", 53, "HR/08/72/0282512"], [882, "104", "राज कुमारी", "पति", "मोहन लाल", "F", 52, "HR/08/72/0282513"], [883, "104", "अनूप कुमार", "पिता", "अजीत सिंह", "M", 39, "HWV1834993"], [884, "104", "अनित कुमार", "पिता", "अजीत सिंह", "M", 35, "HWV1835065"], [885, "104", "रमन", "पिता", "अजीत सिंह", "M", 33, "NZR0360453"], [886, "104", "मैन पाल", "पिता", "राजेन्द्र", "M", 32, "NZR0360461"], [887, "104", "मुकेश", "पति", "मैनपाल", "F", 30, "NZR1306489"], [888, "104", "प्रीतम", "पिता", "बलवान सिंह", "M", 31, "NZR0536722"], [889, "104", "प्रमोद कुमार", "पिता", "बलवान सिंह", "M", 28, "NZR0999870"], [890, "104", "शर्मिला", "पति", "अनूप कुमार", "F", 27, "NZR1046986"], [891, "104", "अनिल", "पिता", "राजेन्द्र सिंह", "M", 27, "NZR1405521"], [892, "104", "रवीना", "पिता", "बलवान", "F", 25, "NZR1405539"], [893, "104", "सुमित", "पिता", "राजेन्द्र", "M", 25, "NZR1046978"], [894, "104", "आकाश", "पिता", "मोहन लाल", "M", 23, "NZR1280551"], [895, "105", "ईश्वर", "पिता", "भान सिंह", "M", 62, "HWV1850072"], [896, "105", "बिमला", "पति", "ईश्वर", "F", 55, "HWV1850023"], [897, "105", "बहादुर", "पिता", "भान सिंह", "M", 55, "HWV1850064"], [898, "105", "सुन्दर", "पति", "बहादुर", "F", 53, "HWV1850031"], [899, "105", "बिजेन्द्र", "पिता", "बहादुर सिंग", "M", 30, "NZR1108778"], [900, "105", "अभिषेक", "पिता", "बहादुर", "M", 27, "NZR1046994"], [901, "106", "धर्म पाल", "पिता", "खुबी राम", "M", 71, "HR/08/72/0282521"], [902, "106", "प्रेम", "पति", "धर्म पाल", "F", 69, "HR/08/72/0282522"], [903, "106", "कांता", "पति", "राकेश", "F", 54, "HR/08/72/0282524"], [904, "106", "राकेश", "पिता", "धर्म पाल", "M", 55, "HR/08/72/0282523"], [905, "106", "हर केश", "पिता", "धर्म पाल", "M", 52, "HWV1790666"], [906, "106", "नरेन्द्र कुमार", "पिता", "धर्मपाल", "M", 43, "HR/08/72/0282694"], [907, "106", "मीनू", "पति", "हरकेश", "F", 42, "HWV1836535"], [908, "106", "सुनीता", "पति", "नरेन्द्र कुमार", "F", 40, "HWV1836527"], [909, "107", "धर्म बीर", "पिता", "पला लाल", "M", 63, "HR/08/72/0282528"], [910, "107", "कृष्णा", "पति", "धर्म बीर", "F", 61, "HR/08/72/0282529"], [911, "107", "सुमित्रा", "पति", "सतीश कुमार", "F", 43, "HWV1731827"], [912, "107", "सतीश कुमार", "पिता", "धर्मबीर सिंह", "M", 40, "NZR0687921"], [913, "107", "पवन", "पिता", "धर्मबीर", "M", 34, "NZR0229468"], [914, "107", "सुखमा", "पति", "पवन", "F", 29, "NZR0994947"], [915, "107/1", "नारायणी", "पति", "रणजीत", "F", 81, "HR/08/72/0282533"], [916, "107/1", "विजय सिंह", "पिता", "रणजीत", "M", 66, "NZR1527191"], [917, "107/1", "मौसमी", "पति", "विजय", "F", 53, "HR/08/72/0282535"], [918, "107/1", "महावीर", "पिता", "रणजीत", "M", 47, "HR/08/72/0282692"], [919, "107/1", "प्रेमजीत", "पिता", "महावीर", "M", 45, "HWV1790757"], [920, "107/1", "सुशील कुमार", "पिता", "रणजीत", "M", 43, "HWV1217918"], [921, "107/1", "दर्शना", "पति", "सुशील कुमार", "F", 41, "HWV1835289"], [922, "107/1", "रवि कुमार", "पिता", "विजय सिंह", "M", 36, "NZR0122382"], [923, "107/1", "विकास", "पिता", "विजय सिंह", "M", 34, "NZR0204685"], [924, "107/1", "अंकुश", "पिता", "विजय सिंह", "M", 32, "NZR0536474"], [925, "108", "हर चंद", "पिता", "फुल राम", "M", 68, "HWV1731835"], [926, "108", "धर्म पाल", "पिता", "फुलु राम", "M", 63, "HR/08/72/0282538"], [927, "108", "बिमला", "पति", "धर्म पाल", "F", 61, "HR/08/72/0282539"], [928, "108", "कश्मीर", "पिता", "धर्मपाल", "M", 47, "HWV1836360"], [929, "108", "अंगूरी", "पति", "कुलदीप", "F", 45, "NZR1142207"], [930, "108", "रजनी", "पति", "कश्मीर", "F", 43, "NZR0008771"], [931, "108", "सोनू", "पिता", "हर चंद", "M", 35, "NZR0685883"], [932, "108", "संदीप कुमार", "पिता", "हर चंद", "M", 34, "NZR0685834"], [933, "108", "नीलम", "पति", "पवन कुमार", "F", 33, "NZR0994962"], [934, "108", "पवन", "पिता", "धर्म पाल", "M", 30, "NZR0685875"], [935, "108", "सहन्दा", "पति", "संदीप कुमार", "F", 24, "NZR1316066"], [936, "108", "मीरा", "पिता", "काश्मीर", "F", 20, "NZR1483338"], [937, "108/1", "सतीश", "पिता", "धर्मपाल", "M", 44, "HWV1836113"], [938, "108/1", "गीता", "पति", "सतीश", "F", 41, "HWV1836121"], [939, "109", "श्योकोरी", "पिता", "चंदु", "F", 71, "HR/08/72/0282541"], [940, "109", "महावीर", "पिता", "चंदु", "M", 51, "HR/08/72/0282542"], [941, "109", "रणबीर", "पिता", "चंदु", "M", 50, "HR/08/72/0282633"], [942, "109", "पिंकी", "पति", "महावीर", "F", 41, "HWV1616523"], [943, "109", "किरण रानी", "पति", "रणबीर सिंह", "F", 39, "NZR0163741"], [944, "110", "श्यो बाई", "पति", "हरदू राम", "F", 93, "HR/08/72/0282543"], [945, "110", "जय सिंह", "पिता", "हरदू राम", "M", 68, "HR/08/72/0282545"], [946, "110", "सरोज", "पति", "जय सिंह", "F", 63, "HR/08/72/0282546"], [947, "110", "धर्मबीर", "पिता", "हरदू राम", "M", 61, "HR/08/72/0282549"], [948, "110", "महेन्द्र सिंह", "पिता", "हरदू राम", "M", 57, "NZR0553933"], [949, "110", "पूनम", "पति", "धर्म बीर", "F", 52, "HR/08/72/0282550"], [950, "110", "भारती देवी", "पति", "महेन्द्र सिंह", "F", 47, "NZR0553925"], [951, "110", "संजीव भाकर", "पिता", "जय सिंह", "M", 35, "NZR0229492"], [952, "110", "विकास", "पिता", "धर्मबीर सिंह", "M", 34, "NZR0229476"], [953, "110", "रंभे", "पिता", "धर्मबीर सिंह", "F", 32, "NZR0360503"], [954, "110", "संजू", "पिता", "हैप्पी", "F", 24, "NZR1355999"], [955, "110", "पुलकित", "पिता", "महेन्द्र सिंह", "M", 23, "NZR1280569"], [956, "110/1", "बिरमा", "पति", "ओम प्रकाश", "F", 73, "HR/08/72/0282635"], [957, "110/1", "मुकेश", "पिता", "ओम प्रकाश", "M", 51, "HR/08/72/0282636"], [958, "110/1", "रोशनलाल", "पिता", "ओमप्रकाश", "M", 45, "HR/08/72/0282683"], [959, "110/1", "कृष्ण कुमार", "पिता", "प्रताप सिंह", "M", 40, "HWV1648500"], [960, "110/1", "सुमन", "पति", "रोशन लाल", "F", 40, "NZR0229500"], [961, "110/1", "कविता", "पति", "कृष्ण कुमार", "F", 37, "NZR0122390"], [962, "110(1)", "मुकेशी", "पति", "मुकेश कुमार", "F", 43, "HWV1218023"], [963, "111", "सावित्री", "पिता", "श्यो राम", "F", 85, "HR/08/72/0282554"], [964, "111", "उमराव", "पिता", "चंदगी", "M", 65, "HR/08/72/0282555"], [965, "111", "केला", "पति", "इंद सिंह", "F", 63, "HR/08/72/0282558"], [966, "111", "बादी", "पति", "उमराव", "F", 57, "HWV1756386"], [967, "111", "रमेश", "पिता", "श्यो राम", "M", 53, "HR/08/72/0282559"], [968, "111", "मीना", "पति", "रमेश कुमार", "F", 49, "HWV1731868"], [969, "111", "सुरेश", "पिता", "श्यो राम", "M", 45, "HWV1618495"], [970, "111", "दिनेश", "पिता", "श्यो राम", "M", 43, "HWV1756378"], [971, "111", "शीला", "पति", "सुरेश", "F", 43, "HWV1731850"], [972, "111", "निर्मला", "पति", "दिनेश", "F", 42, "HWV1618560"], [973, "111", "कविता रानी", "पति", "राजेश", "F", 43, "NZR0536730"], [974, "111", "मुकेश", "पिता", "उमराव सिंह", "M", 40, "HWV1618479"], [975, "111", "सीमा", "पति", "मुकेश कुमार", "F", 40, "HWV1648450"], [976, "111", "सुनीता", "पति", "मुनेश", "F", 38, "NZR0536490"], [977, "111", "मुनेश", "पिता", "इंदर सिंह", "M", 38, "NZR0536482"], [978, "111", "दीपक", "पिता", "रमेश कुमार", "M", 30, "NZR0637694"], [979, "111", "विपिन कुमार", "पिता", "सुरेश कुमार", "M", 27, "NZR1063809"], [980, "111", "पर्णीत", "पति", "विपिन कुमार", "F", 25, "NZR1326057"], [981, "111", "अनीशा", "पिता", "दिनेश", "F", 22, "NZR1325364"], [982, "111", "अंशुल", "पिता", "दिनेश", "M", 21, "NZR1337955"], [983, "113", "जय भगवान", "पिता", "माई राम", "M", 51, "HR/08/72/0282642"], [984, "113", "रोशनी", "पति", "जय भगवान", "F", 43, "HWV1731876"], [985, "114", "सुशील", "पिता", "राज कुमार", "M", 43, "HWV1850114"], [986, "114", "कमलेश", "पति", "सुशील", "F", 43, "HWV1217694"], [987, "115", "सुभे सिंह", "पिता", "फुलु राम", "M", 59, "HWV1731884"], [988, "115", "नीलम", "पति", "सुभे सिंह", "F", 57, "HWV1731892"], [989, "115", "श्रवण", "पिता", "सुभे सिंह", "M", 30, "NZR0685891"], [990, "116", "बृज लाल", "पिता", "दुनी लाल", "M", 71, "HR/08/72/0282652"], [991, "116", "सिम्मी", "पति", "बृज लाल", "F", 66, "HWV1731900"], [992, "116", "प्रसी", "पति", "रवबीर", "F", 59, "HWV1761782"], [993, "116", "बीर मती", "पति", "कृष्ण", "F", 56, "HR/08/72/0282658"], [994, "116", "नानू राम", "पिता", "बृज लाल", "M", 42, "HWV1835297"], [995, "116", "रवि", "पिता", "लाल चंद", "M", 39, "NZR0966630"], [996, "116", "रेखा", "पति", "रवि", "F", 37, "NZR0966622"], [997, "116", "प्रवीन कुमार", "पिता", "कृष्ण कुमार", "M", 35, "NZR0229518"], [998, "116", "अशोक कुमार", "पिता", "कृष्ण", "M", 32, "NZR0966606"], [999, "116", "सीमा", "पति", "नानूराम", "F", 31, "NZR0437491"], [1000, "117", "वेद", "पिता", "ठाकर दास", "M", 71, "HWV1756428"], [1001, "117", "सुनीता", "पति", "वेद", "F", 66, "HR/08/72/0282664"], [1002, "117", "शुभम कालरा", "पिता", "वेद प्रकाश", "M", 29, "NZR0637892"], [1003, "118", "कमला", "पति", "मंगे राम", "F", 79, "HWV1761766"], [1004, "118", "विजय", "पिता", "मंगे राम", "M", 52, "HWV1756345"], [1005, "118", "ईश्वर", "पिता", "मंगे राम", "M", 50, "HWV1756410"], [1006, "118", "बालादेवी", "पति", "विजयसिंह", "F", 47, "HWV1761774"], [1007, "118", "राधा", "पति", "ईश्वर", "F", 39, "NZR0216531"], [1008, "118", "अंजू", "पति", "संदीप कुमार", "F", 33, "NZR0700674"], [1009, "118", "अंकित", "पिता", "विजय सिंह", "M", 23, "NZR1325455"], [1010, "118", "अंजु", "पति", "अंकित", "F", 22, "NZR1419985"], [1011, "118क", "संतोष", "पति", "जगदीश", "F", 61, "HR/08/72/0282711"], [1012, "118क", "सुन्दर", "पिता", "अमरचन्द", "M", 56, "NZR1307644"], [1013, "118क", "संतोष", "पति", "सुन्दर", "F", 51, "HR/08/72/0282714"], [1014, "118क", "मंजीत", "पिता", "जगदीश", "M", 39, "NZR0229526"], [1015, "118क", "संदीप कुमार", "पिता", "जगदीश", "M", 36, "NZR0008797"], [1016, "118क", "बिमला देवी", "पति", "मंजीत", "F", 36, "NZR0229534"], [1017, "118क", "वकील", "पिता", "सुन्दर सिंह", "M", 31, "NZR0360511"], [1018, "118क", "सोयिया", "पति", "वकील", "F", 29, "NZR1142058"], [1019, "119", "रंभे", "पति", "विक्रम सिंग", "F", 25, "NZR1337179"], [1020, "119", "सचिन", "पिता", "उमेद सिंह", "M", 25, "NZR1328277"], [1021, "119", "अमित", "पिता", "राम मेहर", "M", 23, "NZR1337328"], [1022, "119", "परवीन", "पिता", "रामफल", "M", 22, "NZR1328202"], [1023, "142", "सुनील कुमार", "पिता", "सुन्दर सिंह", "M", 28, "NZR1063130"], [1024, "147", "परवीन", "पिता", "भीम सिंग", "M", 23, "NZR1337054"], [1025, "152", "सोहन", "पिता", "रण सिंह", "M", 38, "NZR0287219"], [1026, "152", "संतोष कुमारी", "पति", "सुरेश कुमार", "F", 39, "NZR0438481"], [1027, "152", "पाली", "पति", "सोहन", "F", 35, "NZR1325604"], [1028, "152क", "बिमला देवी", "पति", "रण सिंह", "F", 65, "HWV1748623"], [1029, "152क", "सुरेश कुमार", "पिता", "रण सिंह", "M", 38, "HWV1748631"], [1030, "233", "प्रगति", "पिता", "सीता राम", "F", 23, "NZR1299908"], [1031, "239", "कृष्ण", "पिता", "रती राम", "M", 58, "NZR0008805"], [1032, "239", "अंगूरी", "पति", "कृष्ण", "F", 56, "NZR0008821"], [1033, "239", "चरण सिंह", "पिता", "कृष्ण", "M", 37, "NZR0008813"], [1034, "239", "मीरा देवी", "पति", "चरण सिंह", "F", 36, "NZR0122408"], [1035, "240", "कुलदीप", "पिता", "जयबीर", "M", 43, "NZR0122416"], [1036, "240", "कमलेश", "पति", "कुलदीप", "F", 41, "NZR0204693"], [1037, "241", "भगवान दास", "पिता", "ओंकार", "M", 55, "NZR0216549"], [1038, "241", "अनीता", "पति", "भगवान दास", "F", 50, "NZR0216556"], [1039, "556", "पिंकी", "पति", "दिनेश कुमार", "F", 40, "NZR1246842"], [1040, "", "अनु", "पति", "रवि", "F", 26, "NZR1142256"], [1041, "ढाणी ठाकरिया", "किरण", "पति", "संजय", "F", 22, "NZR1484260"], [1042, "ढाणी ठाकरिया", "सपना", "पिता", "सुरेश", "F", 22, "NZR1402171"], [1043, "ढाणी ठाकरिया", "रवि", "पिता", "बलवंत सिंह", "M", 31, "NZR1331594"], [1044, "ढाणी ठाकरिया", "किरण कुमारी", "पति", "सोनू", "F", 30, "NZR1348945"], [1045, "ढाणी ठाकरिया", "प्रियंका", "पति", "अनित कुमार", "F", 25, "NZR1388461"], [1046, "ढाणी ठाकरिया", "सुमित", "पिता", "सुशील", "M", 23, "NZR1388438"], [1047, "ढाणी ठाकरिया", "सुदेश", "पति", "महावीर", "F", 23, "NZR1328293"], [1048, "ढाणी ठाकरिया", "सोयिया", "पिता", "सतीश कुमार", "F", 21, "NZR1444686"], [1049, "ढाणी ठाकरिया", "नविता", "पिता", "अरविंद कुमार", "F", 22, "NZR1337088"], [1050, "ढाणी ठाकरिया", "साहिल", "पिता", "संजय", "M", 22, "NZR1348952"], [1051, "ढाणी ठाकरिया", "नेहा", "पिता", "अरविंद कुमार", "F", 21, "NZR1394964"], [1052, "हांसी", "बीर सिंह", "पिता", "जोगिंदर सिंह", "M", 28, "NZR1347095"], [1053, "हांसी", "पूजा रानी", "पति", "अरुण कुमार", "F", 22, "NZR1347103"], [1054, "107ए", "दीपिका", "पति", "अंकुश", "F", 25, "NZR1343656"], [1055, "3", "रेनु", "पति", "सुरेन्द कुमार", "F", 24, "NZR1337302"], [1056, "13/1", "पंकज यादव", "पिता", "रमेश", "M", 23, "NZR1328137"], [1057, "21", "सुमित", "पिता", "इंद्रजीत सिंह", "M", 22, "NZR1343664"], [1058, "22", "मनदीप", "पिता", "राजेन्द्र", "M", 22, "NZR1337112"], [1059, "25", "मोनू", "पिता", "जयबीर", "M", 28, "NZR1328335"], [1060, "25", "रवीन्द्र", "पिता", "जय सिंह", "M", 22, "NZR1343672"], [1061, "56", "केशव", "पिता", "सत्य नारायण", "M", 22, "NZR1343623"], [1062, "59", "नेहा यादव", "पिता", "राजेन्द्र", "F", 23, "NZR1337294"], [1063, "59", "नितिन यादव", "पिता", "राजेन्द्र", "M", 22, "NZR1337286"], [1064, "90", "दीपिका", "पिता", "राज कुमार", "F", 27, "NZR1328301"], [1065, "107/1", "लवकेश", "पिता", "सुशील", "M", 22, "NZR1328269"], [1066, "111", "विकास पुनिया", "पिता", "राजेश पुनिया", "M", 20, "NZR1543669"], [1067, "115", "रामभतेरी", "पति", "श्रवण", "F", 22, "NZR1343680"], [1068, "116", "राम दिया", "पिता", "रवबीर", "M", 24, "NZR1328327"], [1069, "119", "सुमन देवी", "पति", "विकास", "F", 29, "NZR1343599"], [1070, "166", "पिंकी", "पति", "मोनू", "F", 31, "NZR1328343"], [1071, "बीबीओ ढाणी ठाकरिया", "भारती देवी", "पति", "मोहित", "F", 23, "NZR1442730"]];
+
+/* Sarkari namavali ke cover page se (2026 SIR draft roll, bhag 124) */
+const ROLL = {
+  year: 2026, part: 124, ac: '50 - Hansi', pc: '4 - Hisar',
+  ps: '124 - ढाणी ठाकरिया (Rajkiya Middle School)',
+  total: 1071, m: 563, f: 508,
+  ageRef: '01-07-2026', published: '31-07-2026'
+};
+
+const WORKER_URL = '';               /* apna Cloudflare Worker URL (optional) */
+const NEWS_SNAPSHOT = {"village": [], "hansi": [{"title": "Farmers, police clash in Hansi during protest against Haryana CM’s Independence Day event - The Hindu", "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPc0QtbFlvY1k3XzlkaHV6UlpCZVIxeldLQm5lQ0dndzM4Q1E0MmpueXRsLTFMN0dJT1dzdFlfTHYzcVRkbzh3bXB6WDNFT0szX19nN1V1V05idS1KTnlwTHI2ZmtzOGoxcnZ6dF84aVBLNHhvQ3VjdFZWR2pLa04ycDhhQTY1UjIxMG1hTjZQeDBKc2pYVGhVandRN1llTV9yaHVOa2tMcVZtNTV0R1IxWXplTzhDc0c3NThMdnB4RWV5VUVUYTJ5T3JFWkp4UnZkS2tWTEUzdnJNdFFXdVlUbW5rNVVGdDE2aXfSAfABQVVfeXFMTUh6d204YzBFWFBiY1M0cUItQUdJTk93dUY1TTY2dURMeGtJMTdBaWFjNkdhSTNZdzVoQ2xCTHhzTEdjQThCMmtSaDFYdllEdWxPRE44NTJfU3R6b1h6ZzVRb0tnQUxfTkFObWVxT1BveDNubWNhNjEyb2VNeUtfV2FHZ3dvNWY4Vm5McWttb2dhWlBET1JIWF9EY0tTRkVnOVQzb1hWeWF0OUxfQ2J3NHNEVXQ1LTkyME0xd01WU3g5OXpFakd4Mi1fRTVDcmpKWi1VTENnczZlZjRxM1QxM3c0SHlMbXhyVkZVUXlyOEpB?oc=5", "published": "Sat, 15 Aug 2026 07:00:00 GMT", "source": "The Hindu"}, {"title": "I-Day face-off in Hansi: Farmers, cops clash as protest targets Saini’s flag-hoisting, many injured - ThePrint", "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQMFR6a3JFSTI0ZVRXWU1OQjZ4Y3BrSWJ5c2xlOVA3SmtlVlYtOFZjb3FrMUNWVUE5bFpza2ppWjdGR3dHNG5tcGdSZVlHSnpnZ3F2TDI0MGE2MnFEU0liY05LRG1aWWhSYjRrOUpnbl9LcXJhcUZYYzJPcjVxdmZWc3JRR1htRzBFYlJmdXVSX2N5U05Cb1h1ZjF3Wm1xcnRTbmJndHlwWDhNT1J5cHduX3JHSDM4X3dzRDFTeTU0b0xGaTgxMHNKRWR30gHPAUFVX3lxTE8xbllENmIxYi1peF9YZU5uZ2VoZFFzazZ3MzBOTmxSbkxGbjRCMW5kLW5QYnFTTHBwTkIyZmZpRnFLOENxVEFMRXhiY3NXS28zeUtHTFhjbE9aRlN0NnhlSzhuRTJ6X2JIQXpJUE1HWDdKajg5YTlfTGZxZmxZYkQtSkJ0YTNtdElESExRQXlPZy01bGZwTU9JZzJEWlVSYmpNclVxbEZuZkh3a1k4Y0lQN0ZxempOUnRaUTJkR0VCRlpCV3UybGVNYTVxSTgxQQ?oc=5", "published": "Sat, 15 Aug 2026 07:00:00 GMT", "source": "ThePrint"}, {"title": "Hansi Air Quality Index (AQI) and India Air Pollution - IQAir", "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE0xU3k0b2E0RmFRbHMyLVBwYkJYZHFzTVlOZXdTaWxEeGo3cy1GUEFjN21Id2VhcFRCWS1CdjM2UlM5dFdJRXhNUkNFV2t4VUR0elE2TXNtbXdQMzRRN3lQdlptbk9CbndOYms0?oc=5", "published": "Tue, 23 Jun 2026 20:55:16 GMT", "source": "IQAir"}, {"title": "Gym operator shot dead in Haryana's Hansi, Lawrence Bishnoi gang claims responsibility - The New Indian Express", "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNejFUSHF3b2tsYkRWQWlfLU9hYUl3Z3R6T3RxdVlyTVVfU21pZ3l3OHVKdkktOWZJVm4tQ1UxcUJBWk5tQWNkblVCc1E3RlB3MV9IYXBXNktaNHRtUzBldHAxMWVQZ1JPd01nZG45bVVCQXlfZzFpb0k1em9pZGk3N2t2ZFlUYlp3WnNCZTlNTEg4c0gxanFNM3ZIVXRVekxaUUNrU0I1R0FNQmlPSTdxb0lQUk5xMEVpUHJ0MmYwSzVDNU1wZHZzTnVWOS11V18t0gHeAUFVX3lxTE5lTUtSN3lMVS01X0RtTXlqWmNTdllnUUVKRGZROTgyZHZqdjQ4MWhkWVlLQVdrajQzTHNXZF9KNUIxbVViUnpydDBoNlVaeW1MRnhuSlRkUHppaHdZdW1WWEJ1SHc1WnlWUHZSblZ4NFNzRG1fOUo2dlUyY19reGlNQnRvczg5OVpSVFVsOEh2MUhRRlhlYVZCVWN3V0hTUWlxWkdNcWFGQVBiMVlCYzlfeEV2bGh0Q2xnMS1iZUZPNmFRQ1BCQnBFWkpZWExhSDNsblowNmduMENZeDJmdw?oc=5", "published": "Thu, 11 Jun 2026 07:00:00 GMT", "source": "The New Indian Express"}, {"title": "New anti-corruption bureau unit inaugurated in Haryana’s Hansi - ThePrint", "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOcGdReEdEaVR4TFdKZVE0UDVNeE9UWFJMZXAxRmoweG00YkZfdHluUEhNa2gwUEhwT1Y4Ql9BN253YWZrZDFCN2JxZ2xma2F1REZueHA5RGNFNVZxa2djQ0NzNnFiOGxEZG1Ma2Y1c0hCMnpjVmw5TG9KUkl4SWRoR2xpYnZQQjBNQ0s3U0hrVlZkSGx6UU9GVXBmYWbSAaIBQVVfeXFMTVN1TkJoOXVQQ2o3NEppYU1Gcy04MElfRkxlbE5KWlU3SDRHalJ3dDdsVzJWYXRSS2hhYkRxaGRKRlZzX29HanIzZWpuYVBRb3J3Qnp1Q1A5VUhiTDNWTWhhNE5YcFJBaHNoSXlucDlXa2o0ejJ5eE9oWmZXUklWbXF3V2dwZ19MbkdleVdjSE5fckpEaEhkalBMRjh1MGtlVG5R?oc=5", "published": "Mon, 07 Sep 2026 07:00:00 GMT", "source": "ThePrint"}, {"title": "Gang-linked killing caught on camera during public gym session in Haryana - The Indian Express", "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxONWhmY0tHX0dkYUtoM0VNNktVek5UUzJHX2l6enFiWW5DY2hWRURhSzdtcHBtWDZXS04xS3dVcmpoNUdZaGZDakZhSlBOa1lhN3daNk5FVEZoT2FXaWlwbHRpV19tOGwtQ1lzcDdWcHk0QTFTckV2azhCZVU0T2hDcUgtNHFaVnI1TlZsWVhuMGt4a1dkTjJNbzhuQzJkUEhxNW11VTY0QjNoSlZ0QjlVMTVzdmVLdUtzbWfSAcABQVVfeXFMUHNIZGxjTV9oOVhuODNiMWoxcGE2NUN1enJULTJBV0hDWkN4WDVqenRUSTVuOFRUS29tT0dqMG5jY3FGZ1NzcGluanBVMWE0RGFBdWFFMV9ud1RrbE15Mk5ac01DcnVHRUswWUJSUnRlWjQteXFSanRibThobmQzcnhHcUc3dDgtY1Nxc0p6OTE4Y0hUdDVYaGhPZlA2bTFSZV9pZVlkS3dsY2VxSGlheGo0ZmhlbVpUZXlvNkpsaElQ?oc=5", "published": "Thu, 11 Jun 2026 07:00:00 GMT", "source": "The Indian Express"}, {"title": "IPS pelting stones, cop pointing AK-47 at farmers. How Hansi marked 1st I-Day as Haryana district - ThePrint", "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPRTMwOEFVMjF3MWxTNzk2cXRlNUVMVGllVVdRS0gtUlJIU0J6ZFhlU09DVV9YeGhiT1lYQWtJTFlMbDNSRGFzU2N1Q0hYUlZJMUQ0RERHY1hQZzA4VW5iQWVwOEpXLXZjakFPd1BfNHdDQ0lJZjU5X2FVRU5SY0E0bE5vT3RYcUM2bHpjUERZd2RjVUpuUW12Ri1hMmJzN3M0OEtMMG9wSWJLSmx3Z2RfYVNIU2QzLW5EOXpIN0pzZVUyU2dlYi15NmFR?oc=5", "published": "Sun, 16 Aug 2026 07:00:00 GMT", "source": "ThePrint"}, {"title": "Hansi becomes district again after 193 years; city older than Hisar - The Times of India", "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPbDZRbUlON0FfSTh1RjRUT1lVZ0duSjhrZmN0UUl5N0tuLVlheFhNZXhZeDZmNDRrN0ZlWnpCVEJ3Q0JHNDlZMGFiQktJZGx1OUx3WEJIczB2MmEzMGM5NVQxQ2tyY1pqcXBvYzROOG9HY3dPbGphNWotYXhJa0Zsa2w3NGhxYTEtUHNIbXVXY1JsRVRMY2Z0b0VmRnoyTnJmWUY3RVVscms2ZXNPTzAwRXJHQ3BPUkZCdkNBdGViNWZKRG9sODVHbl9KV0NBV1M3cTUzWGp1eDNOVjdB0gHiAUFVX3lxTFBWcFVHUkQxdXlENXhoejUzcHA0Umc0YmZrTDRMT0l6VnNEY0swUHUyWndxZnRBN1Z0S0kwOUFGR0lFaVBYcEJERmxFa3dsQTR1cFcwYXF4YXZISXBjZ2Y2a3lIbHlsamFYd1VWM3I3akloZ25JNjNMLUhmaTBPSU5WQmJSbVJuWFVHS0dBREhlYUtfbVpKLWNKTzdwNUVhQXRhNUVxZzA4cENhS2VGZmtKMXl1cngwd0I0WlRsbXBnYXdYVWtzSm1MVXhoRlFDZ2V6RHZfNDAzbFRubWRrc3JKTkE?oc=5", "published": "Fri, 19 Dec 2025 08:00:00 GMT", "source": "The Times of India"}, {"title": "Stopped from constructing sheds, lawyers strike work in Hansi & Hisar - The Times of India", "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNT0NlWG5QN25HOE1xMk45V01VTTN0Yk1mTGxTRWZJSFFqMkZBaE9NYTM4ZGtuVXphcW85UVRaeDV3eGltZ0I0QlhTQTFaTF9raVVlc1oyN1d0RmU2VVpwVkNyNXNfWlY2dEM0OExvZzFOMzVVclNPOTFJZjJsZTVsZ1hYeGVuV0FTd3J4Q1JqOWs2Y1JqalNaeTZDc0h3TGRKZ2dZeHBsZTA1TjJJQXhyQl9hVHcydlFfNEQ1OW84bVRORERuYWdYME90VVZkYXNBRFhiUGFLVVVKazhu0gHiAUFVX3lxTE00UEZ5NXp0cTg3REJaZkhTamtwZ2VRMGF2clNwSnktc3FGc21lUTQzQVloejdPS0pQS3ROQVNzTFEzVUFXS3dqWTFlYVNGY1ZzbFFtb2dTeGxfbjFSWmZUSFViNWVvaklWQV8wc2IxZ0lSV3NhQlFramJzRkwzR3F6LTYtQ21RQUtydUdSd0R4TG1ablRORVZWRm5VUmhDS1pwck5URUllZDZzdUFRbFVtbnVqUE1JNWNNd0hfeHVuSC1UQ1JWOHZCVzluaGRPWENzVHVUNUZVb2xUMU56ZEJXaHc?oc=5", "published": "Tue, 03 Feb 2026 08:00:00 GMT", "source": "The Times of India"}, {"title": "Hansi to Become Haryana’s 23rd District, Notification Likely Within a Week - The Haryana Story", "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNTTl3S0ZyMURrVV9EUDJtWmxtMDZkZ29LNWxpNlBfQlUxd3RJVS1KZFFQS0EtV1U2S25fSm1XYmFkZkl0T2FndVNGWUZaZE5IdV9GZXBoZ2QwRnc1Z3h4Y0hxaEpXY2tQSzJNQW5nVl9rT2JmMmh0aFNZaHZFandrSG9aRVd6U3lSbVB2WVRtM1EyMnNxY1Q5eFdXTDFGQkNJX3VQcWhQRWpnUzVMMEJ0c09ZdGxjakU?oc=5", "published": "Wed, 17 Dec 2025 08:00:00 GMT", "source": "The Haryana Story"}, {"title": "Hansi, Haryana, India Weather Radar - AccuWeather", "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9GajFDcEtCeEVnaVhFZ2k0MlkyaDJVOTg1TnlOc2xWQmRWQTBXMGlhbGRFdkZxNG44RjBXQ0oyVzkwTjVxejNXc3JBY2FWYkZOTDhnRUlzOHV3alB2a3Z5YWFOdUVWcExGMkxQeGhoWHk0V1pSbXc?oc=5", "published": "Thu, 10 Dec 2020 10:37:36 GMT", "source": "AccuWeather"}, {"title": "Hansi declared as 23rd district of Haryana, notification within a week - The New Indian Express", "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNZWZvdkc5M3hZVk5seG1DOEZ4ZjRfUTVPdkxsSTVaakgtczFNOFVkZFZwQzl0SGhoSE96MFh5OGh6aUtUb24zc1hmeWpjdmFBZHJtM0duelZua3ZoeldQczNueDlBb2QybUJNZVNWeFVJWi16eWhUenVubzdxUVplbnp3M1ZkWEUyMHIyNFZZR0NxR21lakJiMjdBNGhYRlZoejJILW5WRVJLNDlPcUFfbERTQ0luQWFKcnNiTNIBygFBVV95cUxQNVVLMGFYTGpmeE9LY2NnUGRTbmpfcC11cW1ENDdTdUI1eTZmMHFWM3dVVU9QcUtSZDBqeVA4bjg2TVdRZ2hQWXZYX3ZMakZET2dwdUxwVXVvVWVZUGdjUTVTUjNXc05xNFNjS3ZtTXN4NXZ0dDQ5bXlUNzBmRmVWcE5MakhMRmsxM2tpejhuRG1FQlJNYlRWX2JJdldNRmp1X0RKSkx1aVpSVThKNmRyS01FNFRzNGhuX3lOdlowTUk5czdRTi1sZzZR?oc=5", "published": "Tue, 16 Dec 2025 08:00:00 GMT", "source": "The New Indian Express"}, {"title": "BJP National President, Shri Amit Shah addressing a public meeting at Hansi, Hisar (Haryana) on October 10, 2014 - Bharatiya Janata Party", "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPYkszR1lXYl9rSUZoR2s2eE9xZ2RLcm9Pc1RBY2lVd2tUc19qS1VZMDdHWUlPQlZqVHowSlJfRXMyQzhKSF96cFlaVmxGTFUwMjBkMHdVREUwaEJkSElHZ2EzaDRPbTNqR1hfMzlSbTd5c3E3RUhjaXpwczJncGNrbDdFTVFTdHZQYk5ITDBCTmdLbW5TR3dhbkpZM1VBeGV3QVAzSElGYTNsNm8xX2FMUURoYXlfUi1j?oc=5", "published": "Fri, 10 Oct 2014 07:00:00 GMT", "source": "Bharatiya Janata Party"}, {"title": "Haryana Declares Hansi as Its 23rd District - Adda247", "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQUkp4bzc1bmRSU3FUT1VvSGxmLUItbUhkdkJLZGZ6TWdGUUVKYU9hNE9XTTBXU0U4blNvWXpLOEk0SmUtaXdnc1d6Rm1HdlpMTmpxYUdqbWNDMjRaQ2k0LUdoLTZjTjUwcnM4LVo4QWJ0cDZrLTZXbVZGY3lSQVhhRlJXNnlEdw?oc=5", "published": "Wed, 24 Dec 2025 08:00:00 GMT", "source": "Adda247"}], "hisar": [{"title": "Chief Minister, Government of Haryana visits ICAR-CIRB, Hisar - Indian Council Of Agricultural Research", "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBMSjJoODNmMVZxWUEwUjZZRmdUTXB3RTRYTllzRHlCZmJweVpEYlQ3T0theWJRNjVIM3MzRE5tRjlVR0QyV2c?oc=5", "published": "Fri, 06 Nov 2026 10:37:42 GMT", "source": "Indian Council Of Agricultural Research"}, {"title": "Hisar Air Quality Index (AQI) and India Air Pollution - IQAir", "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBMV2k5ZVJ0amphZVFYaDlkMjBKYmtwWnRmMmxqODZ3enVzMVNxdzUxSmd2emdRWDEydU9xVHpocXBzSUdaTm9nVzhxeEt1OUlXb21TQnVBQzlGMjZycUhwMnpreHItNkg0SURr?oc=5", "published": "Mon, 22 Jun 2026 22:14:26 GMT", "source": "IQAir"}, {"title": "Hisar Air Quality Index (AQI) and India Air Pollution - IQAir", "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5KQ0wzU1Fmbndyczh3U2tfYl9DVGdsQl9uT01xZW80Z0R5NjB1TGxEcG5IS2Z0Wm5xMTNBVEtPQ1FIeUo2bDViTk91UUNCcUVEQW1FODVCUHZIb182TndkczJNWQ?oc=5", "published": "Tue, 23 Jun 2026 12:40:14 GMT", "source": "IQAir"}, {"title": "PM lays foundation stone of new terminal building of Hisar airport worth over Rs 410 crore - PM India", "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPcEJhQTNCQmxMbWMxTlpJVm82aVRnWkZTM3ZaVUVITlZBR2M1U29Qc0dWb0xQS3pmYU4tWm92VDQ5cU1LcVA1czRqLXNFaVhMM2ROVzlHeW9ZdlFuSHNaVlRNUGJlYVJSc3pNM3E4M0Fyc3pFS2hPOEZlTEMtaUs5NERlYVBEeW5SSmJ3RWo3SWlsbTJpUU5za0xnTWJCQi04Wk0wQ2xlTy1NRlFvTnotbTJsczBJY21EVzRHVnZiT2xsbDZCd1lqWlFvVGl1bEE?oc=5", "published": "Mon, 14 Apr 2025 07:00:00 GMT", "source": "PM India"}, {"title": "Air quality in Hisar - IQAir", "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBGWDJkRU9KZVBuNC1xVmFKeVlNMEM5X0Zra3YyLUJTbkdDUi1peUl5VUFYUUlBRVZFVnpxX3Vsam5QMGlhQ28yTzgwTWhYMUR3amNlQ0dzRDY3SDVnQTlNUzF0Q0psT2M?oc=5", "published": "Sat, 27 Jun 2026 19:48:13 GMT", "source": "IQAir"}, {"title": "LIVE: PM Shri Narendra Modi addresses public meeting in Hisar, Haryana - Bharatiya Janata Party", "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNYnFxMGF1REhNODdXTTZsSFRyX3F5a2ZELUpINW9pRm5TQWVjY0QzSk5WZ3FoRFZNOG1od1JUclpKdmQtOWVCdmR4UU8yd1lwVHVwSEhXbHY3N3hqVENDdzhVRzZWdXhfVTlGXzc1dGs4dEF5MzhQdmQ2ZjR2VGE4NWVhMnFIOVBaU1NhTENn?oc=5", "published": "Sat, 28 Sep 2024 11:34:48 GMT", "source": "Bharatiya Janata Party"}, {"title": "Hisar to become Agrodak? Former Haryana minister’s plan to change name of his hometown triggers row - ThePrint", "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQRXM0UENzbk11ZFRURTRuLVZoalNLZkNGZGFEcnhIakpRVkw1WkNnTVVlZURaZFh2MG9VUUgwWEZEQl9ETXdnWkctS1FrZXpWUngwd1g4dU96WllpbkQwTEdveU1maWFEdkUxYmJUSXkwNTZmdDAtYVdvcGhTWHRFMkhWN0ZSYi1uTWpJMkhNUDNvbTJLSEx1OWhqNjRxX3hPSWR0LUNBbGhRZXI1VGtIM3Y2NTRqQkVyWElTQmFjbE1TUl9INm1pd2V1Z0hDZXpJ0gHWAUFVX3lxTE1MSkdhTUZ6b0lBLUlVZU85N25LN1UxeVBWelpNSjRWWmx3S2VxYUQ2NWhQdTFyVTViVVQzV2thMWE4QTJWUWhEQkNTM19aTk83T3lKMnBYeE1ZOTYxNGR0ZnZtbkxwX0xvSlBmVUZDYzAzRGRXdlhGRXRrT2N6MFp1Q2djQ2F3NE5jRXYxNk81Yk9RRWpaa1g0LW1YTlFlSjU2UGlHeWlTcVZFM3NFVUZ1ZFZjakxtYm56aWpDejAzUklMZHRXQXFWR0hSRXdZeUh1U3RNNUE?oc=5", "published": "Sun, 17 Mar 2024 07:00:00 GMT", "source": "ThePrint"}, {"title": "Hisar, Haryana, India Weather Forecast - AccuWeather", "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE4xM3dsY2Fmb3RVd3RyeGNPdEtQdkhuVDBScXNhc3M3Z2JDVDZsWHVjZGxPVUtIZk5CVDV5VGgyVjVuY0haQjZ0UEE5bzVEdU5OdEhmN3lYbHZ1ZU1abURiVGptX3BCX1k5UW9HNHNvTEhXTVlNaUFySXAzOXE?oc=5", "published": "Fri, 03 Mar 2017 07:14:17 GMT", "source": "AccuWeather"}, {"title": "Why Haryana govt has tabled bill to give Hisar its own metropolitan authority & what it says - ThePrint", "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxON3NOZmVnV2UtOXN2ZzBUeFpaQy1MOW5tTUNaZ2k0TUFvSTNlajRldGVpSm1rVkRIYWREWEpVUm1jcXpRaW1TdjdyYlFjOGI4THAzbzY3eGJrcDR0bFF0YWswQjRXSnBZM0RzVEdwNzBlOTR3SGdpdk9BT3pfYVVOTTVMaU5xanpXZkNzNlFrcnlaOVc2bEtYLWpYc0g4dHQ3SEl4MkJkUW9XRnlMLUNIbkh2cEh2RFNEVjF6NFFsdG91ZlXSAcgBQVVfeXFMUC0ta19mc3dIQ1R3YU5yUmc3T2FmRDlfUnA2aGM0WGdYbFhSQ3VJd3ZZWGVqaW9YRmE3c1Jfc0YzQlotRF9Cc05lcnlZMjdrZTZCTnNBZnhrOXJPWFNvOUlndXg3V1J0NUN5aE9nbG5SRTdQaUxzMXltLUE5YXdod3lnbkFTbjFOUGdvaFNPdmdfaU9tam5tSy1MZ1B6RTEtTkc3QW52dzZqb2pmcTlPOVBRd19aVkJNSUZJWjJHWE5wUFg3VkVYLWU?oc=5", "published": "Wed, 28 Feb 2024 08:00:00 GMT", "source": "ThePrint"}, {"title": "Haryana Roadways employees call statewide strike on November 5-6 over pending dues - Moneycontrol.com", "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPRmpYbzhKWDhubVFBXzNSaGdTVG82dGxnWUJpYjl6UzZwa3k0QUNjMFNLd1YyWTloVGtJTm5UTEp2ajlpMlgyT25jOVF2RzVNcWFkZkV5NWcySjNreTdTVkk3aFF1a0Y4akdYM3ZPYjBvZzZxNEN4bDBkdnVNR3BMcmktSERuTlJHSmN2Nko4YTJfQjdCRndmQkJBRThKS2V1M2Z1aDNEOHJ5RmtrSTl1UnVSeEJjcUladGo0RDcweV80OWI4NTBiOWxIZ3hKZzhqQnfSAdcBQVVfeXFMUGdyNGN5SlZ5bzRaOXdCNWhBa2hPVEVqemtKaEowWFAzaTR1bHlTbzViMGs1emFMWWgwZmdrR3RCY1FKVXFGdHBIZkMtalFSZ3VtOFVEOTRVVWc0R2k0Q0Y2QWl5VnhkdnBmdVNtTVp4ZVRTdEJWYkRjOGNfbHVodFVpMjZUcm9nczd5cFRGUFpFX0hsRVhkTFVMZGZRQWl5Z2h0LU13V2tfX2ZodzJfcUlwZWZLa09lX2JDNmNidE9ILUxRblZsS3pNUzlrT0NJOGFyU0dkZ00?oc=5", "published": "Tue, 03 Nov 2026 08:00:00 GMT", "source": "Moneycontrol.com"}, {"title": "Top 100 Polluted Cities in the World 2026, Delhi AQI Rankings - Vajiram & Ravi", "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOQ2V2Y2RXVll5RGpGV2ptYXFPR3JFdDJGMWJoRlF5Ym01SEJTdDB5dnlSZGNZSVlKeDRFcW5UeTUtT0xLQzROTHdlYlFCMHpJT0lHN3E5R1FXd1VRa3Q1ci1odHV4a3VfSGJuZFhLSHZ4NU9MdmlkSTUyY2Q5b2dSQ3dIR0pjVW8?oc=5", "published": "Fri, 13 Nov 2026 10:34:37 GMT", "source": "Vajiram & Ravi"}, {"title": "AQI world most polluted cities ranking: Gurugram No. 1 at 691, all top 10 in India, NCR cities in red - Moneycontrol.com", "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOQ2VrTGhmUDJzaWVhc1BGVXlzZm5NR2pnWEZSTmlkNTlINno2anNkYlc0THNzdDR0Q3hsMUxpenp6SVp5SW5CRm1NeGhCM3VMUUVwd2N1WnhFX2tYNUk3UVViQlkwT016cEtpOURvNGZjaEJjVWNsQ0tHc0hXc0h0b2FmT2dJdm9HYWlrQXpRVUt4RkdGcXo0MTJXWE4yQkNLa0k3cVpZQ2Ixb1BMUXJ1dFcxeVd3ODZMeVBpZ0FWN0dnOGJ4dmlvNktYN0lLeFJ5aVVqYnBHQUlIcFhuTHJMNmhCZGxIcjhH0gHuAUFVX3lxTE96emtkLXFTRGdHLUY4Q1lrb2t4THp6ZlFPc2dYNjNmVHR5ejZ1TThPcm9LdDhYSjRka3pMZHdYNU1VNkItT1ZfT1ZsWWJWRXp3SFBpNk8ySi1RbXVYdzBGUlc1UGl0bi1mYl9GeDRLYlVrdHJTV3Q3Uk9CUFdFYlVVRkdiRkh1ZGJ6NnJJWTRleUlFQ0htQjdSd2NMV2RYRXY1aGdEb2NvVENJTjE2amxEV19ERkU2cUpFQjIxMlEzWThTLUNDUmVsNDZMbFNVbE1LelBtdm84NFRIR0gwc1JIT0QyblFtWFBYVnJRblE?oc=5", "published": "Mon, 16 Nov 2026 04:32:32 GMT", "source": "Moneycontrol.com"}, {"title": "Hisar air quality map - IQAir", "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5QaGk1MjVwNGlIMmwxQ0UwUERhckxicWFxcGhCTmQ2U3l2VTJRTkloamtJbVFvWE5ubExKZnhZc05TdndKNTU4ek15VHBxbnZjUkVQOFdWXzBXQVMzSXVmcXhKUEhwUzR4bDFpV050R0E?oc=5", "published": "Tue, 17 May 2022 07:09:02 GMT", "source": "IQAir"}, {"title": "Haryana: Farmers kick off Hisar-Delhi march | Hindustan Times - Hindustan Times", "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPZk4yZFdJZ2lieU1BQWZqa1dhSDRnWjNLNVZoQzlBVlZ0STN3R2RhdGh2NmlNek1wdTFDNUZPaDNaMGJqYjdXQlN0RnpoOTRMekRwWE9kcHVrSi1YNkdsSmF6ZlRhLVZSU3ZUZnpieTJaQ0Voc0ZtZWNUQmtyVE9QaDVxOThyQnlQaXRWWjBaZXVXRnpqQ0lFM0FUQlVIMUg2cm05Y051TWpfX3dDQ0pJR25obmloY1Zi0gG-AUFVX3lxTFBZLUNjOTJuTUFtVXBma1dIWEhnRHprMklBdzN6M0oxVVdXN3d3NUdQUGRQNFg3VnlZYUtQNDZJVWEyQTI3cG1QN05DcFdVakpRZlNBQmU0TERzU1pfUE9TWVhrN1U1aUZBYTlKTFdJaUtnWjV1dlRYMkVaQUZZUDNiUjFUMkk2Q2NKdGs1dldfVjJGdWszR2oxVTZCbzF3YWctQXF3bmJHemVXLV9RZEJDYUhhSGVoby1tUEtNMVE?oc=5", "published": "Fri, 20 Nov 2026 02:11:10 GMT", "source": "Hindustan Times"}], "fetched_at": "2026-11-20T11:04:45.969991Z"};
+const LS_KEY = 'dt_portal_v2';
+const LS_THEME = 'dt_theme';
+
+/* localStorage kuch preview/iframe mein block hota hai — usse app crash na ho */
+const memStore = {};
+const store = {
+  get(k, d){
+    try{
+      const v = window.localStorage.getItem(k);
+      return v === null ? (k in memStore ? memStore[k] : d) : v;
+    }catch(e){ return k in memStore ? memStore[k] : d; }
+  },
+  set(k, v){
+    memStore[k] = v;
+    try{ window.localStorage.setItem(k, v); }catch(e){ /* session-only */ }
+  }
+};
+
+const $  = (s, r) => (r || document).querySelector(s);
+const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
+const nf = n => (n === null || n === undefined || n === '') ? '—' : Number(n).toLocaleString('en-IN');
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const uid = () => (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : 'v' + Date.now() + Math.random().toString(16).slice(2);
+const clone = o => JSON.parse(JSON.stringify(o));
+
+function toast(msg){
+  const t = $('#toast');
+  t.textContent = msg;
+  t.classList.add('on');
+  clearTimeout(toast._t);
+  toast._t = setTimeout(() => t.classList.remove('on'), 2200);
+}
+
+/* ---------------- state ---------------- */
+const defaultWards = () => Array.from({length: 18}, (_, i) => ({ward: i + 1, name: '', mobile: '', note: ''}));
+
+let state = {voters: [], wards: defaultWards(), votes: [], meta: {}};
+
+function seedVoters(){
+  /* row: [sr, house, name, relWord, relName, g, age, epic] */
+  return VOTERS_RAW.map(r => ({
+    id: uid(),
+    sr: r[0], house: String(r[1] || ''), name: r[2],
+    relWord: r[3] || '', rel: r[4] || '',
+    g: r[5], age: r[6] === null || r[6] === '' ? '' : Number(r[6]),
+    epic: r[7] || '', note: ''
+  }));
+}
+
+function loadState(){
+  try{
+    const raw = store.get(LS_KEY, null);
+    if(raw){
+      const s = JSON.parse(raw);
+      if(s && Array.isArray(s.voters) && s.voters.length){
+        state.voters = s.voters;
+        state.wards = (Array.isArray(s.wards) && s.wards.length) ? s.wards : defaultWards();
+        state.votes = Array.isArray(s.votes) ? s.votes : [];
+        state.meta = s.meta && typeof s.meta === 'object' ? s.meta : {};
+        while(state.wards.length < 18) state.wards.push({ward: state.wards.length + 1, name: '', mobile: '', note: ''});
+        buildSearchIndex();
+        return;
+      }
+    }
+  }catch(e){ /* ignore */ }
+  state.voters = seedVoters();
+  state.wards = defaultWards();
+  buildSearchIndex();
+  saveState();
+}
+
+function saveState(){
+  try{ store.set(LS_KEY, JSON.stringify(state)); }
+  catch(e){ toast('Save nahi hua — browser storage bhar gaya hai'); }
+}
+
+/* ---------------- static data ---------------- */
+const AC_2024 = [
+  ['Vinod Bhayana','BJP',78686,55.30,1],['Rahul Makkar','INC',57226,40.22,0],
+  ['Rajender Singh','AAP',2333,1.64,0],['Ravinder Kumar','BSP',2182,1.53,0],
+  ['Shamsher Singh','JJP',516,0.36,0],['Suman Kumar','IND',182,0.13,0],
+  ['Harish Verma','IND',180,0.13,0],['Rohit','IND',176,0.12,0],
+  ['Amarjeet','IND',163,0.11,0],['Kashmiri Lal Grover','IND',103,0.07,0],
+  ['Veerbhan','AAPP',72,0.05,0],['Navin','IND',69,0.05,0],
+  ['Jai Parkash','IND',23,0.02,0],['NOTA','NOTA',374,0.26,0]
+];
+const LS_2024 = [
+  ['Jai Parkash (J P)','INC',570424,48.72,1],['Ranjit Singh','BJP',507043,43.31,0],
+  ['Desh Raj','BSP',26015,2.22,0],['Sunaina Chautala','INLD',22303,1.91,0],
+  ['Naina Singh Chautala','JJP',22032,1.88,0],['Pardeep Dahiya','IND',3608,0.31,0],
+  ['Jai Prakash (J.P.)','IND',3273,0.28,0],['Jile Singh','IND',3196,0.27,0],
+  ['NOTA','NOTA',3366,0.29,0]
+];
+const PLACES = [
+  {t:'Govt Middle School (GMS)', s:'Class 6–8 · UDISE 06120402702', rows:[['Students','59 (33 ladke, 26 ladkiyan)'],['Teachers','5 (2 purush, 3 mahila)'],['Ratio','~11.8 student / teacher']]},
+  {t:'Village Library', s:'Gaon ki library', rows:[['Rating','5.0 / 5 (2 review)'],['Location','3W6V+965, Hansi 125033']]},
+  {t:'Hanuman Mandir', s:'Mandir', rows:[['Rating','5.0 / 5 (3 review)'],['Coords','29.0616, 75.9405']]},
+  {t:'Shiv Mandir', s:'Mandir', rows:[['Rating','4.6 / 5 (5 review)'],['Coords','29.0628, 75.9425']]},
+  {t:'Yadav Dharamshala', s:'Mandir ke paas, rukne ki jagah', rows:[['Rating','5.0 / 5 (4 review)'],['Note','Students ke liye safe stay']]},
+  {t:'Shivansh Milk Center', s:'Doodh ka center', rows:[['Coords','29.0684, 75.9467'],['Type','Local dairy']]},
+  {t:'Hansi Railway Station', s:'Sabse nazdeek station', rows:[['Doori','2.8 km'],['Type','Rail']]},
+  {t:'Tosam Road Bus Stop', s:'Sabse nazdeek bus stop', rows:[['Doori','1 km'],['Type','Roadways']]},
+  {t:'Hansi Bazaar', s:'Rozmarra ka bazaar', rows:[['Doori','~1 km'],['Note','Bank/ATM, dawai, kapde']]}
+];
+
+/* ---------------- helpers ---------------- */
+
+/* Search key: Devanagari + Roman dono, spelling variation ko ek jaisa banata hai
+   (Somveer = Somvir = Sombir) */
+function looseKey(s){
+  return String(s || '').toLowerCase()
+    .replace(/[^a-z0-9\u0900-\u097F]+/g, '')
+    .replace(/ee|ii/g, 'i').replace(/oo|uu/g, 'u')
+    .replace(/ph/g, 'f').replace(/v/g, 'b').replace(/w/g, 'b')
+    .replace(/sh/g, 's').replace(/chh/g, 'c').replace(/ch/g, 'c')
+    .replace(/kh/g, 'k').replace(/gh/g, 'g').replace(/th/g, 't').replace(/dh/g, 'd')
+    .replace(/(.)\1+/g, '$1');
+}
+
+/* Consonant skeleton — vowels hata dete hain, isliye Somveer / Sombir / Somvir
+   sab ek hi skeleton "smbr" par aa jaate hain */
+function skelKey(s){
+  return looseKey(s).replace(/[aeiou]/g, '');
+}
+
+const searchIndex = new Map();
+function buildSearchIndex(){
+  searchIndex.clear();
+  state.voters.forEach(v => {
+    const lat = trText(v.name) + ' ' + trText(v.rel);
+    searchIndex.set(v.id, {
+      raw: [v.name, v.rel, v.house, v.epic, v.note].join(' ').toLowerCase(),
+      lat: looseKey(lat),
+      skel: skelKey(lat)
+    });
+  });
+}
+const naturalCmp = (a, b) => String(a).localeCompare(String(b), 'en', {numeric: true});
+const isNum = v => v !== '' && v !== null && !isNaN(Number(v));
+
+function housesMap(){
+  const m = new Map();
+  state.voters.forEach(v => {
+    const h = (v.house || '').trim() || '—';
+    if(!m.has(h)) m.set(h, []);
+    m.get(h).push(v);
+  });
+  return m;
+}
+
+
+/* =========================================================================
+   Bhasha toggle: Devanagari -> Roman transliteration
+   ========================================================================= */
+const TR_CONS = {'क':'k','ख':'kh','ग':'g','घ':'gh','ङ':'n','च':'ch','छ':'chh','ज':'j','झ':'jh','ञ':'n',
+ 'ट':'t','ठ':'th','ड':'d','ढ':'dh','ण':'n','त':'t','थ':'th','द':'d','ध':'dh','न':'n',
+ 'प':'p','फ':'ph','ब':'b','भ':'bh','म':'m','य':'y','र':'r','ल':'l','व':'v','श':'sh','ष':'sh','स':'s','ह':'h',
+ 'क़':'q','ख़':'kh','ग़':'g','ज़':'z','ड़':'r','ढ़':'rh','फ़':'f','य़':'y'};
+const TR_VOW = {'अ':'a','आ':'a','इ':'i','ई':'i','उ':'u','ऊ':'u','ऋ':'ri','ए':'e','ऐ':'ai','ओ':'o','औ':'au','ऑ':'o','ऍ':'e'};
+const TR_MATRA = {'ा':'a','ि':'i','ी':'i','ु':'u','ू':'u','ृ':'ri','े':'e','ै':'ai','ो':'o','ौ':'au','ॉ':'o','ॅ':'e'};
+const TR_INH = '\u0001';
+
+/* Bar bar aane wale naam ke shabd — inki spelling fix */
+const TR_WORDS = {
+ 'सिंह':'Singh','सिंघ':'Singh','सिह':'Singh','सिंहा':'Singha',
+ 'देवी':'Devi','देवि':'Devi','कुमार':'Kumar','कुमारी':'Kumari','कौर':'Kaur',
+ 'राम':'Ram','रामा':'Rama','कृष्ण':'Krishna','कृष्णा':'Krishna','राधे':'Radhe','श्याम':'Shyam',
+ 'चंद':'Chand','चन्द':'Chand','चंद्र':'Chandra','चन्द्र':'Chandra','चंदा':'Chanda',
+ 'श्री':'Shri','लाल':'Lal','दास':'Das','देव':'Dev','प्रसाद':'Prasad','पाल':'Pal',
+ 'जगदीश':'Jagdish','जगदीश':'Jagdish','महेन्द्र':'Mahendra','महेन्द्र':'Mahendra','सुरेन्द्र':'Surendra',
+ 'नरेन्द्र':'Narendra','राजेन्द्र':'Rajendra','देवेन्द्र':'Devendra','मुकेश':'Mukesh','सुरेश':'Suresh',
+ 'रमेश':'Ramesh','दिनेश':'Dinesh','महेश':'Mahesh','अशोक':'Ashok','विजय':'Vijay','अजय':'Ajay',
+ 'सुनील':'Sunil','अनिल':'Anil','सुनीता':'Sunita','अनीता':'Anita','अनिता':'Anita','मीना':'Meena',
+ 'रेखा':'Rekha','गीता':'Geeta','सीता':'Sita','शीला':'Sheela','कमला':'Kamla','बिमला':'Bimla',
+ 'शकुंतला':'Shakuntala','संतोष':'Santosh','सन्तोष':'Santosh','प्रदीप':'Pradeep','प्रवीण':'Praveen',
+ 'सतीश':'Satish','सतीश':'Satish','रणबीर':'Ranbir','जसबीर':'Jasbir','सतबीर':'Satbir','बलबीर':'Balbir',
+ 'कुलदीप':'Kuldeep','दलीप':'Dalip','हरचंद':'Harchand','उमेद':'Umed','उम्मेद':'Ummed',
+ 'मांगे':'Mange','भगवान':'Bhagwan','जय':'Jai','ज्ञान':'Gyan','उर्फ':'urf','मती':'Mati',
+ 'पति':'Pati','पिता':'Pita','नाम':'Naam','फोटो':'Photo','उपलब्ध':'available','है':'hai'
+};
+
+function trWord(w){
+  if(TR_WORDS[w]) return TR_WORDS[w];
+  const chars = Array.from(w);
+  let out = '';
+  for(let i = 0; i < chars.length; i++){
+    const c = chars[i], nx = chars[i + 1];
+    if(TR_CONS[c]){
+      out += TR_CONS[c];
+      if(nx === '्'){ i++; continue; }
+      if(TR_MATRA[nx]){ out += TR_MATRA[nx]; i++; continue; }
+      out += TR_INH;
+      continue;
+    }
+    if(TR_VOW[c]){ out += TR_VOW[c]; continue; }
+    if(c === 'ं' || c === 'ँ'){ out += 'n'; continue; }
+    if(c === 'ः'){ out += 'h'; continue; }
+    if(c === '़'){ continue; }
+    if(TR_MATRA[c]){ out += TR_MATRA[c]; continue; }
+    out += c;
+  }
+  out = out.replace(/\u0001(?=$|[^A-Za-z\u0001])/g, '');
+  out = out.replace(/\u0001/g, 'a');
+  return out;
+}
+
+function trText(str){
+  return String(str || '')
+    .split(/(\s+|\/|-)/)
+    .map(part => /[\u0900-\u097F]/.test(part) ? trWord(part) : part)
+    .map(part => part.replace(/^[a-z]/, ch => ch.toUpperCase()))
+    .join('');
+}
+
+/* ---------------- bhasha ---------------- */
+let lang = store.get('dt_lang', 'hi');
+const isEN = () => lang === 'en';
+const nm = s => isEN() ? trText(s) : s;
+const relLabel = g => isEN() ? (g === 'F' ? 'Husband' : 'Father') : (g === 'F' ? 'पति' : 'पिता');
+
+function applyLang(){
+  document.documentElement.lang = isEN() ? 'en' : 'hi';
+  $$('#lang-switch button').forEach(b => b.classList.toggle('on', b.dataset.lang === lang));
+  $$('[data-en]').forEach(el => {
+    if(el.tagName === 'TH'){
+      if(!el.dataset.hiLabel){
+        const c = el.cloneNode(true);
+        const ar0 = c.querySelector('.ar');
+        if(ar0) ar0.remove();
+        el.dataset.hiLabel = c.textContent.trim();
+      }
+      const ar = el.querySelector('.ar');
+      const arrow = ar ? ar.outerHTML : '';
+      el.innerHTML = (isEN() ? el.dataset.en : el.dataset.hiLabel) + (arrow ? ' ' + arrow : '');
+      return;
+    }
+    if(!el.dataset.hi) el.dataset.hi = el.textContent;
+    el.textContent = isEN() ? el.dataset.en : el.dataset.hi;
+  });
+  renderStats(); renderDirectory(); renderHouses();
+}
+
+function initLang(){
+  $$('#lang-switch button').forEach(b => b.addEventListener('click', () => {
+    lang = b.dataset.lang;
+    store.set('dt_lang', lang);
+    applyLang();
+  }));
+  applyLang();
+}
+
+/* ---------------- KPIs & charts ---------------- */
+function renderStats(){
+  const total = state.voters.length;
+  const males = state.voters.filter(v => v.g === 'M').length;
+  const females = state.voters.filter(v => v.g === 'F').length;
+  const hm = housesMap();
+
+  $('#st-total').textContent = nf(ROLL.total);
+  $('#st-m').textContent = nf(ROLL.m);
+  $('#st-f').textContent = nf(ROLL.f);
+  $('#st-house').textContent = nf(hm.size);
+  $('#st-live').textContent = nf(total);
+  $('#st-live-sub').textContent = males + ' purush · ' + females + ' mahila (list se)';
+
+  /* gender split */
+  const pm = total ? (males / total) * 100 : 0;
+  $('#gender-split').innerHTML =
+    '<i style="width:' + pm + '%; background:var(--blue)"></i>' +
+    '<i style="width:' + (100 - pm) + '%; background:var(--red)"></i>';
+  $('#gender-legend').innerHTML =
+    '<span><i class="swatch" style="background:var(--blue)"></i>' + (isEN() ? 'Male' : 'Purush') + ' ' + males + ' (' + pm.toFixed(1) + '%)</span>' +
+    '<span><i class="swatch" style="background:var(--red)"></i>' + (isEN() ? 'Female' : 'Mahila') + ' ' + females + ' (' + (100 - pm).toFixed(1) + '%)</span>';
+
+  /* ages */
+  const ages = state.voters.map(v => Number(v.age)).filter(a => a > 0);
+  if(ages.length){
+    const min = Math.min(...ages), max = Math.max(...ages);
+    const avg = Math.round(ages.reduce((a, b) => a + b, 0) / ages.length);
+    const unit = isEN() ? ' years' : ' saal';
+    $('#age-min').textContent = min + unit;
+    $('#age-max').textContent = max + unit;
+    $('#age-avg').textContent = avg + unit;
+  }
+
+  const buckets = [
+    {lab:'18–25', lo:18, hi:25}, {lab:'26–35', lo:26, hi:35}, {lab:'36–45', lo:36, hi:45},
+    {lab:'46–60', lo:46, hi:60}, {lab:'60+', lo:61, hi:200}
+  ].map(b => Object.assign(b, {n: ages.filter(a => a >= b.lo && a <= b.hi).length}));
+  const maxN = Math.max(...buckets.map(b => b.n), 1);
+  $('#age-bars').innerHTML = buckets.map(b =>
+    '<div class="bar-col"><span class="num">' + b.n + '</span>' +
+    '<div class="bar" style="height:' + Math.max(5, Math.round((b.n / maxN) * 82)) + 'px"></div>' +
+    '<span class="lab">' + b.lab + '</span></div>').join('');
+
+  /* biggest families */
+  const top = Array.from(hm.entries()).sort((a, b) => b[1].length - a[1].length).slice(0, 6);
+  if(top.length){
+    $('#big-house').textContent = (isEN() ? 'House ' : 'Ghar ') + top[0][0] + ' — ' + top[0][1].length + (isEN() ? ' people' : ' log');
+  }
+  $('#top-houses').innerHTML = top.map(([h, list]) => {
+    const eldest = list.slice().sort((a, b) => (Number(b.age) || 0) - (Number(a.age) || 0))[0];
+    return '<div class="house"><h4>' + (isEN() ? 'House ' : 'Ghar ') + esc(h) + '<span class="cnt">' + list.length + (isEN() ? ' people' : ' log') + '</span></h4>' +
+      '<div class="head">' + esc(nm(eldest.name)) + ' · ' + (eldest.age || '—') + (isEN() ? ' yrs' : ' saal') + '</div>' +
+      '<ul>' + list.slice(0, 6).map(v => '<li class="' + (v.g === 'M' ? 'm' : 'f') + '">' + esc(nm(v.name)) + '</li>').join('') +
+      (list.length > 6 ? '<li>+' + (list.length - 6) + '</li>' : '') + '</ul></div>';
+  }).join('');
+}
+
+/* ---------------- directory ---------------- */
+let dir = {q: '', g: '', house: '', age: '', sort: 'sr', dirAsc: true, page: 1, per: 50};
+
+function ageMatch(age, range){
+  if(!range) return true;
+  const a = Number(age);
+  if(!a) return false;
+  const [lo, hi] = range.split('-').map(Number);
+  return a >= lo && a <= hi;
+}
+
+function filteredVoters(){
+  const q = dir.q.trim();
+  const qRaw = q.toLowerCase();
+  const qLoose = looseKey(q);
+  const qSkel = skelKey(q);
+  /* Devanagari query ko bhi Roman mein badal ke match karte hain —
+     isliye सोमवीर (व) se bhi सोमबीर (ब) mil jata hai */
+  const qTr = trText(q);
+  const qTrLoose = looseKey(qTr);
+  const qTrSkel = skelKey(qTr);
+  return state.voters.filter(v => {
+    if(dir.g && v.g !== dir.g) return false;
+    if(dir.house && (v.house || '').trim() !== dir.house) return false;
+    if(!ageMatch(v.age, dir.age)) return false;
+    if(!q) return true;
+    let idx = searchIndex.get(v.id);
+    if(!idx){
+      const lat = trText(v.name) + ' ' + trText(v.rel);
+      idx = {
+        raw: [v.name, v.rel, v.house, v.epic, v.note].join(' ').toLowerCase(),
+        lat: looseKey(lat),
+        skel: skelKey(lat)
+      };
+      searchIndex.set(v.id, idx);
+    }
+    if(idx.raw.includes(qRaw) || idx.lat.includes(qLoose)) return true;
+    if(idx.lat.includes(qTrLoose)) return true;
+    if(qSkel.length >= 3 && idx.skel.includes(qSkel)) return true;
+    return qTrSkel.length >= 3 && idx.skel.includes(qTrSkel);
+  });
+}
+
+function sortedVoters(list){
+  const s = dir.sort, asc = dir.dirAsc;
+  const arr = list.slice();
+  arr.sort((a, b) => {
+    let r;
+    if(s === 'name') r = String(a.name).localeCompare(String(b.name), 'hi');
+    else if(s === 'house') r = naturalCmp(a.house || '', b.house || '');
+    else if(s === 'age') r = (Number(a.age) || 0) - (Number(b.age) || 0);
+    else if(s === 'g') r = String(a.g).localeCompare(String(b.g));
+    else if(s === 'epic') r = naturalCmp(a.epic || '', b.epic || '');
+    else r = (Number(a.sr) || 0) - (Number(b.sr) || 0);
+    return asc ? r : -r;
+  });
+  return arr;
+}
+
+function renderDirectory(){
+  const all = filteredVoters();
+  const list = sortedVoters(all);
+  const per = Number(dir.per);
+  const pages = Math.max(1, Math.ceil(list.length / per));
+  if(dir.page > pages) dir.page = pages;
+  const start = (dir.page - 1) * per;
+  const slice = list.slice(start, start + per);
+  const showEpic = $('#show-epic').checked;
+
+  $('#dir-body').innerHTML = slice.map((v, i) => `
+    <tr>
+      <td class="num" style="color:var(--faint)">${start + i + 1}</td>
+      <td class="name">${esc(nm(v.name))}<span class="rel">${esc(isEN() ? relLabel(v.g) : (v.relWord || relLabel(v.g)))}: ${esc(nm(v.rel) || '—')}</span></td>
+      <td class="num">${esc(v.house || '—')}</td>
+      <td class="num">${esc(v.age || '—')}</td>
+      <td><span class="badge ${v.g === 'M' ? 'm' : 'f'}">${isEN() ? (v.g === 'M' ? 'M' : 'F') : (v.g === 'M' ? 'पु' : 'म')}</span></td>
+      <td class="epic">${v.epic ? (showEpic ? esc(v.epic) : esc(v.epic.slice(0, -4)) + '••••') : '—'}</td>
+      <td style="white-space:nowrap; text-align:right">
+        <button class="btn icon" data-edit="${v.id}">Edit</button>
+        <button class="btn icon" data-del="${v.id}">Del</button>
+      </td>
+    </tr>`).join('') || `<tr><td colspan="7" style="text-align:center; padding:26px; color:var(--faint)">
+        <b style="display:block; color:var(--ink); font-family:var(--display); font-size:15px; margin-bottom:4px">“${esc(dir.q || '')}” nahi mila</b>
+        Spelling alag ho sakti hai — jaise Somveer / Sombir / सोमबीर. Chhota hissa likhein (jaise “som”) ya ghar number se search karein.</td></tr>`;
+
+  $('#page-info').textContent = list.length
+    ? `${nf(start + 1)}–${nf(Math.min(start + per, list.length))} / ${nf(list.length)} naam`
+    : '0 naam';
+
+  const btns = [];
+  btns.push(`<button data-page="1" ${dir.page === 1 ? 'disabled' : ''}>«</button>`);
+  btns.push(`<button data-page="${dir.page - 1}" ${dir.page === 1 ? 'disabled' : ''}>‹</button>`);
+  const win = 5;
+  let from = Math.max(1, dir.page - 2), to = Math.min(pages, from + win - 1);
+  from = Math.max(1, to - win + 1);
+  for(let p = from; p <= to; p++) btns.push(`<button data-page="${p}" class="${p === dir.page ? 'on' : ''}">${p}</button>`);
+  btns.push(`<button data-page="${dir.page + 1}" ${dir.page === pages ? 'disabled' : ''}>›</button>`);
+  btns.push(`<button data-page="${pages}" ${dir.page === pages ? 'disabled' : ''}>»</button>`);
+  $('#page-btns').innerHTML = btns.join('');
+
+  $$('#dir-table thead th[data-sort]').forEach(th => {
+    th.classList.toggle('sorted', th.dataset.sort === dir.sort);
+    const ar = $('.ar', th);
+    if(ar) ar.textContent = th.dataset.sort === dir.sort ? (dir.dirAsc ? '↑' : '↓') : '↕';
+  });
+}
+
+function fillHouseFilter(){
+  const sel = $('#house-filter');
+  const cur = sel.value;
+  const houses = Array.from(housesMap().keys()).sort(naturalCmp);
+  sel.innerHTML = '<option value="">Sab ghar</option>' +
+    houses.map(h => `<option value="${esc(h)}">Ghar ${esc(h)}</option>`).join('');
+  if(houses.includes(cur)) sel.value = cur;
+}
+
+function bindDirectory(){
+  $('#dir-search').addEventListener('input', e => { dir.q = e.target.value; dir.page = 1; renderDirectory(); });
+  $('#gender-filter').addEventListener('click', e => {
+    const c = e.target.closest('.chip'); if(!c) return;
+    $$('#gender-filter .chip').forEach(x => x.classList.toggle('on', x === c));
+    dir.g = c.dataset.g; dir.page = 1; renderDirectory();
+  });
+  $('#house-filter').addEventListener('change', e => { dir.house = e.target.value; dir.page = 1; renderDirectory(); });
+  $('#age-filter').addEventListener('change', e => { dir.age = e.target.value; dir.page = 1; renderDirectory(); });
+  $('#show-epic').addEventListener('change', renderDirectory);
+  $('#per-page').addEventListener('change', e => { dir.per = Number(e.target.value); dir.page = 1; renderDirectory(); });
+  $('#dir-clear').addEventListener('click', () => {
+    dir = {q: '', g: '', house: '', age: '', sort: 'sr', dirAsc: true, page: 1, per: dir.per};
+    $('#dir-search').value = ''; $('#house-filter').value = ''; $('#age-filter').value = ''; $('#show-epic').checked = false;
+    $$('#gender-filter .chip').forEach(x => x.classList.toggle('on', x.dataset.g === ''));
+    renderDirectory();
+  });
+  $('#page-btns').addEventListener('click', e => {
+    const b = e.target.closest('button[data-page]'); if(!b || b.disabled) return;
+    dir.page = Number(b.dataset.page); renderDirectory();
+    $('#directory').scrollIntoView({behavior: 'smooth', block: 'start'});
+  });
+  $$('#dir-table thead th[data-sort]').forEach(th => {
+    th.addEventListener('click', () => {
+      const k = th.dataset.sort;
+      if(dir.sort === k) dir.dirAsc = !dir.dirAsc; else { dir.sort = k; dir.dirAsc = true; }
+      renderDirectory();
+    });
+  });
+  $('#dir-body').addEventListener('click', e => {
+    const eb = e.target.closest('[data-edit]');
+    const db = e.target.closest('[data-del]');
+    if(eb) openMember(eb.dataset.edit);
+    if(db){
+      const v = state.voters.find(x => x.id === db.dataset.del);
+      if(!v) return;
+      if(!confirm('“' + v.name + '” ko list se hata dein?')) return;
+      state.voters = state.voters.filter(x => x.id !== db.dataset.del);
+      saveState(); buildSearchIndex(); renderAll(); toast('Hata diya');
+    }
+  });
+
+  $('#dir-export').addEventListener('click', () => {
+    const rows = [['Kram', 'Naam', 'Pita/Pati', 'Ghar', 'Umar', 'Ling', 'EPIC', 'Note']].concat(
+      sortedVoters(filteredVoters()).map(v => [v.sr, nm(v.name), nm(v.rel), v.house, v.age, v.g === 'M' ? 'Male' : 'Female', v.epic, v.note]));
+    download('dhani-thakarian-matdata.csv', toCSV(rows));
+  });
+  $('#dir-backup').addEventListener('click', () => {
+    download('dhani-thakarian-backup.json', JSON.stringify(state, null, 1), 'application/json');
+  });
+}
+
+/* ---------------- modal ---------------- */
+let editingId = null;
+
+function openMember(id){
+  editingId = id || null;
+  const v = id ? state.voters.find(x => x.id === id) : null;
+  $('#modal-title').textContent = v ? 'Member edit karein' : 'Naya member jodein';
+  $('#m-name').value = v ? v.name : '';
+  $('#m-rel').value = v ? (v.rel || '') : '';
+  $('#m-house').value = v ? (v.house || '') : '';
+  $('#m-age').value = v ? (v.age || '') : '';
+  $('#m-g').value = v ? (v.g || 'M') : 'M';
+  $('#m-epic').value = v ? (v.epic || '') : '';
+  $('#m-note').value = v ? (v.note || '') : '';
+  const note = $('#modal-note');
+  if(v && v.sr){ note.style.display = 'block'; note.textContent = 'Ye naam namavali ke kram ' + v.sr + ' se aaya hai.'; }
+  else note.style.display = 'none';
+  $('#modal').showModal();
+  setTimeout(() => $('#m-name').focus(), 60);
+}
+
+function bindModal(){
+  $('#modal-close').addEventListener('click', () => $('#modal').close());
+  $('#modal-cancel').addEventListener('click', () => $('#modal').close());
+  $('#member-form').addEventListener('submit', e => {
+    e.preventDefault();
+    const rec = {
+      name: $('#m-name').value.trim(),
+      rel: $('#m-rel').value.trim(),
+      house: $('#m-house').value.trim(),
+      age: $('#m-age').value.trim(),
+      g: $('#m-g').value,
+      epic: $('#m-epic').value.trim(),
+      note: $('#m-note').value.trim()
+    };
+    if(!rec.name){ toast('Naam zaroori hai'); return; }
+    if(editingId){
+      const v = state.voters.find(x => x.id === editingId);
+      if(v) Object.assign(v, rec);
+      toast('Update ho gaya');
+    }else{
+      const maxSr = state.voters.reduce((m, v) => Math.max(m, Number(v.sr) || 0), 0);
+      state.voters.push(Object.assign({id: uid(), sr: maxSr + 1}, rec));
+      toast('Member add ho gaya');
+    }
+    saveState();
+    buildSearchIndex();
+    $('#modal').close();
+    renderAll();
+  });
+  ['#dir-add', '#dash-add'].forEach(sel => $(sel).addEventListener('click', () => openMember(null)));
+  $('#dash-search').addEventListener('click', () => {
+    $('#directory').scrollIntoView({behavior: 'smooth'});
+    setTimeout(() => $('#dir-search').focus(), 500);
+  });
+  $('#global-search').addEventListener('input', e => {
+    dir.q = e.target.value; dir.page = 1;
+    $('#dir-search').value = e.target.value;
+    renderDirectory();
+    if(e.target.value.length > 1) $('#directory').scrollIntoView({behavior: 'smooth', block: 'start'});
+  });
+  $('#global-search').addEventListener('keydown', e => {
+    if(e.key === 'Enter'){ $('#directory').scrollIntoView({behavior: 'smooth', block: 'start'}); }
+  });
+}
+
+/* ---------------- parivar ---------------- */
+function renderHouses(){
+  const hm = housesMap();
+  let entries = Array.from(hm.entries());
+  const q = ($('#house-search').value || '').trim().toLowerCase();
+  if(q) entries = entries.filter(([h]) => h.toLowerCase().includes(q));
+  const mode = $('#house-sort').value;
+  entries.sort((a, b) => mode === 'size' ? b[1].length - a[1].length : naturalCmp(a[0], b[0]));
+
+  $('#house-grid').innerHTML = entries.map(([h, list]) => {
+    const males = list.filter(v => v.g === 'M').length;
+    const eldest = list.slice().sort((a, b) => (Number(b.age) || 0) - (Number(a.age) || 0))[0];
+    return `<div class="house" data-house="${esc(h)}" style="cursor:pointer">
+      <h4>${isEN() ? 'House' : 'Ghar'} ${esc(h)}<span class="cnt">${list.length} ${isEN() ? 'people · ' + males + ' M / ' + (list.length - males) + ' F' : 'log · ' + males + ' पु / ' + (list.length - males) + ' म'}</span></h4>
+      <div class="head">${esc(eldest.name)} · ${eldest.age || '—'} saal</div>
+      <ul>${list.map(v => `<li class="${v.g === 'M' ? 'm' : 'f'}" title="${esc(v.name)} · ${v.age || '—'} saal">${esc(v.name)}</li>`).join('')}</ul>
+    </div>`;
+  }).join('') || `<div class="empty"><b>Koi ghar nahi mila</b><p>Doosra number try karein.</p></div>`;
+}
+
+function bindHouses(){
+  $('#house-search').addEventListener('input', renderHouses);
+  $('#house-sort').addEventListener('change', renderHouses);
+  $('#house-grid').addEventListener('click', e => {
+    const card = e.target.closest('[data-house]');
+    if(!card) return;
+    dir.house = card.dataset.house; dir.page = 1;
+    $('#house-filter').value = card.dataset.house;
+    renderDirectory();
+    $('#directory').scrollIntoView({behavior: 'smooth', block: 'start'});
+    toast('Ghar ' + card.dataset.house + ' ke ' + (housesMap().get(card.dataset.house) || []).length + ' log');
+  });
+}
+
+/* ---------------- elections ---------------- */
+function renderElections(){
+  const row = r => `<tr><td class="name">${esc(r[0])}${r[4] ? ' <span class="badge win">jeet</span>' : ''}</td>
+    <td><span class="badge">${esc(r[1])}</span></td>
+    <td class="num">${nf(r[2])}</td><td class="num">${r[3].toFixed(2)}</td></tr>`;
+  $('#ac-body').innerHTML = AC_2024.map(row).join('');
+  $('#ls-body').innerHTML = LS_2024.map(row).join('');
+}
+
+function renderVotes(){
+  $('#v-body').innerHTML = state.votes.map(v => {
+    const t = (v.voters && v.polled) ? ((v.polled / v.voters) * 100).toFixed(1) + '%' : '—';
+    return `<tr><td class="name">${esc(v.name)}</td><td class="num">${nf(v.voters)}</td>
+      <td class="num">${nf(v.polled)}</td><td class="num">${t}</td><td>${esc(v.lead || '—')}</td>
+      <td style="text-align:right"><button class="btn icon" data-vdel="${v.id}">Del</button></td></tr>`;
+  }).join('');
+  $('#v-empty').style.display = state.votes.length ? 'none' : 'block';
+}
+
+function bindVotes(){
+  $('#v-save').addEventListener('click', () => {
+    const voters = $('#v-voters').value.trim();
+    const polled = $('#v-polled').value.trim();
+    if(!voters && !polled){ toast('Pehle voters ya vote ki ginti bharein'); $('#v-voters').focus(); return; }
+    state.votes.push({
+      id: uid(),
+      name: $('#v-name').value.trim() || 'Chunav ' + (state.votes.length + 1),
+      voters: voters ? Number(voters) : null,
+      polled: polled ? Number(polled) : null,
+      lead: $('#v-lead').value.trim()
+    });
+    saveState(); renderVotes();
+    ['#v-name','#v-voters','#v-polled','#v-lead'].forEach(s => $(s).value = '');
+    toast('Vote record save ho gaya');
+  });
+  $('#v-body').addEventListener('click', e => {
+    const b = e.target.closest('[data-vdel]'); if(!b) return;
+    state.votes = state.votes.filter(v => v.id !== b.dataset.vdel);
+    saveState(); renderVotes(); toast('Record hata diya');
+  });
+  $('#vote-export').addEventListener('click', () => {
+    const rows = [['Chunav', 'Voters', 'Pade', 'Turnout %', 'Leader']].concat(
+      state.votes.map(v => [v.name, v.voters, v.polled,
+        (v.voters && v.polled) ? ((v.polled / v.voters) * 100).toFixed(1) : '', v.lead]));
+    download('dhani-thakarian-votes.csv', toCSV(rows));
+  });
+}
+
+/* ---------------- wards ---------------- */
+function renderWards(){
+  $('#ward-body').innerHTML = state.wards.map((w, i) => `
+    <tr>
+      <td><span class="badge">Ward ${w.ward}</span></td>
+      <td><input type="text" data-wi="${i}" data-wf="name" value="${esc(w.name)}" placeholder="member ka naam"></td>
+      <td><input type="tel" data-wi="${i}" data-wf="mobile" value="${esc(w.mobile)}" placeholder="mobile"></td>
+      <td><input type="text" data-wi="${i}" data-wf="note" value="${esc(w.note)}" placeholder="note"></td>
+      <td style="text-align:right"><button class="btn icon" data-wdel="${i}">&times;</button></td>
+    </tr>`).join('');
+}
+
+function bindWards(){
+  $('#ward-body').addEventListener('input', e => {
+    const el = e.target;
+    if(!el.dataset.wf) return;
+    state.wards[Number(el.dataset.wi)][el.dataset.wf] = el.value;
+    saveState();
+  });
+  $('#ward-body').addEventListener('click', e => {
+    const b = e.target.closest('[data-wdel]'); if(!b) return;
+    const i = Number(b.dataset.wdel);
+    state.wards[i] = {ward: state.wards[i].ward, name: '', mobile: '', note: ''};
+    saveState(); renderWards();
+  });
+  $('#ward-export').addEventListener('click', () => {
+    const rows = [['Ward', 'Member', 'Mobile', 'Note']].concat(state.wards.map(w => [w.ward, w.name, w.mobile, w.note]));
+    download('dhani-thakarian-wards.csv', toCSV(rows));
+  });
+  $('#ward-reset').addEventListener('click', () => {
+    if(!confirm('Saare ward members ke naam hata dein?')) return;
+    state.wards = defaultWards(); saveState(); renderWards(); toast('Ward list reset');
+  });
+}
+
+/* ---------------- places ---------------- */
+function renderPlaces(){
+  $('#places').innerHTML = PLACES.map(p => `
+    <div class="card">
+      <h3>${esc(p.t)}</h3>
+      <p class="hint">${esc(p.s)}</p>
+      <div class="dl">${p.rows.map(r => `<div class="k">${esc(r[0])}</div><div class="v">${esc(r[1])}</div>`).join('')}</div>
+    </div>`).join('');
+}
+
+/* ---------------- csv / download ---------------- */
+function toCSV(rows){
+  return rows.map(r => r.map(c => {
+    const s = String(c == null ? '' : c);
+    return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+  }).join(',')).join('\n');
+}
+function download(name, content, type){
+  const blob = new Blob([content], {type: type || 'text/csv;charset=utf-8'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = name;
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1500);
+}
+
+/* ---------------- clock & weather ---------------- */
+function tickClock(){
+  const now = new Date();
+  const ist = new Date(now.getTime() + (330 + now.getTimezoneOffset()) * 60000);
+  const p = n => String(n).padStart(2, '0');
+  $('#clock').textContent = p(ist.getHours()) + ':' + p(ist.getMinutes()) + ' IST';
+}
+const WX = {0:'Saaf', 1:'Zyadatar saaf', 2:'Thode baadal', 3:'Baadal', 45:'Kohra', 48:'Kohra', 51:'Barsi', 53:'Barsi', 55:'Tez barsi', 61:'Halki baarish', 63:'Baarish', 65:'Tez baarish', 71:'Baraf', 80:'Baarish', 81:'Baarish', 82:'Tez baarish', 95:'Toofan', 96:'Ole ke saath toofan', 99:'Tez toofan'};
+async function loadWeather(){
+  try{
+    const r = await fetch('https://api.open-meteo.com/v1/forecast?latitude=29.0609&longitude=75.9431&current=temperature_2m,relative_humidity_2m,weather_code&timezone=Asia%2FKolkata');
+    if(!r.ok) throw new Error('wx');
+    const j = await r.json();
+    const c = j.current;
+    $('#wx-pill').innerHTML = '<b>' + Math.round(c.temperature_2m) + '°C</b> ' + (WX[c.weather_code] || '') + ' · ' + Math.round(c.relative_humidity_2m) + '%';
+  }catch(e){ $('#wx-pill').textContent = 'Mausam offline'; }
+}
+
+/* ---------------- news ---------------- */
+const FEEDS = {
+  village: '"Dhani Thakarian" OR "Dhani Thakriya"',
+  hansi: '"Hansi" Hisar Haryana',
+  hisar: 'Hisar Haryana'
+};
+let newsTab = 'village';
+const newsCache = {};
+const gnews = q => 'https://news.google.com/rss/search?q=' + encodeURIComponent(q) + '&hl=en-IN&gl=IN&ceid=IN:en';
+
+async function fetchText(url, ms){
+  const ctrl = new AbortController();
+  const t = setTimeout(() => ctrl.abort(), ms || 9000);
+  try{
+    const r = await fetch(url, {signal: ctrl.signal, cache: 'no-store'});
+    if(!r.ok) throw new Error('HTTP ' + r.status);
+    const txt = await r.text();
+    if(!txt || txt.length < 200) throw new Error('khaali');
+    return txt;
+  } finally { clearTimeout(t); }
+}
+
+async function getFeed(q){
+  const direct = gnews(q);
+  const tries = [];
+  if(WORKER_URL) tries.push(WORKER_URL.replace(/\/+$/, '') + '/api/news?q=' + encodeURIComponent(q));
+  tries.push('/api/news?q=' + encodeURIComponent(q));
+  tries.push('https://api.allorigins.win/raw?url=' + encodeURIComponent(direct));
+  tries.push('https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(direct));
+  tries.push('https://corsproxy.io/?url=' + encodeURIComponent(direct));
+  for(const u of tries){
+    try{ const t = await fetchText(u); if(t.indexOf('<item') > -1) return t; }catch(e){}
+  }
+  return null;
+}
+
+function splitTitle(raw){
+  const t = String(raw || '');
+  const cut = t.lastIndexOf(' - ');
+  if(cut > 25) return {title: t.slice(0, cut).trim(), source: t.slice(cut + 3).trim()};
+  return {title: t.trim(), source: ''};
+}
+
+function parseRSS(xml){
+  const doc = new DOMParser().parseFromString(xml, 'text/xml');
+  return Array.from(doc.querySelectorAll('item')).slice(0, 18).map(it => {
+    const g = t => (it.querySelector(t) ? it.querySelector(t).textContent.trim() : '');
+    const st = splitTitle(g('title'));
+    return {title: st.title, link: g('link'), date: g('pubDate'), source: g('source') || st.source};
+  }).filter(x => x.title && x.link && !/Air Quality Index|Weather Radar|Air Pollution/i.test(x.title));
+}
+
+function timeAgo(str){
+  const d = new Date(str);
+  if(isNaN(d)) return '';
+  const mins = Math.round((Date.now() - d.getTime()) / 60000);
+  if(mins < 1) return 'abhi';
+  if(mins < 60) return mins + ' min pehle';
+  const h = Math.round(mins / 60);
+  if(h < 24) return h + ' ghante pehle';
+  const days = Math.round(h / 24);
+  if(days < 30) return days + ' din pehle';
+  return d.toLocaleDateString('en-IN', {day: '2-digit', month: 'short', year: 'numeric'});
+}
+
+function renderNews(){
+  const c = newsCache[newsTab];
+  const items = (c && c.items) || [];
+  $('#news-empty').style.display = items.length ? 'none' : 'block';
+  $('#news-list').innerHTML = items.map(n => `
+    <div class="news-item">
+      <a href="${esc(n.link)}" target="_blank" rel="noopener">${esc(n.title)}</a>
+      <span class="meta">${esc(timeAgo(n.date))}</span>
+      ${n.source ? `<span class="src">${esc(n.source)}</span>` : ''}
+    </div>`).join('');
+
+  const st = $('#news-status');
+  if(!c) st.textContent = 'Connect ho raha hai…';
+  else if(c.live) st.textContent = '● Live · Google News · ' + items.length + ' khabrein' + (c.fallback ? ' · gaon ki alag khabar nahi mili' : '');
+  else st.textContent = '● Saved list' + (c.at ? ' (' + new Date(c.at).toLocaleString('en-IN', {day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit'}) + ')' : '') + ' · live connect nahi hua';
+}
+
+async function loadNews(){
+  const tab = newsTab;
+  $('#news-status').textContent = 'Connect ho raha hai…';
+  const xml = await getFeed(FEEDS[tab]);
+  let items = xml ? parseRSS(xml) : null;
+  let fallback = false;
+  if(items && !items.length && tab === 'village'){
+    const x2 = await getFeed(FEEDS.hansi);
+    if(x2){ const i2 = parseRSS(x2); if(i2.length){ items = i2; fallback = true; } }
+  }
+  if(items && items.length){
+    newsCache[tab] = {items, at: new Date().toISOString(), live: true, fallback};
+  }else if(!newsCache[tab]){
+    let snap = NEWS_SNAPSHOT[tab] || [];
+    if(!snap.length && tab === 'village'){ snap = NEWS_SNAPSHOT.hansi || []; fallback = true; }
+    newsCache[tab] = {
+      items: snap.map(s => { const st = splitTitle(s.title); return {title: st.title, link: s.link, date: s.published, source: s.source || st.source}; }),
+      at: NEWS_SNAPSHOT.fetched_at || null, live: false, fallback
+    };
+  }
+  if(tab === newsTab) renderNews();
+}
+
+function bindNews(){
+  $('#news-tabs').addEventListener('click', e => {
+    const c = e.target.closest('[data-tab]'); if(!c) return;
+    newsTab = c.dataset.tab;
+    $$('#news-tabs .chip').forEach(x => x.classList.toggle('on', x === c));
+    renderNews();
+    if(!newsCache[newsTab]) loadNews();
+  });
+  $('#news-refresh').addEventListener('click', loadNews);
+}
+
+/* ---------------- theme & nav ---------------- */
+function initTheme(){
+  const saved = store.get(LS_THEME, null);
+  const sysDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  document.documentElement.dataset.theme = saved || (sysDark ? 'dark' : 'light');
+  $('#theme-toggle').addEventListener('click', () => {
+    const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    store.set(LS_THEME, next);
+  });
+}
+
+function initNav(){
+  const links = $$('#subnav a');
+  const secs = links.map(a => ({a, el: document.getElementById(a.getAttribute('href').slice(1))})).filter(x => x.el);
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if(!en.isIntersecting) return;
+      links.forEach(a => a.classList.remove('on'));
+      const m = secs.find(s => s.el === en.target);
+      if(m){ m.a.classList.add('on'); m.a.scrollIntoView({block: 'nearest', inline: 'center'}); }
+    });
+  }, {rootMargin: '-15% 0px -75% 0px'});
+  secs.forEach(s => io.observe(s.el));
+  links.forEach(a => a.addEventListener('click', e => {
+    e.preventDefault();
+    const el = document.getElementById(a.getAttribute('href').slice(1));
+    if(el){ el.scrollIntoView({behavior: 'smooth', block: 'start'}); history.replaceState(null, '', a.getAttribute('href')); }
+  }));
+}
+
+/* ---------------- restore ---------------- */
+function initRestore(){
+  const input = document.createElement('input');
+  input.type = 'file';
+  input.accept = '.json,application/json';
+  input.style.display = 'none';
+  document.body.appendChild(input);
+  const btn = document.createElement('button');
+  btn.className = 'btn';
+  btn.textContent = 'Restore';
+  btn.addEventListener('click', () => input.click());
+  $('#dir-backup').insertAdjacentElement('afterend', btn);
+  input.addEventListener('change', () => {
+    const f = input.files[0]; if(!f) return;
+    const rd = new FileReader();
+    rd.onload = () => {
+      try{
+        const s = JSON.parse(String(rd.result));
+        if(!s || !Array.isArray(s.voters)){ toast('Ye backup file sahi nahi hai'); return; }
+        if(!confirm('Purana data is backup se replace ho jayega. Aage badhein?')) return;
+        state.voters = s.voters;
+        state.votes = Array.isArray(s.votes) ? s.votes : [];
+        state.wards = (Array.isArray(s.wards) && s.wards.length) ? s.wards : defaultWards();
+        saveState(); renderAll(); fillHouseFilter(); renderHouses();
+        toast('Backup restore ho gaya');
+      }catch(err){ toast('Backup padha nahi ja saka'); }
+      input.value = '';
+    };
+    rd.readAsText(f);
+  });
+}
+
+/* ---------------- render all ---------------- */
+function renderAll(){
+  renderStats();
+  renderDirectory();
+  fillHouseFilter();
+  renderHouses();
+}
+
+function init(){
+  loadState();
+  initTheme();
+  initLang();
+  renderStats();
+  renderDirectory();
+  fillHouseFilter();
+  renderHouses();
+  bindDirectory();
+  bindHouses();
+  bindModal();
+  renderElections();
+  renderVotes();
+  bindVotes();
+  renderWards();
+  bindWards();
+  renderPlaces();
+  bindNews();
+  initNav();
+  initRestore();
+
+  tickClock(); setInterval(tickClock, 30000);
+  loadWeather(); setInterval(loadWeather, 10 * 60 * 1000);
+  renderNews(); loadNews();
+  setInterval(() => { if(document.visibilityState === 'visible') loadNews(); }, 5 * 60 * 1000);
+}
+
+function registerSW(){
+  if(!('serviceWorker' in navigator)) return;
+  if(!location.protocol.startsWith('http')) return;
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  });
+}
+
+function boot(){
+  try{
+    registerSW();
+    console.log('Dhani Thakarian portal — build v6');
+    init();
+    document.documentElement.dataset.ready = '1';
+  }catch(err){
+    const box = document.createElement('div');
+    box.style.cssText = 'position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;background:#b3392a;color:#fff;padding:12px 14px;border-radius:10px;font:13px/1.4 system-ui;box-shadow:0 8px 24px rgba(0,0,0,.3)';
+    box.textContent = 'App load nahi ho payi: ' + (err && err.message ? err.message : err) + ' — page refresh karein ya file Chrome mein kholein.';
+    document.body.appendChild(box);
+    console.error(err);
+  }
+}
+if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
+else boot();
+
+</script>
+</body>
+</html>
